@@ -25,10 +25,6 @@ def download_repo(repo_owner, repo_name):
     return repo
 
 
-def check_validity(repo):
-    if(len(repo.iter_commits()) < 100): return False
-
-
 
 class Progress(git.remote.RemoteProgress):
     def update(self, op_code, cur_count, max_count=None, message=""):
