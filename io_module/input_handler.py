@@ -23,7 +23,8 @@ def get_input_files():
     if not validate_date(end_date):
         console.print("[bold red]Invalid date")
         raise SystemExit(0)
-    start_date = datetime.strptime(end_date, '%Y-%m-%d') - timedelta(days=90)
+    end_date = datetime.strptime(end_date, '%Y-%m-%d')
+    start_date = end_date - timedelta(days=90)
     return input_path, output_path, start_date, end_date
 
 def get_input_communities(path):

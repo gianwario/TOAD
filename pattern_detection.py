@@ -3,7 +3,7 @@ import os
 import json
 from auth import oauth2
 from io_module import input_handler, repository_manager
-from data_retriever.data_retriever import retrieve_data
+from data_retriever.data_retriever import retrieve_data_and_check_validity
 from console import console
 from community.data import Data
 
@@ -27,7 +27,7 @@ def main():
         repo = repository_manager.download_repo(community.repo_owner, community.repo_name)
         community.data.commits = list(repo.iter_commits())
 
-        if not retrieve_data(community): 
+        if not retrieve_data_and_check_validity(community): 
             console.print("[bold red]Invalid repository")
             raise SystemExit(0)
 

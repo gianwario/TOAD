@@ -1,8 +1,11 @@
 from dataclasses import dataclass
+from datetime import datetime
 @dataclass
 class Data():
-    start_date:str=None
-    end_date:str=None
+    #datetime
+    start_date:any=None
+    #datetime
+    end_date:any=None
     first_commit_hash:str=None
     last_commit_hash:str=None
     first_commit_datetime:str=None
