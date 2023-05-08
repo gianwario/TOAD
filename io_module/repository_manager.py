@@ -3,7 +3,12 @@ import git
 from os import path
 from console import console
 
-def download_repo(repo_owner, repo_name):
+def download_repo(repo_owner:str, repo_name:str):
+    """
+    This function pulls the whole repository specified with name and owner, and stores it locally.
+
+    :return: the repository ad a git Repo object
+    """ 
     # build path
     repo_path = os.path.join(
         "repositories",

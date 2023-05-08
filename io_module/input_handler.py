@@ -6,6 +6,10 @@ from community import community
 from console import console
 
 def get_input_files():
+    """
+    This function prompts the user to insert the needed input/output files and the end date of the time window to analyze.
+    :return: the input given by the user
+    """ 
     input_path = console.input('[bold green]Please enter the path of the input file, including filename and its extension\n')
     if not os.path.isfile(input_path):
         console.print("[bold red]Error, the file does not exist")
@@ -27,7 +31,14 @@ def get_input_files():
     start_date = end_date - timedelta(days=90)
     return input_path, output_path, start_date, end_date
 
-def get_input_communities(path):
+
+def get_input_communities(path:str):
+    """
+    This function gets the communities contained in the file specified by the user.
+
+    :param path: the path of the csv containing communities
+    :return: the list of communities contained in the file
+    """ 
     communities = []
     with open(path, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='|')

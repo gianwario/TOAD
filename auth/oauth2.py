@@ -6,9 +6,17 @@ load_dotenv('.env')
 dot_env_path = ".env"
 
 def execute_oauth2(header, payload):
+    """
+    This function allows the user to authenticate with his GitHub account.
+    It is used to ask the oauth2 system to produce a device code in order to get the access token.
+
+    :param header: the http header to make a request
+    :param payload: the payload containing the secret client id
+    :return: the device code needed to complete the authentication
+    """ 
+
     r = requests.post('https://github.com/login/device/code',headers=header,json=payload)
     data = r.json()
-    #print(data)
     device_code = data['device_code']
     uri = data['verification_uri']
     user_code = data['user_code']
@@ -17,12 +25,24 @@ def execute_oauth2(header, payload):
     return device_code
 
 def generate_new_token(header, payload):
+    """
+    This function is used to generate a new Personal Access Token through the GitHub API.
+    It also stores the token in the environment.
+
+    :param header: the http header to make a request
+    :param payload: the payload containing the secret client id and the device code obtained with the authentication
+    :return: the personal access token
+    """ 
     r = requests.post( "https://github.com/login/oauth/access_token", headers=header, json=payload)
-    #print(r.json())
     set_key(dot_env_path, "PAT", r.json()['access_token'])   
     return r.json()['access_token']
 
 def get_access_token():
+    """
+    This function is used to retrieve the personal access token either from the environment if stored or through a new GitHub authentication.
+
+    :return: the personal access token
+    """ 
     pat = os.environ.get('PAT',"")
     if not pat:
         console.print("[bold magenta]Retrieving Personal Access Token from GitHub")

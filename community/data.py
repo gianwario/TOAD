@@ -2,6 +2,9 @@ from dataclasses import dataclass
 from datetime import datetime
 @dataclass
 class Data():
+    """
+    This class stores needed data of a Community
+    """ 
     #datetime
     start_date:any=None
     #datetime
