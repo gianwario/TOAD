@@ -26,7 +26,6 @@ def main():
         
         repo = repository_manager.download_repo(community.repo_owner, community.repo_name)
         community.data.commits = list(repo.iter_commits())
-
         if not retrieve_data_and_check_validity(community): 
             console.print("[bold red]Invalid repository")
             raise SystemExit(0)
