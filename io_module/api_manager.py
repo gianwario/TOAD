@@ -18,14 +18,13 @@ def get_closed_milestones(owner: str, name: str):
     resp = json.loads(response.content)
     return resp
 
-def get_user_from_email(email:str):
+def get_user_from_email(email: str):
     response = requests.get("https://api.github.com/search/users?q="+email+"+in:email", auth=("YOSHI3", GIT_PAT)) 
     resp = json.loads(response.content)
-    print(resp)
     if(len(resp.get('items')) > 0):
         return resp.get('items')
 
-def get_user_data_from_username(username:str):
+def get_user_data_from_username(username: str):
     response = requests.get("https://api.github.com/users/"+username, auth=("YOSHI3", GIT_PAT)) 
     resp = json.loads(response.content)
     print(resp)
