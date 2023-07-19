@@ -4,6 +4,7 @@ import git
 from community import community
 from io_module import api_manager
 from data_retriever import filters
+from alias_handler import alias_handler
 
 
 def retrieve_data_and_check_validity(community: community.Community):
@@ -19,7 +20,7 @@ def retrieve_data_and_check_validity(community: community.Community):
     :return: true if valid, false otherwise
     """
     console.log("Checking commits")
-    filters.filter_commits_and_get_members(community)
+    filters.filter_commits(community)
     if len(community.data.commits) < 100:
         console.print("[bold red]There must be at least 100 commits")
         return False
@@ -40,7 +41,9 @@ def retrieve_data_and_check_validity(community: community.Community):
 
 def retrieve_member_data(community: community.Community):
     """
-    Retrieves the GitHub user information from the usernames contained in the community data
+    Retrieves the GitHub user information from the usernames contained in the community data.
+    It does so by extracting logins and aliases from the GitHub API
+
     :param community: the community containing members usernames
 
     members = []
@@ -51,6 +54,8 @@ def retrieve_member_data(community: community.Community):
         api_manager.get_user_from_username(username)
 
     """
+    alias_handler.alias_extraction(community, "")
+
     # TODO start aliasing extraction here
 
 
