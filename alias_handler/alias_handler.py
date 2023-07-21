@@ -5,6 +5,7 @@ from console import console
 from io_module import api_manager
 from dotenv import load_dotenv
 from community import community
+from progress.bar import Bar
 
 
 load_dotenv(".env")
@@ -18,10 +19,10 @@ credit: https://github.com/Nuri22/csDetector/blob/master/authorAliasExtractor.py
 """
 
 
-def alias_extraction(community: community.Community, alias_path: str):
+def alias_extraction(community: community.Community):
     # we get two data structure, one containing a mapping of emails of community members for which login username is available,
     # the other one containing a list of users with no public login available
-    commits_login, commits_without_login, members = get_commits_information(community)
+    commits_login, commits_without_login = get_commits_information(community)
 
     aliases = {}
     used = {}
@@ -79,7 +80,7 @@ def alias_extraction(community: community.Community, alias_path: str):
                     used[authorB] = authorA
                     break
 
-    return aliases, members
+    return aliases
 
 
 def get_commits_information(community: community.Community):
@@ -103,27 +104,22 @@ def get_commits_information(community: community.Community):
     commits_login = dict()
     commits_without_login = []
 
-    # also, to save API calls, we gather here informations about community members
-    members = []
+    with Bar("Computing aliases...", max=len(commits_sha)) as bar:
+        for email in commits_sha:
+            sha = commits_sha[email]
+            commit = api_manager.get_commit_by_sha(
+                community.repo_owner, community.repo_name, sha
+            )
+            if not "author" in commit.keys():
+                continue
 
-    for email in commits_sha:
-        sha = commits_sha[email]
-        commit = api_manager.get_commit_by_sha(
-            community.repo_owner, community.repo_name, sha
-        )
-        if not "author" in commit.keys():
-            continue
+            if not commit["author"] is None and not commit["author"]["login"] is None:
+                commits_login[email] = commit["author"]["login"]
+            else:
+                commits_without_login.append(email)
+            bar.next()
 
-        # members of the community
-        if commit["author"] not in members:
-            members.append(commit["author"])
-
-        if not commit["author"] is None and not commit["author"]["login"] is None:
-            commits_login[email] = commit["author"]["login"]
-        else:
-            commits_without_login.append(email)
-
-    return commits_login, commits_without_login, members
+    return commits_login, commits_without_login
 
 
 def replace_all_aliases(commits: list[git.Commit], aliases):

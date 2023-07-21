@@ -23,22 +23,11 @@ def get_milestones(owner: str, name: str):
     return resp
 
 
-def get_user_from_email(email: str):
+def get_user_data_from_login(login: str):
     response = requests.get(
-        "https://api.github.com/search/users?q=" + email + "+in:email",
-        auth=("YOSHI3", GIT_PAT),
+        "https://api.github.com/users/" + login, auth=("YOSHI3", GIT_PAT)
     )
     resp = json.loads(response.content)
-    if len(resp.get("items")) > 0:
-        return resp.get("items")
-
-
-def get_user_data_from_username(username: str):
-    response = requests.get(
-        "https://api.github.com/users/" + username, auth=("YOSHI3", GIT_PAT)
-    )
-    resp = json.loads(response.content)
-    print(resp)
     return resp
 
 

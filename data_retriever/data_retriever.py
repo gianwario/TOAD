@@ -5,6 +5,8 @@ from community import community
 from io_module import api_manager
 from data_retriever import filters
 from alias_handler import alias_handler
+from data_retriever import geographical_retriever
+from progress.bar import Bar
 
 
 def retrieve_data_and_check_validity(community: community.Community):
@@ -32,8 +34,8 @@ def retrieve_data_and_check_validity(community: community.Community):
     if len(community.data.commits) < 100:
         console.print("[bold red]There must be at least 100 commits")
         return False
-    console.log("Checking community members")
     retrieve_member_data(community)
+
     if len(community.data.members) < 2:
         console.print("[bold red]There must be at least 2 members")
         return False
@@ -42,9 +44,10 @@ def retrieve_data_and_check_validity(community: community.Community):
     milestones = filters.filter_milestones(milestones)
     if len(milestones) < 1:
         console.print("[bold red]There must be at least 1 closed milestone")
-        return False
-    console.log("TODO Checking geographical information")
-    # TODO controllo su dati geografici
+        # return False
+    console.log("Retrieving geographical information")
+    geographical_retriever.retrieve_geo_information(community)
+    # TODO how many geo info do we need to consider the repository valid?
     return True
 
 
@@ -59,10 +62,27 @@ def retrieve_member_data(community: community.Community):
 
     :param community: the analyzed community
     """
-    aliases, members = alias_handler.alias_extraction(community, "")
+    aliases = alias_handler.alias_extraction(community)
+
+    members = []
+
     users = []
     bots = []
     organizations = []
+
+    community.data.aliases = aliases
+    community.data.members_logins = [key for key in aliases.keys()]
+
+    community.data.commits = alias_handler.replace_all_aliases(
+        community.data.commits, aliases
+    )
+    with Bar(
+        "Retrieving community members data...", max=len(community.data.members_logins)
+    ) as bar:
+        for login in community.data.members_logins:
+            members.append(api_manager.get_user_data_from_login(login))
+            bar.next()
+
     for member in members:
         if member["type"] == "User":
             users.append(member)
@@ -82,12 +102,6 @@ def retrieve_member_data(community: community.Community):
     )
 
     community.data.members = users
-    community.data.aliases = aliases
-    community.data.members_logins = [key for key in aliases.keys()]
-
-    community.data.commits = alias_handler.replace_all_aliases(
-        community.data.commits, aliases
-    )
 
 
 # TODO

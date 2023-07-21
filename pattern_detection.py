@@ -35,6 +35,7 @@ def main():
         if not retrieve_data_and_check_validity(community):
             console.print("[bold red]Invalid repository")
             raise SystemExit(0)
+        console.print("[bold green]Repository is valid")
 
 
 if __name__ == "__main__":

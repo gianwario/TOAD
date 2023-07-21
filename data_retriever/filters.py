@@ -1,4 +1,4 @@
-from utils import convert_commit_date
+from utils import convert_date
 from datetime import datetime
 from strsimpy.metric_lcs import MetricLCS
 import re
@@ -29,8 +29,8 @@ def filter_milestones(milestones: list):
     filtered_milestones = []
     for milestone in milestones:
         if (
-            milestone["state"] is "closed"
-            and milestone["closed_at"] is not ""
+            milestone["state"] == "closed"
+            and milestone["closed_at"] != ""
             and datetime.strptime(convert_date(milestone["closed_at"]), "%Y-%m-%d")
             <= community.data.end_date
         ):
