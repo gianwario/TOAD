@@ -17,11 +17,22 @@ def filter_commits(community: community.Community):
     for commit in community.data.commits:
         if (
             community.data.start_date
-            <= datetime.strptime(convert_commit_date(commit.committed_date), "%Y-%m-%d")
+            <= datetime.strptime(convert_date(commit.committed_date), "%Y-%m-%d")
             <= community.data.end_date
         ):
             filtered_commits.append(commit)
 
-    print(len(community.data.commits))
-    print(len(filtered_commits))
     community.data.commits = filtered_commits
+
+
+def filter_milestones(milestones: list):
+    filtered_milestones = []
+    for milestone in milestones:
+        if (
+            milestone["state"] is "closed"
+            and milestone["closed_at"] is not ""
+            and datetime.strptime(convert_date(milestone["closed_at"]), "%Y-%m-%d")
+            <= community.data.end_date
+        ):
+            filtered_milestones.append(milestone)
+    return filtered_milestones

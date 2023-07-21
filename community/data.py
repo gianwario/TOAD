@@ -1,27 +1,30 @@
 from dataclasses import dataclass
 from datetime import datetime
+
+
 @dataclass
-class Data():
+class Data:
     """
     This class stores needed data of a Community
-    """ 
-    #datetime
-    start_date:any=None
-    #datetime
-    end_date:any=None
-    first_commit_hash:str=None
-    last_commit_hash:str=None
-    first_commit_datetime:str=None
-    last_commit_datetime:str=None
-    members: list=None
-    members_username: list=None
-    map_user_followers: {str, list}=None
-    map_user_following: {str, list}=None
-    map_user_repositories: {str, list}=None
-    commits: list=None
+    """
 
-    '''
-        public IReadOnlyList<Milestone> Milestones { get; set; }
+    # datetime
+    start_date: any = None
+    # datetime
+    end_date: any = None
+    first_commit_hash: str = None
+    last_commit_hash: str = None
+    first_commit_datetime: str = None
+    last_commit_datetime: str = None
+    members: list = None
+    members_logins: list = None
+    aliases: list = None
+    map_user_followers: {str, list} = None
+    map_user_following: {str, list} = None
+    map_user_repositories: {str, list} = None
+    commits: list = None
+    milestones: list = None
+    """
         public List<GitHubCommit> CommitsWithinTimeWindow { get; set; }
         public IReadOnlyList<CommitComment> CommitComments { get; set; }
         public List<PullRequest> MergedPullRequests { get; set; }
@@ -41,6 +44,4 @@ class Data():
         public List<string> Countries { get; set; }
         public int Contributors { get; set; }
         public int Collaborators { get; set; }
-    '''
-    
-
+    """

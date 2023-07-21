@@ -14,7 +14,7 @@ This module contains functions to access the GitHub APIs
 """
 
 
-def get_closed_milestones(owner: str, name: str):
+def get_milestones(owner: str, name: str):
     response = requests.get(
         "https://api.github.com/repos/{0}/{1}/milestones".format(owner, name),
         auth=("YOSHI3", GIT_PAT),

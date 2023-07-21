@@ -1,6 +1,7 @@
 import datetime
 import time
 
+
 def validate_date(date_text):
     try:
         datetime.date.fromisoformat(date_text)
@@ -8,6 +9,7 @@ def validate_date(date_text):
     except ValueError:
         return False
 
-def convert_commit_date(date):
+
+def convert_date(date):
     dt = time.gmtime(date)
     return str(dt.tm_year) + "-" + str(dt.tm_mon) + "-" + str(dt.tm_mday)

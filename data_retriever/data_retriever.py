@@ -21,42 +21,73 @@ def retrieve_data_and_check_validity(community: community.Community):
     """
     console.log("Checking commits")
     filters.filter_commits(community)
+    console.print(
+        "Valid commits between "
+        + str(community.data.start_date)
+        + " and "
+        + str(community.data.end_date)
+        + " : "
+        + str(len(community.data.commits))
+    )
     if len(community.data.commits) < 100:
         console.print("[bold red]There must be at least 100 commits")
         return False
-
+    console.log("Checking community members")
     retrieve_member_data(community)
     if len(community.data.members) < 2:
         console.print("[bold red]There must be at least 2 members")
         return False
-    milestones = api_manager.get_closed_milestones(
-        community.repo_owner, community.repo_name
-    )
+    console.log("Checking number of closed milestones")
+    milestones = api_manager.get_milestones(community.repo_owner, community.repo_name)
+    milestones = filters.filter_milestones(milestones)
     if len(milestones) < 1:
-        console.print("[bold red]There must be at least 1 milestone")
+        console.print("[bold red]There must be at least 1 closed milestone")
         return False
+    console.log("TODO Checking geographical information")
     # TODO controllo su dati geografici
     return True
 
 
 def retrieve_member_data(community: community.Community):
     """
-    Retrieves the GitHub user information from the usernames contained in the community data.
-    It does so by extracting logins and aliases from the GitHub API
+    Retrieves the GitHub user information from the commits contained in the community data.
+    It does so by extracting logins and aliases from the GitHub API.
+    After querying the APIs to gather the information neeeded, this method updates the community data
+    with members considered real users, their login username and the computed aliases
 
-    :param community: the community containing members usernames
+    It also updated the commits by replacing the emails with the aliases.
 
-    members = []
+    :param community: the analyzed community
+    """
+    aliases, members = alias_handler.alias_extraction(community, "")
+    users = []
     bots = []
     organizations = []
-    for username in community.data.members_username:
-        print(username)
-        api_manager.get_user_from_username(username)
+    for member in members:
+        if member["type"] == "User":
+            users.append(member)
+        elif member["type"] == "Bot":
+            bots.append(member)
+        elif member["type"] == "Organization":
+            organizations.append(member)
+        else:
+            pass
 
-    """
-    alias_handler.alias_extraction(community, "")
+    console.print("[blue]" + str(len(users)) + " users were classified as a user.")
+    console.print("[blue]" + str(len(bots)) + " users were classified as a bot.")
+    console.print(
+        "[blue]"
+        + str(len(organizations))
+        + " users were classified as an organization."
+    )
 
-    # TODO start aliasing extraction here
+    community.data.members = users
+    community.data.aliases = aliases
+    community.data.members_logins = [key for key in aliases.keys()]
+
+    community.data.commits = alias_handler.replace_all_aliases(
+        community.data.commits, aliases
+    )
 
 
 # TODO

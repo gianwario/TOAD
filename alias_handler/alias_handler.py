@@ -1,6 +1,6 @@
 import git
-import yaml
 import os
+from console import console
 
 from io_module import api_manager
 from dotenv import load_dotenv
@@ -21,7 +21,7 @@ credit: https://github.com/Nuri22/csDetector/blob/master/authorAliasExtractor.py
 def alias_extraction(community: community.Community, alias_path: str):
     # we get two data structure, one containing a mapping of emails of community members for which login username is available,
     # the other one containing a list of users with no public login available
-    commits_login, commits_without_login = get_commits_information(community)
+    commits_login, commits_without_login, members = get_commits_information(community)
 
     aliases = {}
     used = {}
@@ -74,21 +74,12 @@ def alias_extraction(community: community.Community, alias_path: str):
                     continue
 
                 if check_similarity(authorA, authorB, SIMILARITY_MAX_DISTANCE):
-                    aliasedAuthor = aliases.setdefault(authorA, [])
-                    aliasedAuthor.append(authorB)
+                    aliased = aliases.setdefault(authorA, [])
+                    aliased.append(authorB)
                     used[authorB] = authorA
                     break
-    print(aliases)
 
-
-"""
-    print("Writing aliases to '{0}'".format(alias_path))
-    if not os.path.exists(os.path.dirname(alias_path)):
-        os.makedirs(os.path.dirname(alias_path))
-
-    with open(alias_path, "a", newline="") as f:
-        yaml.dump(aliases, f)
-"""
+    return aliases, members
 
 
 def get_commits_information(community: community.Community):
@@ -112,6 +103,9 @@ def get_commits_information(community: community.Community):
     commits_login = dict()
     commits_without_login = []
 
+    # also, to save API calls, we gather here informations about community members
+    members = []
+
     for email in commits_sha:
         sha = commits_sha[email]
         commit = api_manager.get_commit_by_sha(
@@ -120,45 +114,39 @@ def get_commits_information(community: community.Community):
         if not "author" in commit.keys():
             continue
 
+        # members of the community
+        if commit["author"] not in members:
+            members.append(commit["author"])
+
         if not commit["author"] is None and not commit["author"]["login"] is None:
             commits_login[email] = commit["author"]["login"]
         else:
             commits_without_login.append(email)
-    return commits_login, commits_without_login
+
+    return commits_login, commits_without_login, members
 
 
-def replace_all_aliases(commits: list[git.Commit], aliases_path: str):
+def replace_all_aliases(commits: list[git.Commit], aliases):
     """
     This function reads computed aliases from a file and replaces author aliases with unique one
 
     :param commits: the list of commits from wich authors are taken
     """
 
-    if not os.path.exists(aliases_path):
-        return commits
-
-    content = ""
-    with open(aliases_path, "r", encoding="utf-8-sig") as file:
-        content = file.read()
-    aliases = yaml.load(content, Loader=yaml.FullLoader)
-
     transposed = {}
     for alias in aliases:
         for email in aliases[alias]:
             transposed[email] = alias
 
-    return replace(commits, transposed)
-
-
-def replace(commits: list[git.Commit], aliases: list):
+    updated_commits = []
     for commit in commits:
         copy = commit
         author = extract_author_id(commit.author)
+        if author in transposed:
+            copy.author.email = transposed[author]
+        updated_commits.append(copy)
 
-        if author in aliases:
-            copy.author.email = aliases[author]
-
-        yield copy
+    return updated_commits
 
 
 def extract_author_id(author: git.Actor):
