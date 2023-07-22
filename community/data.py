@@ -24,6 +24,7 @@ class Data:
     map_user_repositories: {str, list} = None
     commits: list = None
     milestones: list = None
+    coordinates: list = None
     """
         public List<GitHubCommit> CommitsWithinTimeWindow { get; set; }
         public IReadOnlyList<CommitComment> CommitComments { get; set; }

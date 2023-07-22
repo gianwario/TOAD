@@ -6,6 +6,7 @@ from io_module import input_handler, repository_manager
 from data_retriever.data_retriever import retrieve_data_and_check_validity
 from console import console
 from community.data import Data
+from data_processor import dispersion_processor
 
 
 def main():
@@ -36,6 +37,8 @@ def main():
             console.print("[bold red]Invalid repository")
             raise SystemExit(0)
         console.print("[bold green]Repository is valid")
+
+        dispersion_processor.compute_dispersion(community)
 
 
 if __name__ == "__main__":
