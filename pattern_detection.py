@@ -6,6 +6,7 @@ from io_module import input_handler, repository_manager
 from data_retriever.data_retriever import retrieve_data_and_check_validity
 from console import console
 from community.data import Data
+from community.metrics import Metrics
 from data_processor import dispersion_processor
 
 
@@ -27,6 +28,9 @@ def main():
         data.end_date = end_date
         community.add_data(data)
 
+        metrics = Metrics()
+        community.add_metrics(metrics)
+
         repo = repository_manager.download_repo(
             community.repo_owner, community.repo_name
         )
@@ -38,7 +42,7 @@ def main():
             raise SystemExit(0)
         console.print("[bold green]Repository is valid")
 
-        dispersion_processor.compute_dispersion(community)
+        dispersion_processor.compute_distances(community)
 
 
 if __name__ == "__main__":

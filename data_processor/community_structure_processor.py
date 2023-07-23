@@ -1,5 +1,5 @@
 from community import community
 
-def compute_community_structure(community: community.Community):
-    pass
 
+def compute_structure_data(community: community.Community):
+    pass

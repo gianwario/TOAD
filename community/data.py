@@ -25,6 +25,10 @@ class Data:
     commits: list = None
     milestones: list = None
     coordinates: list = None
+    distances: list = None
+    countries: list = None
+    geo_distance_variance: float = None
+    cultural_distance_variance: float = None
     """
         public List<GitHubCommit> CommitsWithinTimeWindow { get; set; }
         public IReadOnlyList<CommitComment> CommitComments { get; set; }
@@ -41,8 +45,6 @@ class Data:
         public HashSet<string> Watchers { get; set; }
         public HashSet<string> Stargazers { get; set; }
 
-        public List<Location> Coordinates { get; set; }
-        public List<string> Countries { get; set; }
         public int Contributors { get; set; }
         public int Collaborators { get; set; }
     """

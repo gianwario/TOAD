@@ -46,7 +46,9 @@ def retrieve_data_and_check_validity(community: community.Community):
         console.print("[bold red]There must be at least 1 closed milestone")
         # return False
     console.log("Retrieving geographical information")
-    geographical_retriever.retrieve_geo_information(community)
+    geographical_retriever.retrieve_geo_information(community)    
+    geographical_retriever.retrieve_country_name(community)
+
     # TODO how many geo info do we need to consider the repository valid?
     return True
 
