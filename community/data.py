@@ -19,9 +19,9 @@ class Data:
     members: list = None
     members_logins: list = None
     aliases: list = None
-    map_user_followers: {str, list} = None
-    map_user_following: {str, list} = None
-    map_user_repositories: {str, list} = None
+    map_user_followers: {} = None
+    map_user_following: {} = None
+    map_user_repositories: {} = None
     commits: list = None
     milestones: list = None
     coordinates: list = None
@@ -29,10 +29,11 @@ class Data:
     countries: list = None
     geo_distance_variance: float = None
     cultural_distance_variance: float = None
+    merged_pull_requests: list = None
     """
         public List<GitHubCommit> CommitsWithinTimeWindow { get; set; }
         public IReadOnlyList<CommitComment> CommitComments { get; set; }
-        public List<PullRequest> MergedPullRequests { get; set; }
+        
         public Dictionary<PullRequest, List<IssueComment>> MapPullReqsToComments { get; set; }
         // Regarding the difference between Watchers and Stargazers:
         // https://developer.github.com/changes/2012-09-05-watcher-api/

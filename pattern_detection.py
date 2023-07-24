@@ -3,7 +3,10 @@ import os
 import json
 from auth import oauth2
 from io_module import input_handler, repository_manager
-from data_retriever.data_retriever import retrieve_data_and_check_validity
+from data_retriever.data_retriever import (
+    retrieve_data_and_check_validity,
+    retrieve_structure_data,
+)
 from console import console
 from community.data import Data
 from community.metrics import Metrics
@@ -42,7 +45,8 @@ def main():
             raise SystemExit(0)
         console.print("[bold green]Repository is valid")
 
-        dispersion_processor.compute_distances(community)
+        retrieve_structure_data(community)
+        # dispersion_processor.compute_distances(community)
 
 
 if __name__ == "__main__":
