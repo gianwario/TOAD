@@ -29,3 +29,8 @@ def check_githubdate_within_timewindow(community, date):
         <= datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ")
         <= community.data.end_date
     )
+
+
+def intersection(lst1, lst2):
+    lst3 = [value for value in lst1 if value in lst2]
+    return lst3

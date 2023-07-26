@@ -57,9 +57,9 @@ def get_pr_details(owner: str, name: str, pr_number: str):
     return resp
 
 
-def get_issue_comments(owner: str, name: str, since: str):
+def get_prs_comments(owner: str, name: str, since: str):
     response = paginate(
-        "https://api.github.com/repos/{}/{}/issues/comments?since={}".format(
+        "https://api.github.com/repos/{}/{}/pulls/comments?since={}".format(
             owner, name, since
         )
     )

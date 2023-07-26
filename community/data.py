@@ -30,11 +30,13 @@ class Data:
     geo_distance_variance: float = None
     cultural_distance_variance: float = None
     merged_pull_requests: list = None
+    all_pull_requests: list = None
+    pr_comments: list = None
+    map_pr_to_comments: {} = None
     """
         public List<GitHubCommit> CommitsWithinTimeWindow { get; set; }
         public IReadOnlyList<CommitComment> CommitComments { get; set; }
         
-        public Dictionary<PullRequest, List<IssueComment>> MapPullReqsToComments { get; set; }
         // Regarding the difference between Watchers and Stargazers:
         // https://developer.github.com/changes/2012-09-05-watcher-api/
         // Watchers/Subscribers are users watching the repository. Watching a repository registers the user to receive

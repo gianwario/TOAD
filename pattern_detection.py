@@ -10,7 +10,7 @@ from data_retriever.data_retriever import (
 from console import console
 from community.data import Data
 from community.metrics import Metrics
-from data_processor import dispersion_processor
+from data_processor import dispersion_processor, community_structure_processor
 
 
 def main():
@@ -47,6 +47,8 @@ def main():
 
         retrieve_structure_data(community)
         # dispersion_processor.compute_distances(community)
+
+        community_structure_processor.compute_structure_data(community)
 
 
 if __name__ == "__main__":

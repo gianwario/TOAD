@@ -43,7 +43,7 @@ def retrieve_data_and_check_validity(community: community.Community):
         return False
     console.log("Checking number of closed milestones")
     milestones = api_manager.get_milestones(community.repo_owner, community.repo_name)
-    milestones = filters.filter_milestones(milestones)
+    milestones = filters.filter_milestones(community, milestones)
     if len(milestones) < 1:
         console.print("[bold red]There must be at least 1 closed milestone")
         # return False
@@ -133,7 +133,7 @@ def retrieve_structure_data(community: community.Community):
     community.data.map_user_repositories = map_user_repositories
 
     filtered_prs = retrieve_and_filter_pull_requests(community)
-
+    community.data.all_pull_requests = filtered_prs
     # for each pull request that has been merged, retrieve detailed data
     merged_pr_detailed = []
     for pr in filtered_prs:
@@ -145,6 +145,8 @@ def retrieve_structure_data(community: community.Community):
             )
     community.data.merged_pull_requests = merged_pr_detailed
     # retrieve pull request comments and map them to pull requests gatghered
+    retrieve_and_filter_pr_comments(community)
+    map_prs_to_comments(community)
 
     pass
 
@@ -174,49 +176,38 @@ def retrieve_data_per_member(member):
 
 def retrieve_and_filter_pull_requests(community: community.Community):
     prs = api_manager.get_pull_requests(community.repo_owner, community.repo_name)
-    return filters.filter_prs(prs)
+    return filters.filter_prs(community, prs)
 
 
 def retrieve_and_filter_pr_comments(community: community.Community):
     """
-        Method that retrieves from GitHub comments from the pull requests gathered.
-        Note that it uses the IssuesAPI over the PullsAPI since the some comments are
-        considered as Issue Comment from GitHub and could not be retrieved through the PullsAPI.
-
-
-                IssueCommentRequest issueCommentRequest = new IssueCommentRequest { Since = Filters.StartDateTimeWindow };
-                IReadOnlyList<IssueComment> comments =
-                    await GitHubRateLimitHandler.Delegate(Client.Issue.Comment.GetAllForRepository, repoOwner, repoName, issueCommentRequest, MaxSizeBatches);
-
-                Console.WriteLine("Filtering pull request comments...");
-                List<IssueComment> filteredComments = Filters.FilterComments(comments, memberUsernames);
-
-                return filteredComments;
-
-
-    YYYY-MM-DDTHH:MM:SSZ
+    TODO switched to pulls api since issues do not retrieve review comments as stated by authors
     """
-    dt = time.gmtime(community.data.start_date)
-    since = (
-        tr(dt.tm_year)
-        + "-"
-        + str(dt.tm_mon)
-        + "-"
-        + str(dt.tm_mday)
-        + "T"
-        + str(dt.tm_hour)
-        + ":"
-        + str(dt.tm_min)
-        + ":"
-        + str(dt.tm_sec)
-        + "Z"
+
+    comments = api_manager.get_prs_comments(
+        community.repo_owner, community.repo_name, community.data.start_date.isoformat()
     )
-    comments = api_manager.get_issue_comments(
-        community.repo_owner, community.repo_name, since
-    )
-    filtered_comments = filters.filter_pr_comments(comments)
+
+    filtered_comments = filters.filter_pr_comments(community, comments)
+
+    community.data.pr_comments = filtered_comments
 
 
-# TODO
 def map_prs_to_comments(community: community.Community):
-    pass
+    """
+    Given a list of pull requests for a repository, this method retrieves the pull request review comments
+    for each pull request and maps them in a dictionary. Filters all pull request comments by
+    non-committers, i.e., users that are not considered members.
+
+    """
+    pr_to_comments = {}
+    for pr in community.data.all_pull_requests:
+        pr_to_comments[str(pr["number"])] = []
+
+    for comment in community.data.pr_comments:
+        prs = []
+        split_url = comment["pull_request_url"].split("/")
+        comment_pr_num = split_url[len(split_url) - 1]
+        if comment_pr_num in pr_to_comments:
+            pr_to_comments[comment_pr_num].append(comment)
+    community.data.map_pr_to_comments = pr_to_comments
