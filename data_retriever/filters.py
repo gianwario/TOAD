@@ -58,9 +58,9 @@ def filter_prs(community: community.Community, prs: list):
     return filtered_prs
 
 
-def filter_pr_comments(community: community.Community, comments: list):
+def filter_comments(community: community.Community, comments: list):
     """
-    Filter out all non-pull-request issue-comments that are not within the time window, do not have an author,
+    Filter out all comments that are not within the time window, do not have an author,
     or are not considered current members (i.e., have not committed in the last 90 days).
     """
     filtered_comments = []
@@ -76,3 +76,27 @@ def filter_pr_comments(community: community.Community, comments: list):
         ):
             filtered_comments.append(comment)
     return filtered_comments
+
+
+def filter_first_last_commits(commits: list):
+    last_commit_datetime = datetime.strptime("1980-01-01", "%Y-%m-%d")
+    last_commit_hash = ""
+    first_commit_datetime = datetime.today()
+    first_commit_hash = ""
+
+    for commit in commits:
+        current_commit_date = datetime.strptime(
+            convert_date(commit.committed_date), "%Y-%m-%d"
+        )
+        if current_commit_date > last_commit_datetime:
+            last_commit_datetime = current_commit_date
+            last_commit_hash = commit.hexsha
+        if current_commit_date < first_commit_datetime:
+            first_commit_datetime = current_commit_date
+            first_commit_hash = commit.hexsha
+    return (
+        first_commit_datetime,
+        first_commit_hash,
+        last_commit_datetime,
+        last_commit_hash,
+    )

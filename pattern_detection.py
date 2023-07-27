@@ -6,6 +6,7 @@ from io_module import input_handler, repository_manager
 from data_retriever.data_retriever import (
     retrieve_data_and_check_validity,
     retrieve_structure_data,
+    retrieve_miscellaneous_data,
 )
 from console import console
 from community.data import Data
@@ -46,9 +47,17 @@ def main():
         console.print("[bold green]Repository is valid")
 
         retrieve_structure_data(community)
-        # dispersion_processor.compute_distances(community)
 
         community_structure_processor.compute_structure_data(community)
+        retrieve_miscellaneous_data(community)
+        """
+        TODO
+        if the community exhibits a structure (community_structure = true)
+            # dispersion_processor.compute_distances(community)
+            retrieve data for formality, cohesion, engagement, longevity
+            compute remaining characteristics
+            compute patterns
+        """
 
 
 if __name__ == "__main__":

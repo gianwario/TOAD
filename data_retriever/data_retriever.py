@@ -188,7 +188,7 @@ def retrieve_and_filter_pr_comments(community: community.Community):
         community.repo_owner, community.repo_name, community.data.start_date.isoformat()
     )
 
-    filtered_comments = filters.filter_pr_comments(community, comments)
+    filtered_comments = filters.filter_comments(community, comments)
 
     community.data.pr_comments = filtered_comments
 
@@ -211,3 +211,56 @@ def map_prs_to_comments(community: community.Community):
         if comment_pr_num in pr_to_comments:
             pr_to_comments[comment_pr_num].append(comment)
     community.data.map_pr_to_comments = pr_to_comments
+
+
+def retrieve_miscellaneous_data(community: community.Community):
+    retrieve_commits_details(community)
+    retrieve_active_users(community)
+    retrieve_watchers_and_stargazers(community)
+
+
+def retrieve_commits_details(community: community.Community):
+    commits = community.data.commits
+    modified_files_per_commit = {}
+    with Bar("Retrieving commits details...", max=len(commits)) as bar:
+        for commit in commits:
+            files = list(commit.stats.files.keys())
+            modified_files_per_commit[commit.hexsha] = files
+            bar.next()
+
+    community.data.modified_files_per_commit = modified_files_per_commit
+
+    (
+        first_commit_datetime,
+        first_commit_hash,
+        last_commit_datetime,
+        last_commit_hash,
+    ) = filters.filter_first_last_commits(commits)
+    community.data.first_commit_datetime = first_commit_datetime
+    community.data.first_commit_hash = first_commit_hash
+    community.data.last_commit_datetime = last_commit_datetime
+    community.data.last_commit_hash = last_commit_hash
+
+    comments = api_manager.get_commits_comments(
+        community.repo_owner, community.repo_name
+    )
+    community.data.commits_comments = filters.filter_comments(community, comments)
+
+
+def retrieve_active_users(community: community.Community):
+    # TODO
+    """
+    extract active users
+        users that made a commit in the last 30 days (all members had activities in the last 90 days, actives only in last 30)
+
+    """
+    pass
+
+
+def retrieve_watchers_and_stargazers(community: community.Community):
+    # TODO
+    """
+    extract watchers and stargazers
+        snapshot at retrieval, there is no way to retrieve them from a past time
+    """
+    pass

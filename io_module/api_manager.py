@@ -66,6 +66,13 @@ def get_prs_comments(owner: str, name: str, since: str):
     return response
 
 
+def get_commits_comments(owner: str, name: str, since: str):
+    response = paginate(
+        "https://api.github.com/repos/{}/{}/comments".format(owner, name)
+    )
+    return response
+
+
 def make_request(url: str):
     response = paginate(url)
     return response

@@ -11,8 +11,11 @@ def compute_structure_data(community: community.Community):
 
     repo_connections = compute_common_projects_connection(community, G)
     follow_connections = compute_follows_connection(community, G)
-    output_handler.print_graph(G)
-    pass
+    pr_connections = compute_pull_requests_connections(community, G)
+    # output_handler.print_graph(G)
+    if G.size() > 0:
+        # TODO the community has a structure (as authors stated)
+        pass
 
 
 def compute_common_projects_connection(community: community.Community, G: nx.Graph):
@@ -58,4 +61,40 @@ def compute_follows_connection(community: community.Community, G: nx.Graph):
                     )
                 else:
                     G.add_edge(member, other_member, weight=1)
+    return connections
+
+
+def compute_pull_requests_connections(community: community.Community, G: nx.Graph):
+    """
+    This method computes the connections between pull request authors and pull request reviewer/commenter
+    """
+    pr_to_comments = community.data.map_pr_to_comments
+    prs = community.data.all_pull_requests
+    connections = {}
+    for member in community.data.members_logins:
+        connections[member] = []
+    for pr in prs:
+        pr_author = pr["user"]["login"]
+        pr_num = str(pr["number"])
+        if (
+            pr_author is not None
+            and pr_author in community.data.members_logins
+            and pr_num in pr_to_comments
+        ):
+            for comment in pr_to_comments[pr_num]:
+                comment_author = comment["user"]["login"]
+                if (
+                    comment_author is not None
+                    and comment_author in community.data.members_logins
+                    and comment_author != pr_author
+                ):
+                    connections[pr_author].append(comment_author)
+                    if G.has_edge(pr_author, comment_author):
+                        G.add_edge(
+                            pr_author,
+                            comment_author,
+                            weight=G[pr_author][comment_author]["weight"] + 1,
+                        )
+                    else:
+                        G.add_edge(pr_author, comment_author, weight=1)
     return connections

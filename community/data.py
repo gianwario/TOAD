@@ -14,8 +14,8 @@ class Data:
     end_date: any = None
     first_commit_hash: str = None
     last_commit_hash: str = None
-    first_commit_datetime: str = None
-    last_commit_datetime: str = None
+    first_commit_datetime: any = None
+    last_commit_datetime: any = None
     members: list = None
     members_logins: list = None
     aliases: list = None
@@ -23,6 +23,8 @@ class Data:
     map_user_following: {} = None
     map_user_repositories: {} = None
     commits: list = None
+    commits_comments: list = None
+    modified_files_per_commit: {} = None
     milestones: list = None
     coordinates: list = None
     distances: list = None
@@ -33,9 +35,7 @@ class Data:
     all_pull_requests: list = None
     pr_comments: list = None
     map_pr_to_comments: {} = None
-    """
-        public List<GitHubCommit> CommitsWithinTimeWindow { get; set; }
-        public IReadOnlyList<CommitComment> CommitComments { get; set; }
+    """ 
         
         // Regarding the difference between Watchers and Stargazers:
         // https://developer.github.com/changes/2012-09-05-watcher-api/
@@ -44,6 +44,8 @@ class Data:
         // Stargazers are users starring the repository. Repository starring is a feature that lets users bookmark
         // repositories. Stars are shown next to repositories to show an approximate level of interest. Stars have no
         // effect on notifications or the activity feed.
+
+
         public HashSet<string> ActiveMembers { get; set; }
         public HashSet<string> Watchers { get; set; }
         public HashSet<string> Stargazers { get; set; }
