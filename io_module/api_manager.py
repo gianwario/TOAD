@@ -66,9 +66,23 @@ def get_prs_comments(owner: str, name: str, since: str):
     return response
 
 
-def get_commits_comments(owner: str, name: str, since: str):
+def get_commits_comments(owner: str, name: str):
     response = paginate(
         "https://api.github.com/repos/{}/{}/comments".format(owner, name)
+    )
+    return response
+
+
+def get_watchers(owner: str, name: str):
+    response = paginate(
+        "https://api.github.com/repos/{}/{}/subscribers".format(owner, name)
+    )
+    return response
+
+
+def get_stargazers(owner: str, name: str):
+    response = paginate(
+        "https://api.github.com/repos/{}/{}/stargazers".format(owner, name)
     )
     return response
 

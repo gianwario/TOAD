@@ -1,6 +1,6 @@
 from console import console
 import time
-from datetime import datetime
+from datetime import datetime, date, timedelta
 import git
 from community import community
 from io_module import api_manager
@@ -8,7 +8,7 @@ from data_retriever import filters
 from alias_handler import alias_handler
 from data_retriever import geographical_retriever
 from progress.bar import Bar
-from utils import check_githubdate_within_timewindow
+from utils import check_githubdate_within_timewindow, convert_date
 
 
 def retrieve_data_and_check_validity(community: community.Community):
@@ -50,7 +50,6 @@ def retrieve_data_and_check_validity(community: community.Community):
     console.log("Retrieving geographical information")
     geographical_retriever.retrieve_geo_information(community)
     geographical_retriever.retrieve_country_name(community)
-
     # TODO how many geo info do we need to consider the repository valid?
     return True
 
@@ -248,19 +247,24 @@ def retrieve_commits_details(community: community.Community):
 
 
 def retrieve_active_users(community: community.Community):
-    # TODO
-    """
-    extract active users
-        users that made a commit in the last 30 days (all members had activities in the last 90 days, actives only in last 30)
-
-    """
-    pass
+    active_users = []
+    date_30 = community.data.end_date - timedelta(days=30)
+    for commit in community.data.commits:
+        if (commit.author.email not in active_users) and (
+            date_30
+            <= datetime.strptime(convert_date(commit.committed_date), "%Y-%m-%d")
+            <= community.data.end_date
+        ):
+            active_users.append(commit.author.email)
+    community.data.active_members = active_users
 
 
 def retrieve_watchers_and_stargazers(community: community.Community):
-    # TODO
-    """
-    extract watchers and stargazers
-        snapshot at retrieval, there is no way to retrieve them from a past time
-    """
+    community.data.watchers = api_manager.get_watchers(
+        community.repo_owner, community.repo_name
+    )
+    community.data.stargazers = api_manager.get_stargazers(
+        community.repo_owner, community.repo_name
+    )
+
     pass

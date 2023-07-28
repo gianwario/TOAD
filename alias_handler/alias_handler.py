@@ -138,8 +138,13 @@ def replace_all_aliases(commits: list[git.Commit], aliases):
     for commit in commits:
         copy = commit
         author = extract_author_id(commit.author)
+        committer = extract_author_id(commit.committer)
         if author in transposed:
             copy.author.email = transposed[author]
+
+        if committer in transposed:
+            copy.committer.email = transposed[author]
+
         updated_commits.append(copy)
 
     return updated_commits

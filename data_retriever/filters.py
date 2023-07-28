@@ -19,7 +19,7 @@ def filter_commits(community: community.Community):
     :param community: the community
     """
     filtered_commits = []
-    for commit in community.data.commits:
+    for commit in community.data.all_commits:
         if check_date_within_timewindow(community, commit.committed_date):
             filtered_commits.append(commit)
 

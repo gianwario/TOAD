@@ -11,7 +11,12 @@ from data_retriever.data_retriever import (
 from console import console
 from community.data import Data
 from community.metrics import Metrics
-from data_processor import dispersion_processor, community_structure_processor
+from data_processor import (
+    dispersion_processor,
+    structure_processor,
+    formality_processor,
+    engagement_processor,
+)
 
 
 def main():
@@ -39,17 +44,12 @@ def main():
             community.repo_owner, community.repo_name
         )
 
-        community.data.commits = list(repo.iter_commits())
+        community.data.all_commits = list(repo.iter_commits())
 
         if not retrieve_data_and_check_validity(community):
             console.print("[bold red]Invalid repository")
             raise SystemExit(0)
         console.print("[bold green]Repository is valid")
-
-        retrieve_structure_data(community)
-
-        community_structure_processor.compute_structure_data(community)
-        retrieve_miscellaneous_data(community)
         """
         TODO
         if the community exhibits a structure (community_structure = true)
@@ -58,6 +58,12 @@ def main():
             compute remaining characteristics
             compute patterns
         """
+        retrieve_structure_data(community)
+
+        # structure_processor.compute_structure_data(community)
+        retrieve_miscellaneous_data(community)
+        # formality_processor.compute_formality_data(community)
+        engagement_processor.compute_engagement_data(community)
 
 
 if __name__ == "__main__":
