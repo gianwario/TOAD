@@ -9,13 +9,20 @@ def compute_structure_data(community: community.Community):
     G = nx.Graph()
     G.add_nodes_from(community.data.members_logins)
 
-    repo_connections = compute_common_projects_connection(community, G)
-    follow_connections = compute_follows_connection(community, G)
-    pr_connections = compute_pull_requests_connections(community, G)
-    # output_handler.print_graph(G)
+    community.metrics.structure["repo_connections"] = (
+        len(compute_common_projects_connection(community, G)) > 0
+    )
+    community.metrics.structure["follow_connections"] = (
+        len(compute_follows_connection(community, G)) > 0
+    )
+    community.metrics.structure["pr_connections"] = (
+        len(compute_pull_requests_connections(community, G)) > 0
+    )
+    output_handler.print_graph(G, community)
     if G.size() > 0:
-        # TODO the community has a structure (as authors stated)
-        pass
+        return True
+    else:
+        return False
 
 
 def compute_common_projects_connection(community: community.Community, G: nx.Graph):

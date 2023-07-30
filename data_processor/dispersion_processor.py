@@ -1,7 +1,5 @@
-from community import community
+from community import community, metrics
 from geodispersion import globe_data_reader
-
-
 import itertools
 from math import radians, degrees, sin, cos, asin, acos, sqrt
 import statistics
@@ -13,9 +11,9 @@ def compute_distances(community: community.Community):
     )
     community.data.distances = compute_geographical_distances(community)
     geographical_variance = statistics.variance(community.data.distances)
-    community.data.geo_distance_variance = geographical_variance
+    community.metrics.dispersion["geo_distance_variance"] = geographical_variance
     cultural_variance = compute_cultural_distance(community, globe)
-    community.data.cultural_distance_variance = cultural_variance
+    community.metrics.dispersion["cultural_distance_variance"] = cultural_variance
 
 
 def compute_geographical_distances(community: community.Community):

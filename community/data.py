@@ -30,8 +30,6 @@ class Data:
     coordinates: list = None
     distances: list = None
     countries: list = None
-    geo_distance_variance: float = None
-    cultural_distance_variance: float = None
     merged_pull_requests: list = None
     all_pull_requests: list = None
     pr_comments: list = None
@@ -41,7 +39,3 @@ class Data:
     stargazers: {} = None
     contributors: int = None
     collaborators: int = None
-    """ 
-        public int Contributors { get; set; }
-        public int Collaborators { get; set; }
-    """

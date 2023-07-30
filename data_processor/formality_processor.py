@@ -5,9 +5,10 @@ from data_retriever import filters
 
 # TODO
 def compute_formality_data(community: community.Community):
-    mmt = mean_membership_type(community)
-    milestones = len(community.data.milestones)
-    lifetime = abs(lifetime_in_days(community))
+    community.metrics.formality["m_membership_type"] = mean_membership_type(community)
+    # community.metrics.formality["milestones"] = len(community.data.milestones)
+    community.metrics.formality["milestones"] = 1
+    community.metrics.formality["lifetime"] = abs(lifetime_in_days(community))
 
 
 def mean_membership_type(community: community.Community):

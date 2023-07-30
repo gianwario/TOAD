@@ -24,10 +24,29 @@ def get_input_files():
         raise SystemExit(0)
     # output_path = console.input('[bold green]Please enter the filename of the output file. Please do not include any extension, as it will be a csv file\n')
     output_path = "output"
-    open(os.path.join(output_dir, output_path + ".csv"), "w")
-    if not os.path.isfile(output_path + ".csv"):
-        console.print("[bold red]There was an error creating the output file")
-        raise SystemExit(0)
+    with open(os.path.join(output_dir, output_path + ".csv"), "w") as file:
+        if not os.path.isfile(output_path + ".csv"):
+            console.print("[bold red]There was an error creating the output file")
+            raise SystemExit(0)
+        dw = csv.DictWriter(
+            file,
+            delimiter=",",
+            fieldnames=[
+                "owner",
+                "name",
+                "start_date",
+                "end_date",
+                "SN",
+                "NoP",
+                "IN",
+                "FN",
+                "CoP",
+                "PT",
+                "FG",
+                "IC",
+            ],
+        )
+        dw.writeheader()
     # end_date = console.input('[bold green]Enter end date of time window (YYYY-MM-DD) in UTC\n')
     end_date = "2023-02-01"
     if not validate_date(end_date):
@@ -35,7 +54,12 @@ def get_input_files():
         raise SystemExit(0)
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
     start_date = end_date - timedelta(days=90)
-    return input_path, output_path, start_date, end_date
+    return (
+        input_path,
+        os.path.join(output_dir, output_path + ".csv"),
+        start_date,
+        end_date,
+    )
 
 
 def get_input_communities(path: str):

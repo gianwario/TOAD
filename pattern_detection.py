@@ -2,7 +2,8 @@ import requests
 import os
 import json
 from auth import oauth2
-from io_module import input_handler, repository_manager
+from compute_community_pattern import compute_community_patterns
+from io_module import input_handler, repository_manager, output_handler
 from data_retriever.data_retriever import (
     retrieve_data_and_check_validity,
     retrieve_structure_data,
@@ -16,6 +17,7 @@ from data_processor import (
     structure_processor,
     formality_processor,
     engagement_processor,
+    longevity_processor,
 )
 
 
@@ -38,6 +40,11 @@ def main():
         community.add_data(data)
 
         metrics = Metrics()
+        metrics.dispersion = {}
+        metrics.structure = {}
+        metrics.engagement = {}
+        metrics.formality = {}
+        metrics.longevity = 0
         community.add_metrics(metrics)
 
         repo = repository_manager.download_repo(
@@ -50,20 +57,20 @@ def main():
             console.print("[bold red]Invalid repository")
             raise SystemExit(0)
         console.print("[bold green]Repository is valid")
-        """
-        TODO
-        if the community exhibits a structure (community_structure = true)
-            # dispersion_processor.compute_distances(community)
-            retrieve data for formality, cohesion, engagement, longevity
-            compute remaining characteristics
-            compute patterns
-        """
-        retrieve_structure_data(community)
 
-        # structure_processor.compute_structure_data(community)
-        retrieve_miscellaneous_data(community)
-        # formality_processor.compute_formality_data(community)
-        engagement_processor.compute_engagement_data(community)
+        retrieve_structure_data(community)
+        structure = structure_processor.compute_structure_data(community)
+        if structure:
+            retrieve_miscellaneous_data(community)
+            dispersion_processor.compute_distances(community)
+            formality_processor.compute_formality_data(community)
+            engagement_processor.compute_engagement_data(community)
+            longevity_processor.compute_longevity_data(community)
+
+        console.print(community.metrics)
+        community_patterns = compute_community_patterns(community.metrics)
+        print(community_patterns)
+        output_handler.save_results(output_path, community, community_patterns)
 
 
 if __name__ == "__main__":
