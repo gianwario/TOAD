@@ -48,7 +48,8 @@ def get_input_files():
         )
         dw.writeheader()
     # end_date = console.input('[bold green]Enter end date of time window (YYYY-MM-DD) in UTC\n')
-    end_date = "2023-02-01"
+    end_date = "2017-05-01"
+    # end_date = "2023-02-01"
     if not validate_date(end_date):
         console.print("[bold red]Invalid date")
         raise SystemExit(0)

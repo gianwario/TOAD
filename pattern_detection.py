@@ -55,22 +55,32 @@ def main():
 
         if not retrieve_data_and_check_validity(community):
             console.print("[bold red]Invalid repository")
-            raise SystemExit(0)
-        console.print("[bold green]Repository is valid")
+        else:
+            console.print("[bold green]Repository is valid")
 
-        retrieve_structure_data(community)
-        structure = structure_processor.compute_structure_data(community)
-        if structure:
-            retrieve_miscellaneous_data(community)
-            dispersion_processor.compute_distances(community)
-            formality_processor.compute_formality_data(community)
-            engagement_processor.compute_engagement_data(community)
-            longevity_processor.compute_longevity_data(community)
+            console.log("Retrieving data to compute community structure")
+            retrieve_structure_data(community)
+            console.log("[bold yellow] Computing COMMUNITY STRUCTURE")
+            structure = structure_processor.compute_structure_data(community)
+            if structure:
+                console.log(
+                    "Retrieving data to compute community geodispersion, formality, engagement and longevity"
+                )
+                retrieve_miscellaneous_data(community)
+                console.log("[bold yellow] Computing COMMUNITY GEODISPERSION")
+                dispersion_processor.compute_distances(community)
+                console.log("[bold yellow] Computing COMMUNITY FORMALITY")
+                formality_processor.compute_formality_data(community)
+                console.log("[bold yellow] Computing COMMUNITY ENGAGEMENT")
+                engagement_processor.compute_engagement_data(community)
+                console.log("[bold yellow] Computing COMMUNITY LONGEVITY")
+                longevity_processor.compute_longevity_data(community)
 
-        console.print(community.metrics)
-        community_patterns = compute_community_patterns(community.metrics)
-        print(community_patterns)
-        output_handler.save_results(output_path, community, community_patterns)
+            console.print(community.metrics)
+            console.log("[bold purple] Computing COMMUNITY PATTERNS")
+            community_patterns = compute_community_patterns(community.metrics)
+            console.print(community_patterns)
+            output_handler.save_results(output_path, community, community_patterns)
 
 
 if __name__ == "__main__":

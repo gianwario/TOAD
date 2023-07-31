@@ -6,7 +6,9 @@ from utils import convert_date
 
 
 def compute_engagement_data(community: community.Community):
-    """ """
+    """
+    This method computes the values needed for the community engagement metric.
+    """
     community.metrics.engagement["m_comment_per_pr"] = median_comments_per_pr(community)
     community.metrics.engagement[
         "mm_comment_dist"
@@ -116,9 +118,12 @@ def median_monthly_commit_distribution(community: community.Community):
     for member in community.data.members_logins:
         commit_dates_per_member[member] = []
     for commit in commits:
-        commit_dates_per_member[commit.author.email].append(
-            datetime.datetime.strptime(convert_date(commit.committed_date), "%Y-%m-%d")
-        )
+        if commit.author.email in commit_dates_per_member.keys():
+            commit_dates_per_member[commit.author.email].append(
+                datetime.datetime.strptime(
+                    convert_date(commit.committed_date), "%Y-%m-%d"
+                )
+            )
     m_commitpermonth_permember = []
 
     for member in community.data.members_logins:
@@ -138,7 +143,6 @@ def median_monthly_commit_distribution(community: community.Community):
 
 def median_monthly_filecollab_distribution(community: community.Community):
     files_changed, monthly_files_changed = extract_committer_per_file(community)
-    # TODO: file name changed check?????
     count_committer_perfile_permonth = {}
     for i in range(3):
         monthly_committers_per_file = monthly_files_changed[i]
@@ -175,10 +179,11 @@ def extract_committer_per_file(community: community.Community):
                     )
                     if date is not None:
                         month = check_month(community, date)
-                        if f in monthly_files_changed[month].keys():
-                            monthly_files_changed[month][f].append(lc.author.email)
-                        else:
-                            monthly_files_changed[month][f] = [lc.author.email]
+                        if month is not None and month in  monthly_files_changed.keys():
+                            if f in monthly_files_changed[month].keys():
+                                monthly_files_changed[month][f].append(lc.author.email)
+                            else:
+                                monthly_files_changed[month][f] = [lc.author.email]
     return files_changed, monthly_files_changed
 
 

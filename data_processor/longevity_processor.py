@@ -5,6 +5,9 @@ from console import console
 
 
 def compute_longevity_data(community: community.Community):
+    """
+    This method computes the values needed for the community longevity metric.
+    """
     community.metrics.longevity = mean_committer_longevity(community)
 
 

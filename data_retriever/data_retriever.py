@@ -25,6 +25,7 @@ def retrieve_data_and_check_validity(community: community.Community):
     """
     console.log("Checking commits")
     filters.filter_commits(community)
+    console.print("Total number of commits: " + str(len(community.data.all_commits)))
     console.print(
         "Valid commits between "
         + str(community.data.start_date)
@@ -46,11 +47,22 @@ def retrieve_data_and_check_validity(community: community.Community):
     milestones = filters.filter_milestones(community, milestones)
     if len(milestones) < 1:
         console.print("[bold red]There must be at least 1 closed milestone")
-        # return False
+        return False
+    community.data.milestones = milestones
     console.log("Retrieving geographical information")
+
     geographical_retriever.retrieve_geo_information(community)
     geographical_retriever.retrieve_country_name(community)
-    # TODO how many geo info do we need to consider the repository valid?
+
+    if (
+        community.data.countries is None
+        or len(community.data.countries) == 0
+        or len(community.data.coordinates) == 0
+    ):
+        console.print(
+            "[bold red]Geographical information is not enough to compute geodispersion"
+        )
+        return False
     return True
 
 
@@ -87,14 +99,15 @@ def retrieve_member_data(community: community.Community):
             bar.next()
 
     for member in members:
-        if member["type"] == "User":
-            users.append(member)
-        elif member["type"] == "Bot":
-            bots.append(member)
-        elif member["type"] == "Organization":
-            organizations.append(member)
-        else:
-            pass
+        if "type" in member.keys():
+            if member["type"] == "User":
+                users.append(member)
+            elif member["type"] == "Bot":
+                bots.append(member)
+            elif member["type"] == "Organization":
+                organizations.append(member)
+            else:
+                pass
 
     console.print("[blue]" + str(len(users)) + " users were classified as a user.")
     console.print("[blue]" + str(len(bots)) + " users were classified as a bot.")
@@ -118,15 +131,17 @@ def retrieve_structure_data(community: community.Community):
     map_user_followers = {}
     map_user_following = {}
     map_user_repositories = {}
-    for member in community.data.members:
-        (
-            followers_login,
-            following_login,
-            repo_names,
-        ) = retrieve_data_per_member(member)
-        map_user_followers[member["login"]] = followers_login
-        map_user_following[member["login"]] = following_login
-        map_user_repositories[member["login"]] = repo_names
+    with Bar("Filtering members data", max=len(community.data.members)) as bar:
+        for member in community.data.members:
+            (
+                followers_login,
+                following_login,
+                repo_names,
+            ) = retrieve_data_per_member(member)
+            map_user_followers[member["login"]] = followers_login
+            map_user_following[member["login"]] = following_login
+            map_user_repositories[member["login"]] = repo_names
+            bar.next()
     community.data.map_user_followers = map_user_followers
     community.data.map_user_following = map_user_following
     community.data.map_user_repositories = map_user_repositories
@@ -135,19 +150,21 @@ def retrieve_structure_data(community: community.Community):
     community.data.all_pull_requests = filtered_prs
     # for each pull request that has been merged, retrieve detailed data
     merged_pr_detailed = []
-    for pr in filtered_prs:
-        if pr["merged_at"] is not None:
-            merged_pr_detailed.append(
-                api_manager.get_pr_details(
-                    community.repo_owner, community.repo_name, pr["number"]
+    with Bar("Retrieving details for pull requests", max=len(filtered_prs)) as bar:
+        for pr in filtered_prs:
+            if pr["merged_at"] is not None:
+                merged_pr_detailed.append(
+                    api_manager.get_pr_details(
+                        community.repo_owner, community.repo_name, pr["number"]
+                    )
                 )
-            )
+            bar.next()
     community.data.merged_pull_requests = merged_pr_detailed
     # retrieve pull request comments and map them to pull requests gatghered
+
+    console.log("Retrieving and mapping comments to pull requests")
     retrieve_and_filter_pr_comments(community)
     map_prs_to_comments(community)
-
-    pass
 
 
 def retrieve_data_per_member(member):
@@ -174,15 +191,12 @@ def retrieve_data_per_member(member):
 
 
 def retrieve_and_filter_pull_requests(community: community.Community):
+    console.log("Retrieving pull requests")
     prs = api_manager.get_pull_requests(community.repo_owner, community.repo_name)
     return filters.filter_prs(community, prs)
 
 
 def retrieve_and_filter_pr_comments(community: community.Community):
-    """
-    TODO switched to pulls api since issues do not retrieve review comments as stated by authors
-    """
-
     comments = api_manager.get_prs_comments(
         community.repo_owner, community.repo_name, community.data.start_date.isoformat()
     )
@@ -214,7 +228,9 @@ def map_prs_to_comments(community: community.Community):
 
 def retrieve_miscellaneous_data(community: community.Community):
     retrieve_commits_details(community)
+    console.log("Retrieving active users")
     retrieve_active_users(community)
+    console.log("Retrieving watchers and stargazers")
     retrieve_watchers_and_stargazers(community)
 
 
@@ -228,7 +244,7 @@ def retrieve_commits_details(community: community.Community):
             bar.next()
 
     community.data.modified_files_per_commit = modified_files_per_commit
-
+    console.log("Retrieving first and last commit details")
     (
         first_commit_datetime,
         first_commit_hash,
@@ -239,7 +255,7 @@ def retrieve_commits_details(community: community.Community):
     community.data.first_commit_hash = first_commit_hash
     community.data.last_commit_datetime = last_commit_datetime
     community.data.last_commit_hash = last_commit_hash
-
+    console.log("Retrieving commit comments")
     comments = api_manager.get_commits_comments(
         community.repo_owner, community.repo_name
     )

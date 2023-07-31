@@ -17,7 +17,7 @@ This module contains functions to access the GitHub APIs
 
 def get_milestones(owner: str, name: str):
     response = paginate(
-        "https://api.github.com/repos/{0}/{1}/milestones?per_page=100".format(
+        "https://api.github.com/repos/{0}/{1}/milestones?state=closed&per_page=100".format(
             owner, name
         )
     )
@@ -25,20 +25,28 @@ def get_milestones(owner: str, name: str):
 
 
 def get_user_data_from_login(login: str):
-    response = requests.get(
-        "https://api.github.com/users/" + login, auth=("YOSHI3", GIT_PAT)
-    )
-    resp = json.loads(response.content)
-    return resp
+    try:
+        response = requests.get(
+            "https://api.github.com/users/" + login, auth=("YOSHI3", GIT_PAT)
+        )
+        resp = json.loads(response.content)
+        return resp
+    except:
+        pass
+    return None
 
 
 def get_commit_by_sha(owner: str, name: str, sha: str):
-    response = requests.get(
-        "https://api.github.com/repos/{}/{}/commits/{}".format(owner, name, sha),
-        auth=("YOSHI3", GIT_PAT),
-    )
-    resp = json.loads(response.content)
-    return resp
+    try:
+        response = requests.get(
+            "https://api.github.com/repos/{}/{}/commits/{}".format(owner, name, sha),
+            auth=("YOSHI3", GIT_PAT),
+        )
+        resp = json.loads(response.content)
+        return resp
+    except:
+        pass
+    return None
 
 
 def get_pull_requests(owner: str, name: str):
@@ -49,12 +57,18 @@ def get_pull_requests(owner: str, name: str):
 
 
 def get_pr_details(owner: str, name: str, pr_number: str):
-    response = requests.get(
-        "https://api.github.com/repos/{}/{}/pulls/{}".format(owner, name, pr_number),
-        auth=("YOSHI3", GIT_PAT),
-    )
-    resp = json.loads(response.content)
-    return resp
+    try:
+        response = requests.get(
+            "https://api.github.com/repos/{}/{}/pulls/{}".format(
+                owner, name, pr_number
+            ),
+            auth=("YOSHI3", GIT_PAT),
+        )
+        resp = json.loads(response.content)
+        return resp
+    except:
+        pass
+    return None
 
 
 def get_prs_comments(owner: str, name: str, since: str):
@@ -96,16 +110,19 @@ def paginate(url):
     remaining_pages = True
     data = []
     while remaining_pages:
-        response = requests.get(
-            url,
-            params={"per_page": 100},
-            auth=("YOSHI3", GIT_PAT),
-        )
+        try:
+            response = requests.get(
+                url,
+                params={"per_page": 100},
+                auth=("YOSHI3", GIT_PAT),
+            )
 
-        for el in json.loads(response.content):
-            data.append(el)
-        remaining_pages = "next" in response.links
+            for el in json.loads(response.content):
+                data.append(el)
+            remaining_pages = "next" in response.links
 
-        if remaining_pages:
-            url = response.links["next"]["url"]
+            if remaining_pages:
+                url = response.links["next"]["url"]
+        except:
+            continue
     return data

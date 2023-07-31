@@ -2,6 +2,8 @@ import git
 import os
 from console import console
 
+from strsimpy.metric_lcs import MetricLCS
+import re
 from io_module import api_manager
 from dotenv import load_dotenv
 from community import community
@@ -103,7 +105,6 @@ def get_commits_information(community: community.Community):
     # using the GitHub API, we try to retrieve the LOGIN of the author by querying the commit informations
     commits_login = dict()
     commits_without_login = []
-
     with Bar("Computing aliases...", max=len(commits_sha)) as bar:
         for email in commits_sha:
             sha = commits_sha[email]
@@ -113,7 +114,11 @@ def get_commits_information(community: community.Community):
             if not "author" in commit.keys():
                 continue
 
-            if not commit["author"] is None and not commit["author"]["login"] is None:
+            if (
+                not commit["author"] is None
+                and "login" in commit["author"].keys()
+                and not commit["author"]["login"] is None
+            ):
                 commits_login[email] = commit["author"]["login"]
             else:
                 commits_without_login.append(email)
@@ -142,7 +147,7 @@ def replace_all_aliases(commits: list[git.Commit], aliases):
         if author in transposed:
             copy.author.email = transposed[author]
 
-        if committer in transposed:
+        if committer in transposed and author in transposed.keys():
             copy.committer.email = transposed[author]
 
         updated_commits.append(copy)
@@ -186,4 +191,4 @@ def check_similarity(authorA: str, authorB: str, max_distance: float):
 
     distance = lcs.distance(localPartAMatches[0], localPartBMatches[0])
 
-    return distance <= max_distance
+    return distance <= float(max_distance)

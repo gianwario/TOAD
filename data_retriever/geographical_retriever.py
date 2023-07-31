@@ -3,6 +3,7 @@ from console import console
 import pandas as pd
 from community import community
 from geodispersion import globe_data_reader
+import time
 
 
 def retrieve_geo_information(community: community.Community):
@@ -14,11 +15,15 @@ def retrieve_geo_information(community: community.Community):
             result = geolocator.geocode(
                 member["location"], addressdetails=True, language="en"
             )
-            member["location"] = result.raw
-            member_lat = float(member["location"]["lat"])
-            member_lon = float(member["location"]["lon"])
-            coord = {"lon": member_lon, "lat": member_lat}
-            coordinates.append(coord)
+            time.sleep(1)
+            if result is not None and result.raw is not None:
+                member["location"] = result.raw
+                member_lat = float(member["location"]["lat"])
+                member_lon = float(member["location"]["lon"])
+                coord = {"lon": member_lon, "lat": member_lat}
+                coordinates.append(coord)
+            else:
+                member["location"] = None
         updated_members.append(member)
     community.data.members = updated_members
     community.data.coordinates = coordinates
@@ -38,6 +43,8 @@ def retrieve_country_name(community: community.Community):
         for country in globe_countries:
             if (
                 member["location"] is not None
+                and member["location"]["address"] is not None
+                and member["location"]["address"]["country"] is not None
                 and member["location"]["address"]["country"] in country
             ):
                 countries.append(country)

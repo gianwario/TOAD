@@ -3,11 +3,12 @@ from console import console
 from data_retriever import filters
 
 
-# TODO
 def compute_formality_data(community: community.Community):
+    """
+    This method computes the values needed for the community formality metric.
+    """
     community.metrics.formality["m_membership_type"] = mean_membership_type(community)
-    # community.metrics.formality["milestones"] = len(community.data.milestones)
-    community.metrics.formality["milestones"] = 1
+    community.metrics.formality["milestones"] = len(community.data.milestones)
     community.metrics.formality["lifetime"] = abs(lifetime_in_days(community))
 
 
@@ -27,12 +28,13 @@ def mean_membership_type(community: community.Community):
 
     contributors = set(authors).difference(set(committers))
     collaborators = set([item for item in committers if "github" not in item])
-
+    """
     if (len(contributors) + len(collaborators)) != len(community.data.members_logins):
         console.print(
             "[bold red]Found fewer or more contributors and collaborators than members"
         )
         raise SystemExit(0)
+    """
     community.data.contributors = len(contributors)
     community.data.collaborators = len(collaborators)
 

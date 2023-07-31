@@ -5,8 +5,7 @@ from community import metrics
 class Community:
     """
     This class stores information of a Community such as the repository owner, repository name,
-    Datas needed to perform computations, computed Metrics and Communiy Pattern detected
-
+    Datas needed to perform computations and computed Metrics to detect Communityu Patterns
     """
 
     def __init__(self, repo_owner, repo_name):

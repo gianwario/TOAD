@@ -6,6 +6,10 @@ from utils import intersection
 
 
 def compute_structure_data(community: community.Community):
+    """
+    This method computes the values needed for the community structure metric.
+    Also, it creates and saves a weighted graph representing the community.
+    """
     G = nx.Graph()
     G.add_nodes_from(community.data.members_logins)
 

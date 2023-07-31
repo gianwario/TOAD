@@ -4,12 +4,10 @@ from utils import (
     check_githubdate_within_timewindow,
 )
 from datetime import datetime
-from strsimpy.metric_lcs import MetricLCS
-import re
 from community import community
-import git
 from io_module import api_manager
 from console import console
+from progress.bar import Bar
 
 
 def filter_commits(community: community.Community):
@@ -20,8 +18,13 @@ def filter_commits(community: community.Community):
     """
     filtered_commits = []
     for commit in community.data.all_commits:
-        if check_date_within_timewindow(community, commit.committed_date):
-            filtered_commits.append(commit)
+        try:
+            if check_date_within_timewindow(
+                community, commit.committed_date
+            ) or check_date_within_timewindow(community, commit.authored_date):
+                filtered_commits.append(commit)
+        except:
+            continue
 
     community.data.commits = filtered_commits
 
@@ -30,13 +33,15 @@ def filter_milestones(community: community.Community, milestones: list):
     filtered_milestones = []
 
     for milestone in milestones:
-        if (
-            milestone["state"] == "closed"
-            and milestone["closed_at"] != ""
-            and datetime.strptime(milestone["closed_at"], "%Y-%m-%dT%H:%M:%SZ")
-            <= community.data.end_date
-        ):
-            filtered_milestones.append(milestone)
+        try:
+            if milestone["closed_at"] is not None and (
+                community.data.start_date
+                <= datetime.strptime(milestone["closed_at"], "%Y-%m-%dT%H:%M:%SZ")
+                <= community.data.end_date
+            ):
+                filtered_milestones.append(milestone)
+        except:
+            continue
     return filtered_milestones
 
 
@@ -44,17 +49,23 @@ def filter_prs(community: community.Community, prs: list):
     filtered_prs = []
 
     for pr in prs:
-        if (
-            (
-                check_githubdate_within_timewindow(community, pr["created_at"])
-                or check_githubdate_within_timewindow(community, pr["updated_at"])
-                or check_githubdate_within_timewindow(community, pr["closed_at"])
-            )
-            and pr["user"] is not None
-            and pr["user"]["login"] is not None
-            and pr["user"]["login"] in community.data.members_logins
-        ):
-            filtered_prs.append(pr)
+        try:
+            if (
+                pr["closed_at"] is not None
+                and pr["created_at"] is not None
+                and pr["updated_at"] is not None
+                and (
+                    check_githubdate_within_timewindow(community, pr["created_at"])
+                    or check_githubdate_within_timewindow(community, pr["updated_at"])
+                    or check_githubdate_within_timewindow(community, pr["closed_at"])
+                )
+                and pr["user"] is not None
+                and pr["user"]["login"] is not None
+                and pr["user"]["login"] in community.data.members_logins
+            ):
+                filtered_prs.append(pr)
+        except:
+            continue
     return filtered_prs
 
 
@@ -64,17 +75,28 @@ def filter_comments(community: community.Community, comments: list):
     or are not considered current members (i.e., have not committed in the last 90 days).
     """
     filtered_comments = []
-    for comment in comments:
-        if (
-            (
-                check_githubdate_within_timewindow(community, comment["created_at"])
-                or check_githubdate_within_timewindow(community, comment["updated_at"])
-            )
-            and comment["user"] is not None
-            and comment["user"]["login"] is not None
-            and comment["user"]["login"] in community.data.members_logins
-        ):
-            filtered_comments.append(comment)
+    with Bar("Filtering comments", max=len(comments)) as bar:
+        for comment in comments:
+            try:
+                if (
+                    comment["created_at"] is not None
+                    and comment["updated_at"] is not None
+                    and (
+                        check_githubdate_within_timewindow(
+                            community, comment["created_at"]
+                        )
+                        or check_githubdate_within_timewindow(
+                            community, comment["updated_at"]
+                        )
+                    )
+                    and comment["user"] is not None
+                    and comment["user"]["login"] is not None
+                    and comment["user"]["login"] in community.data.members_logins
+                ):
+                    filtered_comments.append(comment)
+            except:
+                continue
+            bar.next()
     return filtered_comments
 
 

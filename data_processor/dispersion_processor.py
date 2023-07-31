@@ -6,6 +6,10 @@ import statistics
 
 
 def compute_distances(community: community.Community):
+    """
+    This method computes the values needed for the community geodispersion metric (i.e. geographical variance
+    and cultural variance).
+    """
     globe = globe_data_reader.read_data(
         "geodispersion\GLOBE-Phase-2-Aggregated-Societal-Culture-Data.xls"
     )
@@ -17,6 +21,9 @@ def compute_distances(community: community.Community):
 
 
 def compute_geographical_distances(community: community.Community):
+    """
+    This method computes the distance in kilometers between each pair of coordinates stored in the community
+    """
     distances = []
     coords = community.data.coordinates
     for c1 in coords:
@@ -33,6 +40,15 @@ def compute_geographical_distances(community: community.Community):
 
 
 def compute_cultural_distance(community: community.Community, globe):
+    """_summary_
+    This method computes the cultural variance of the community using
+    the Globe indexes.
+
+    Wolf, Thom (2006) "Culture, Leadership, and Organizations: The GLOBE Study of 62 Societies  /
+    House, R. J., Hanges, P.J., & Javidan, M., Eds.," Journal of Applied Christian Leadership: Vol. 1: No. 1,
+    55-71.
+    Available at: https://digitalcommons.andrews.edu/jacl/vol1/iss1/6
+    """
     # compute the variance for all of the globe indexes
     countries = community.data.countries
 
@@ -63,8 +79,7 @@ def compute_cultural_distance(community: community.Community, globe):
                     row["Collectivism II Societal Practices (In-group Collectivism)"]
                 )
                 list_GESP.append(row["Gender Egalitarianism Societal Practices"])
-                # list_ASP.append(row["Assertiveness Societal Practices"])
-    # TODO check Assertiveness Societal Practices as it gives an error
+                list_ASP.append(row["Assertiveness Societal Practices"])
     variances = [
         statistics.variance(list_UASP),
         statistics.variance(list_FOSP),
@@ -73,7 +88,7 @@ def compute_cultural_distance(community: community.Community, globe):
         statistics.variance(list_HOSP),
         statistics.variance(list_POSP),
         statistics.variance(list_C2SP),
-        # statistics.variance(list_ASP),
+        statistics.variance(list_ASP),
     ]
     # determine the average of the variances to obtain the variance of cultural distance
     average_distance_variance = sum(variances) / len(variances)

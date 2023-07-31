@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict, field
 
 
 @dataclass
@@ -22,6 +22,9 @@ class Metrics:
 
     longevity: float = None
 
-    # TODO operationalize as integers? (not only checks)
     # common projects between devs, follower relationships, PR interactions
     structure: {} = None
+
+    @property
+    def __dict__(self):
+        return asdict(self)

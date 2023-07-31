@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict, field
 from datetime import datetime
 
 
@@ -39,3 +39,7 @@ class Data:
     stargazers: {} = None
     contributors: int = None
     collaborators: int = None
+
+    @property
+    def __dict__(self):
+        return asdict(self)
