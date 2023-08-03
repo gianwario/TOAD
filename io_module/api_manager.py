@@ -32,7 +32,8 @@ def get_user_data_from_login(login: str):
         resp = json.loads(response.content)
         return resp
     except:
-        pass
+        console.print("[bold red]There was an error with GitHub API. Please try again")
+        sys.exit(1)
     return None
 
 
@@ -45,7 +46,8 @@ def get_commit_by_sha(owner: str, name: str, sha: str):
         resp = json.loads(response.content)
         return resp
     except:
-        pass
+        console.print("[bold red]There was an error with GitHub API. Please try again")
+        sys.exit(1)
     return None
 
 
@@ -67,7 +69,8 @@ def get_pr_details(owner: str, name: str, pr_number: str):
         resp = json.loads(response.content)
         return resp
     except:
-        pass
+        console.print("[bold red]There was an error with GitHub API. Please try again")
+        sys.exit(1)
     return None
 
 
@@ -124,5 +127,8 @@ def paginate(url):
             if remaining_pages:
                 url = response.links["next"]["url"]
         except:
-            continue
+            console.print(
+                "[bold red]There was an error with GitHub API. Please try again"
+            )
+            sys.exit(1)
     return data

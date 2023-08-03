@@ -2,7 +2,7 @@ import csv
 import os
 from datetime import datetime, date, timedelta
 from utils import validate_date
-from community import community
+from community import community, metrics, data
 from console import console
 
 
@@ -11,6 +11,9 @@ def get_input_files():
     This function prompts the user to insert the needed input/output files and the end date of the time window to analyze.
     :return: the input given by the user
     """
+
+    # TODO REMOVE HARD CODED INPUT BEFORE FINAL COMMIT
+
     # input_path = console.input('[bold green]Please enter the path of the input file, including filename and its extension\n')
 
     input_path = "C:/Users/gianm/Desktop/master-thesis/input.csv"
@@ -47,19 +50,10 @@ def get_input_files():
             ],
         )
         dw.writeheader()
-    # end_date = console.input('[bold green]Enter end date of time window (YYYY-MM-DD) in UTC\n')
-    end_date = "2017-05-01"
-    # end_date = "2023-02-01"
-    if not validate_date(end_date):
-        console.print("[bold red]Invalid date")
-        raise SystemExit(0)
-    end_date = datetime.strptime(end_date, "%Y-%m-%d")
-    start_date = end_date - timedelta(days=90)
+
     return (
         input_path,
         os.path.join(output_dir, output_path + ".csv"),
-        start_date,
-        end_date,
     )
 
 
@@ -71,8 +65,31 @@ def get_input_communities(path: str):
     :return: the list of communities contained in the file
     """
     communities = []
+    start_date = None
+    end_date = None
     with open(path, newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=",", quotechar="|")
         for row in reader:
-            communities.append(community.Community(row[0], row[1]))
+            # TODO SWITCH BETWEEN ROW0 AND ROW1 BEFORE FINAL COMMIT
+            comm = community.Community(row[1], row[0])
+            d = data.Data()
+            end_date = row[2]
+            if not validate_date(end_date):
+                console.print("[bold red]Invalid date")
+                raise SystemExit(0)
+            end_date = datetime.strptime(end_date, "%Y-%m-%d")
+            start_date = end_date - timedelta(days=90)
+            d.start_date = start_date
+            d.end_date = end_date
+            comm.add_data(d)
+
+            m = metrics.Metrics()
+            m.dispersion = {}
+            m.structure = {}
+            m.engagement = {}
+            m.formality = {}
+            m.longevity = 0
+            comm.add_metrics(m)
+            communities.append(comm)
+
     return communities

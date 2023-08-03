@@ -38,6 +38,7 @@ def median_comments_per_pr(community: community.Community):
         raise SystemExit(0)
     for pr in pr_to_comments:
         comments_per_pr.append(len(pr_to_comments[pr]))
+    comments_per_pr = sorted(comments_per_pr)
     return statistics.median(comments_per_pr)
 
 
@@ -86,7 +87,7 @@ def median_monthly_comments_distribution(community: community.Community):
             m_commentpermonth_permember.append(
                 statistics.mean(comments_per_month.values())
             )
-
+    m_commentpermonth_permember = sorted(m_commentpermonth_permember)
     return statistics.median(m_commentpermonth_permember)
 
 
@@ -98,6 +99,7 @@ def median_contains_dict(users: list, members_logins: list):
             values.append(1)
         else:
             values.append(0)
+    values = sorted(values)
     return statistics.median(values)
 
 
@@ -109,6 +111,7 @@ def median_contains_list(users: list, members_logins: list):
             values.append(1)
         else:
             values.append(0)
+    values = sorted(values)
     return statistics.median(values)
 
 
@@ -138,6 +141,7 @@ def median_monthly_commit_distribution(community: community.Community):
             m_commitpermonth_permember.append(
                 statistics.mean(commits_per_month.values())
             )
+    m_commitpermonth_permember = sorted(m_commitpermonth_permember)
     return statistics.median(m_commitpermonth_permember)
 
 
@@ -156,6 +160,7 @@ def median_monthly_filecollab_distribution(community: community.Community):
         mean_committer_perfile_permonth.append(
             statistics.mean(count_committer_perfile_permonth[f].values())
         )
+    mean_committer_perfile_permonth = sorted(mean_committer_perfile_permonth)
     return statistics.median(mean_committer_perfile_permonth)
 
 
@@ -179,7 +184,7 @@ def extract_committer_per_file(community: community.Community):
                     )
                     if date is not None:
                         month = check_month(community, date)
-                        if month is not None and month in  monthly_files_changed.keys():
+                        if month is not None and month in monthly_files_changed.keys():
                             if f in monthly_files_changed[month].keys():
                                 monthly_files_changed[month][f].append(lc.author.email)
                             else:

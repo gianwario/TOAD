@@ -12,7 +12,7 @@ def compute_longevity_data(community: community.Community):
 
 
 def mean_committer_longevity(community: community.Community):
-    commits = community.data.commits
+    commits = community.data.all_commits
     commit_date_per_committer = {}
     """ 
     We use committer date instead of author date, since that's when the commit was last applied: 

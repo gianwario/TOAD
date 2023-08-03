@@ -99,7 +99,7 @@ def retrieve_member_data(community: community.Community):
             bar.next()
 
     for member in members:
-        if "type" in member.keys():
+        if member is not None and "type" in member.keys():
             if member["type"] == "User":
                 users.append(member)
             elif member["type"] == "Bot":
@@ -183,9 +183,9 @@ def retrieve_data_per_member(member):
     following = api_manager.make_request(str(member["following_url"]).split("{")[0])
     repos = api_manager.make_request(member["repos_url"])
 
-    followers_login = [f["login"] for f in followers]
-    following_login = [f["login"] for f in following]
-    repo_names = [r["name"] for r in repos]
+    followers_login = [f["login"] for f in followers if "login" in f.keys()]
+    following_login = [f["login"] for f in following if "login" in f.keys()]
+    repo_names = [r["name"] for r in repos if "name" in r.keys()]
 
     return followers_login, following_login, repo_names
 
@@ -268,10 +268,20 @@ def retrieve_active_users(community: community.Community):
     for commit in community.data.commits:
         if (commit.author.email not in active_users) and (
             date_30
-            <= datetime.strptime(convert_date(commit.committed_date), "%Y-%m-%d")
+            <= datetime.strptime(convert_date(commit.authored_date), "%Y-%m-%d")
             <= community.data.end_date
         ):
             active_users.append(commit.author.email)
+        if (
+            commit.committer.email != commit.author.email
+            and (commit.committer.email not in active_users)
+            and (
+                date_30
+                <= datetime.strptime(convert_date(commit.committed_date), "%Y-%m-%d")
+                <= community.data.end_date
+            )
+        ):
+            active_users.append(commit.committer.email)
     community.data.active_members = active_users
 
 

@@ -23,7 +23,7 @@ from data_processor import (
 
 def main():
     console.rule("Input information")
-    input_path, output_path, start_date, end_date = input_handler.get_input_files()
+    input_path, output_path = input_handler.get_input_files()
     communities = input_handler.get_input_communities(input_path)
 
     console.rule("GitHub Authentication")
@@ -33,19 +33,6 @@ def main():
         console.rule(
             "Community " + community.repo_name + " from " + community.repo_owner
         )
-
-        data = Data()
-        data.start_date = start_date
-        data.end_date = end_date
-        community.add_data(data)
-
-        metrics = Metrics()
-        metrics.dispersion = {}
-        metrics.structure = {}
-        metrics.engagement = {}
-        metrics.formality = {}
-        metrics.longevity = 0
-        community.add_metrics(metrics)
 
         repo = repository_manager.download_repo(
             community.repo_owner, community.repo_name
@@ -78,7 +65,23 @@ def main():
 
             console.print(community.metrics)
             console.log("[bold purple] Computing COMMUNITY PATTERNS")
-            community_patterns = compute_community_patterns(community.metrics)
+            (
+                structure,
+                dispersion,
+                formality,
+                longevity,
+                engagement,
+                community_patterns,
+            ) = compute_community_patterns(community.metrics)
+            console.print(
+                {
+                    "structure ": structure,
+                    "dispersion ": dispersion,
+                    "formality ": formality,
+                    "longevity ": longevity,
+                    "engagement ": engagement,
+                }
+            )
             console.print(community_patterns)
             output_handler.save_results(output_path, community, community_patterns)
 

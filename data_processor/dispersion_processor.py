@@ -3,6 +3,7 @@ from geodispersion import globe_data_reader
 import itertools
 from math import radians, degrees, sin, cos, asin, acos, sqrt
 import statistics
+from console import console
 
 
 def compute_distances(community: community.Community):
@@ -18,6 +19,7 @@ def compute_distances(community: community.Community):
     community.metrics.dispersion["geo_distance_variance"] = geographical_variance
     cultural_variance = compute_cultural_distance(community, globe)
     community.metrics.dispersion["cultural_distance_variance"] = cultural_variance
+    console.print(geographical_variance, cultural_variance)
 
 
 def compute_geographical_distances(community: community.Community):
@@ -26,16 +28,19 @@ def compute_geographical_distances(community: community.Community):
     """
     distances = []
     coords = community.data.coordinates
-    for c1 in coords:
-        coords.remove(c1)
-        for c2 in coords:
-            distance = great_circle(
-                c1["lon"],
-                c1["lat"],
-                c2["lon"],
-                c2["lat"],
-            )
-            distances.append(distance)
+    for i in range(len(coords)):
+        c1 = coords[i]
+        for j in range(len(coords)):
+            if i != j:
+                c2 = coords[j]
+                distance = great_circle(
+                    c1["lon"],
+                    c1["lat"],
+                    c2["lon"],
+                    c2["lat"],
+                )
+                distances.append(distance)
+
     return distances
 
 
@@ -90,6 +95,7 @@ def compute_cultural_distance(community: community.Community, globe):
         statistics.variance(list_C2SP),
         statistics.variance(list_ASP),
     ]
+
     # determine the average of the variances to obtain the variance of cultural distance
     average_distance_variance = sum(variances) / len(variances)
     return average_distance_variance

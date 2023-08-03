@@ -35,8 +35,7 @@ def filter_milestones(community: community.Community, milestones: list):
     for milestone in milestones:
         try:
             if milestone["closed_at"] is not None and (
-                community.data.start_date
-                <= datetime.strptime(milestone["closed_at"], "%Y-%m-%dT%H:%M:%SZ")
+                datetime.strptime(milestone["closed_at"], "%Y-%m-%dT%H:%M:%SZ")
                 <= community.data.end_date
             ):
                 filtered_milestones.append(milestone)

@@ -12,10 +12,14 @@ def retrieve_geo_information(community: community.Community):
     coordinates = []
     for member in community.data.members:
         if member["location"] is not None:
-            result = geolocator.geocode(
-                member["location"], addressdetails=True, language="en"
-            )
-            time.sleep(1)
+            result = None
+            try:
+                result = geolocator.geocode(
+                    member["location"], addressdetails=True, language="en"
+                )
+                time.sleep(1)
+            except:
+                pass
             if result is not None and result.raw is not None:
                 member["location"] = result.raw
                 member_lat = float(member["location"]["lat"])
@@ -43,7 +47,9 @@ def retrieve_country_name(community: community.Community):
         for country in globe_countries:
             if (
                 member["location"] is not None
+                and "address" in member["location"].keys()
                 and member["location"]["address"] is not None
+                and "country" in member["location"]["address"].keys()
                 and member["location"]["address"]["country"] is not None
                 and member["location"]["address"]["country"] in country
             ):

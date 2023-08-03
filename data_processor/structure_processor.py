@@ -58,20 +58,21 @@ def compute_follows_connection(community: community.Community, G: nx.Graph):
     mapping_following = community.data.map_user_following
     for member in community.data.members_logins:
         connections[member] = []
-        for other_member in mapping_follower[member]:
-            if (
-                other_member in mapping_following
-                and member in mapping_following[other_member]
-            ):
-                connections[member].append(other_member)
-                if G.has_edge(member, other_member):
-                    G.add_edge(
-                        member,
-                        other_member,
-                        weight=G[member][other_member]["weight"] + 1,
-                    )
-                else:
-                    G.add_edge(member, other_member, weight=1)
+        if member in mapping_follower.keys():
+            for other_member in mapping_follower[member]:
+                if (
+                    other_member in mapping_following
+                    and member in mapping_following[other_member]
+                ):
+                    connections[member].append(other_member)
+                    if G.has_edge(member, other_member):
+                        G.add_edge(
+                            member,
+                            other_member,
+                            weight=G[member][other_member]["weight"] + 1,
+                        )
+                    else:
+                        G.add_edge(member, other_member, weight=1)
     return connections
 
 

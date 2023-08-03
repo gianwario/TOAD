@@ -111,7 +111,7 @@ def get_commits_information(community: community.Community):
             commit = api_manager.get_commit_by_sha(
                 community.repo_owner, community.repo_name, sha
             )
-            if not "author" in commit.keys():
+            if commit is None or not "author" in commit.keys():
                 continue
 
             if (
