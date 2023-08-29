@@ -8,8 +8,7 @@ class Metrics:
     to detect Community Patterns
     """
 
-    # computed as sqrt sqrt((geographical_variance + cultural_variance) / 2)
-    # geographical_variance and cultural_variance
+    # true if both cultural and geographical dispersion exceed thresholds
     dispersion: {} = None
 
     # cohesion: float = None

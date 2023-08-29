@@ -17,7 +17,7 @@ This module contains functions to access the GitHub APIs
 
 def get_milestones(owner: str, name: str):
     response = paginate(
-        "https://api.github.com/repos/{0}/{1}/milestones?state=closed&per_page=100".format(
+        "https://api.github.com/repos/{0}/{1}/milestones?state=all&per_page=100".format(
             owner, name
         )
     )

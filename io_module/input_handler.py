@@ -70,7 +70,7 @@ def get_input_communities(path: str):
     with open(path, newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=",", quotechar="|")
         for row in reader:
-            # TODO SWITCH BETWEEN ROW0 AND ROW1 BEFORE FINAL COMMIT
+            # TODO switch 0 and 1
             comm = community.Community(row[1], row[0])
             d = data.Data()
             end_date = row[2]

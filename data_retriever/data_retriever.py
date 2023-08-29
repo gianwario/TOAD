@@ -42,11 +42,11 @@ def retrieve_data_and_check_validity(community: community.Community):
     if len(community.data.members) < 2:
         console.print("[bold red]There must be at least 2 members")
         return False
-    console.log("Checking number of closed milestones")
+    console.log("Checking number of milestones")
     milestones = api_manager.get_milestones(community.repo_owner, community.repo_name)
-    milestones = filters.filter_milestones(community, milestones)
+    # milestones = filters.filter_milestones(community, milestones)
     if len(milestones) < 1:
-        console.print("[bold red]There must be at least 1 closed milestone")
+        console.print("[bold red]There must be at least 1 milestone")
         return False
     community.data.milestones = milestones
     console.log("Retrieving geographical information")
@@ -56,8 +56,8 @@ def retrieve_data_and_check_validity(community: community.Community):
 
     if (
         community.data.countries is None
-        or len(community.data.countries) == 0
-        or len(community.data.coordinates) == 0
+        or len(community.data.countries) < 2
+        or len(community.data.coordinates) < 2
     ):
         console.print(
             "[bold red]Geographical information is not enough to compute geodispersion"
@@ -183,9 +183,19 @@ def retrieve_data_per_member(member):
     following = api_manager.make_request(str(member["following_url"]).split("{")[0])
     repos = api_manager.make_request(member["repos_url"])
 
-    followers_login = [f["login"] for f in followers if "login" in f.keys()]
-    following_login = [f["login"] for f in following if "login" in f.keys()]
-    repo_names = [r["name"] for r in repos if "name" in r.keys()]
+    followers_login = (
+        [f["login"] for f in followers if "login" in f.keys()]
+        if len(followers) > 0
+        else []
+    )
+    following_login = (
+        [f["login"] for f in following if "login" in f.keys()]
+        if len(following) > 0
+        else []
+    )
+    repo_names = (
+        [r["name"] for r in repos if "name" in r.keys()] if len(repos) > 0 else []
+    )
 
     return followers_login, following_login, repo_names
 

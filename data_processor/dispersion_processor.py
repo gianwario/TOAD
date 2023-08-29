@@ -16,10 +16,11 @@ def compute_distances(community: community.Community):
     )
     community.data.distances = compute_geographical_distances(community)
     geographical_variance = statistics.variance(community.data.distances)
+    avg_geo_distance = statistics.mean(community.data.distances)
     community.metrics.dispersion["geo_distance_variance"] = geographical_variance
+    community.metrics.dispersion["avg_geo_distance"] = avg_geo_distance
     cultural_variance = compute_cultural_distance(community, globe)
     community.metrics.dispersion["cultural_distance_variance"] = cultural_variance
-    console.print(geographical_variance, cultural_variance)
 
 
 def compute_geographical_distances(community: community.Community):
@@ -40,7 +41,6 @@ def compute_geographical_distances(community: community.Community):
                     c2["lat"],
                 )
                 distances.append(distance)
-
     return distances
 
 
@@ -85,6 +85,7 @@ def compute_cultural_distance(community: community.Community, globe):
                 )
                 list_GESP.append(row["Gender Egalitarianism Societal Practices"])
                 list_ASP.append(row["Assertiveness Societal Practices"])
+
     variances = [
         statistics.variance(list_UASP),
         statistics.variance(list_FOSP),
@@ -95,10 +96,20 @@ def compute_cultural_distance(community: community.Community, globe):
         statistics.variance(list_C2SP),
         statistics.variance(list_ASP),
     ]
-
+    means = [
+        statistics.mean(list_UASP),
+        statistics.mean(list_FOSP),
+        statistics.mean(list_PDSP),
+        statistics.mean(list_C1SP),
+        statistics.mean(list_HOSP),
+        statistics.mean(list_POSP),
+        statistics.mean(list_C2SP),
+        statistics.mean(list_ASP),
+    ]
     # determine the average of the variances to obtain the variance of cultural distance
     average_distance_variance = sum(variances) / len(variances)
-    return average_distance_variance
+    avg_distance_means = sum(means) / len(means)
+    return average_distance_variance * 100
 
 
 def great_circle(lon1, lat1, lon2, lat2):

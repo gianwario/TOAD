@@ -25,9 +25,12 @@ def mean_membership_type(community: community.Community):
             and pr["merged_by"]["login"] in community.data.members_logins
         ):
             committers.append(pr["merged_by"]["login"])
+    authors = set(authors)
+    committers = set(committers)
+    contributors = authors.difference(committers)
 
-    contributors = set(authors).difference(set(committers))
-    collaborators = set([item for item in committers if "github" not in item])
+    collaborators = [item for item in committers if "github" not in item]
+
     """
     if (len(contributors) + len(collaborators)) != len(community.data.members_logins):
         console.print(
@@ -37,9 +40,8 @@ def mean_membership_type(community: community.Community):
     """
     community.data.contributors = len(contributors)
     community.data.collaborators = len(collaborators)
-
-    return (len(contributors) + len(collaborators) * 2) / len(
-        community.data.members_logins
+    return (len(contributors) + (len(collaborators) * 2)) / (
+        len(contributors) + len(collaborators)
     )
 
 

@@ -2,11 +2,12 @@ from community import community
 from math import sqrt
 
 # The thresholds that will be used to compute the patterns for each community.
-th_global_distance = 4926  # Kilometers
+# TODO
+th_avg_geo_distance = 4000  # Kilometers
+th_avg_cult_distance = 15  # %
 th_formality_lvl_low = 0.1
 th_formality_lvl_high = 20
 th_engagement_lvl = 3.5
-th_cohesion_lvl = 11.0
 th_longevity = 93  # Days
 
 
@@ -32,7 +33,7 @@ def compute_community_patterns(metrics):
     if structure:
         community_patterns["SN"] = True
         # Dispersed
-        if dispersion >= th_global_distance:
+        if dispersion:
             community_patterns["NoP"] = True
             # Informal
             if formality <= th_formality_lvl_low:
@@ -55,7 +56,7 @@ def compute_community_patterns(metrics):
         # Engaged
         if engagement > th_engagement_lvl:
             community_patterns["IC"] = True
-    return community_patterns
+    return (structure, dispersion, formality, longevity, engagement, community_patterns)
 
 
 def compute_characteristics_from_metrics(metrics):
@@ -64,13 +65,11 @@ def compute_characteristics_from_metrics(metrics):
         or metrics.structure["follow_connections"]
         or metrics.structure["pr_connections"]
     )
-    dispersion = sqrt(
-        (
-            metrics.dispersion["geo_distance_variance"]
-            + metrics.dispersion["cultural_distance_variance"]
-        )
-        / 2
+    dispersion = (
+        metrics.dispersion["avg_geo_distance"] > th_avg_geo_distance
+        and metrics.dispersion["cultural_distance_variance"] > th_avg_cult_distance
     )
+
     engagement = (
         metrics.engagement["m_comment_per_pr"]
         + metrics.engagement["mm_comment_dist"]
