@@ -70,8 +70,7 @@ def get_input_communities(path: str):
     with open(path, newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=",", quotechar="|")
         for row in reader:
-            # TODO switch 0 and 1
-            comm = community.Community(row[1], row[0])
+            comm = community.Community(row[0], row[1])
             d = data.Data()
             end_date = row[2]
             if not validate_date(end_date):

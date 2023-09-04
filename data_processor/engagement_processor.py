@@ -9,7 +9,10 @@ def compute_engagement_data(community: community.Community):
     """
     This method computes the values needed for the community engagement metric.
     """
-    community.metrics.engagement["m_comment_per_pr"] = median_comments_per_pr(community)
+    m_comment_per_pr = median_comments_per_pr(community)
+    if m_comment_per_pr is None:
+        return False
+    community.metrics.engagement["m_comment_per_pr"] = m_comment_per_pr
     community.metrics.engagement[
         "mm_comment_dist"
     ] = median_monthly_comments_distribution(community)
@@ -28,6 +31,7 @@ def compute_engagement_data(community: community.Community):
     community.metrics.engagement[
         "mm_filecollab_dist"
     ] = median_monthly_filecollab_distribution(community)
+    return True
 
 
 def median_comments_per_pr(community: community.Community):
@@ -35,7 +39,7 @@ def median_comments_per_pr(community: community.Community):
     comments_per_pr = []
     if len(pr_to_comments) < 1:
         console.print("[bold red]No pull requests within time window")
-        raise SystemExit(0)
+        return None
     for pr in pr_to_comments:
         comments_per_pr.append(len(pr_to_comments[pr]))
     comments_per_pr = sorted(comments_per_pr)
@@ -88,7 +92,10 @@ def median_monthly_comments_distribution(community: community.Community):
                 statistics.mean(comments_per_month.values())
             )
     m_commentpermonth_permember = sorted(m_commentpermonth_permember)
-    return statistics.median(m_commentpermonth_permember)
+    if len(m_commentpermonth_permember) > 0:
+        return statistics.median(m_commentpermonth_permember)
+    else:
+        return 0
 
 
 def median_contains_dict(users: list, members_logins: list):
@@ -100,7 +107,10 @@ def median_contains_dict(users: list, members_logins: list):
         else:
             values.append(0)
     values = sorted(values)
-    return statistics.median(values)
+    if len(values) > 0:
+        return statistics.median(values)
+    else:
+        return 0
 
 
 def median_contains_list(users: list, members_logins: list):
@@ -112,7 +122,10 @@ def median_contains_list(users: list, members_logins: list):
         else:
             values.append(0)
     values = sorted(values)
-    return statistics.median(values)
+    if len(values) > 0:
+        return statistics.median(values)
+    else:
+        return 0
 
 
 def median_monthly_commit_distribution(community: community.Community):
@@ -142,7 +155,10 @@ def median_monthly_commit_distribution(community: community.Community):
                 statistics.mean(commits_per_month.values())
             )
     m_commitpermonth_permember = sorted(m_commitpermonth_permember)
-    return statistics.median(m_commitpermonth_permember)
+    if len(m_commitpermonth_permember) > 0:
+        return statistics.median(m_commitpermonth_permember)
+    else:
+        return 0
 
 
 def median_monthly_filecollab_distribution(community: community.Community):
@@ -161,7 +177,10 @@ def median_monthly_filecollab_distribution(community: community.Community):
             statistics.mean(count_committer_perfile_permonth[f].values())
         )
     mean_committer_perfile_permonth = sorted(mean_committer_perfile_permonth)
-    return statistics.median(mean_committer_perfile_permonth)
+    if len(mean_committer_perfile_permonth) > 0:
+        return statistics.median(mean_committer_perfile_permonth)
+    else:
+        return 0
 
 
 def extract_committer_per_file(community: community.Community):
