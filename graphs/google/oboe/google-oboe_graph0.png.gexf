@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="ggfan" label="ggfan" />
+      <node id="AndroidDeveloperLB" label="AndroidDeveloperLB" />
+      <node id="dturner" label="dturner" />
+      <node id="iamyellow" label="iamyellow" />
+      <node id="HobbyProjects" label="HobbyProjects" />
+      <node id="philburk" label="philburk" />
+      <node id="atsushieno" label="atsushieno" />
+    </nodes>
+    <edges>
+      <edge source="ggfan" target="AndroidDeveloperLB" id="0" weight="1" />
+      <edge source="ggfan" target="dturner" id="1" weight="23" />
+      <edge source="ggfan" target="iamyellow" id="2" weight="1" />
+      <edge source="ggfan" target="HobbyProjects" id="3" weight="1" />
+      <edge source="ggfan" target="atsushieno" id="4" weight="3" />
+      <edge source="ggfan" target="philburk" id="5" weight="10" />
+      <edge source="AndroidDeveloperLB" target="dturner" id="6" weight="2" />
+      <edge source="AndroidDeveloperLB" target="iamyellow" id="7" weight="1" />
+      <edge source="AndroidDeveloperLB" target="HobbyProjects" id="8" weight="1" />
+      <edge source="AndroidDeveloperLB" target="atsushieno" id="9" weight="1" />
+      <edge source="dturner" target="iamyellow" id="10" weight="2" />
+      <edge source="dturner" target="HobbyProjects" id="11" weight="1" />
+      <edge source="dturner" target="philburk" id="12" weight="37" />
+      <edge source="dturner" target="atsushieno" id="13" weight="2" />
+      <edge source="iamyellow" target="HobbyProjects" id="14" weight="1" />
+      <edge source="iamyellow" target="atsushieno" id="15" weight="1" />
+      <edge source="iamyellow" target="philburk" id="16" weight="1" />
+      <edge source="HobbyProjects" target="atsushieno" id="17" weight="1" />
+    </edges>
+  </graph>
+</gexf>

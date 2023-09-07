@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-29">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="pythad" label="pythad" />
+      <node id="sampritipanda" label="sampritipanda" />
+      <node id="gunvirranu" label="gunvirranu" />
+      <node id="DengYiping" label="DengYiping" />
+      <node id="YagoGG" label="YagoGG" />
+      <node id="joyhchen" label="joyhchen" />
+      <node id="yasoob" label="yasoob" />
+      <node id="gopalmeena" label="gopalmeena" />
+      <node id="PiotrKowalski" label="PiotrKowalski" />
+      <node id="Orbiter" label="Orbiter" />
+      <node id="krishnadm8" label="krishnadm8" />
+      <node id="sevazhidkov" label="sevazhidkov" />
+      <node id="mariobehling" label="mariobehling" />
+      <node id="sudheesh001" label="sudheesh001" />
+      <node id="kngoledge" label="kngoledge" />
+      <node id="seadog007" label="seadog007" />
+      <node id="AnsgarSchmidt" label="AnsgarSchmidt" />
+    </nodes>
+    <edges>
+      <edge source="pythad" target="sampritipanda" id="0" weight="3" />
+      <edge source="pythad" target="DengYiping" id="1" weight="4" />
+      <edge source="pythad" target="YagoGG" id="2" weight="2" />
+      <edge source="pythad" target="yasoob" id="3" weight="5" />
+      <edge source="pythad" target="gopalmeena" id="4" weight="2" />
+      <edge source="pythad" target="PiotrKowalski" id="5" weight="2" />
+      <edge source="pythad" target="krishnadm8" id="6" weight="2" />
+      <edge source="pythad" target="sevazhidkov" id="7" weight="2" />
+      <edge source="pythad" target="sudheesh001" id="8" weight="2" />
+      <edge source="pythad" target="kngoledge" id="9" weight="2" />
+      <edge source="sampritipanda" target="DengYiping" id="10" weight="4" />
+      <edge source="sampritipanda" target="YagoGG" id="11" weight="5" />
+      <edge source="sampritipanda" target="joyhchen" id="12" weight="1" />
+      <edge source="sampritipanda" target="yasoob" id="13" weight="4" />
+      <edge source="sampritipanda" target="gopalmeena" id="14" weight="3" />
+      <edge source="sampritipanda" target="PiotrKowalski" id="15" weight="1" />
+      <edge source="sampritipanda" target="krishnadm8" id="16" weight="1" />
+      <edge source="sampritipanda" target="sevazhidkov" id="17" weight="3" />
+      <edge source="sampritipanda" target="sudheesh001" id="18" weight="3" />
+      <edge source="sampritipanda" target="kngoledge" id="19" weight="1" />
+      <edge source="sampritipanda" target="seadog007" id="20" weight="3" />
+      <edge source="DengYiping" target="YagoGG" id="21" weight="3" />
+      <edge source="DengYiping" target="yasoob" id="22" weight="7" />
+      <edge source="DengYiping" target="gopalmeena" id="23" weight="3" />
+      <edge source="DengYiping" target="PiotrKowalski" id="24" weight="2" />
+      <edge source="DengYiping" target="krishnadm8" id="25" weight="1" />
+      <edge source="DengYiping" target="sevazhidkov" id="26" weight="3" />
+      <edge source="DengYiping" target="mariobehling" id="27" weight="1" />
+      <edge source="DengYiping" target="sudheesh001" id="28" weight="4" />
+      <edge source="DengYiping" target="kngoledge" id="29" weight="1" />
+      <edge source="YagoGG" target="joyhchen" id="30" weight="1" />
+      <edge source="YagoGG" target="yasoob" id="31" weight="7" />
+      <edge source="YagoGG" target="gopalmeena" id="32" weight="2" />
+      <edge source="YagoGG" target="PiotrKowalski" id="33" weight="5" />
+      <edge source="YagoGG" target="krishnadm8" id="34" weight="2" />
+      <edge source="YagoGG" target="sevazhidkov" id="35" weight="3" />
+      <edge source="YagoGG" target="sudheesh001" id="36" weight="4" />
+      <edge source="YagoGG" target="kngoledge" id="37" weight="2" />
+      <edge source="YagoGG" target="seadog007" id="38" weight="1" />
+      <edge source="joyhchen" target="sevazhidkov" id="39" weight="1" />
+      <edge source="yasoob" target="gopalmeena" id="40" weight="3" />
+      <edge source="yasoob" target="PiotrKowalski" id="41" weight="6" />
+      <edge source="yasoob" target="Orbiter" id="42" weight="1" />
+      <edge source="yasoob" target="krishnadm8" id="43" weight="2" />
+      <edge source="yasoob" target="sevazhidkov" id="44" weight="2" />
+      <edge source="yasoob" target="mariobehling" id="45" weight="1" />
+      <edge source="yasoob" target="sudheesh001" id="46" weight="4" />
+      <edge source="yasoob" target="kngoledge" id="47" weight="2" />
+      <edge source="yasoob" target="seadog007" id="48" weight="3" />
+      <edge source="gopalmeena" target="PiotrKowalski" id="49" weight="1" />
+      <edge source="gopalmeena" target="krishnadm8" id="50" weight="1" />
+      <edge source="gopalmeena" target="sevazhidkov" id="51" weight="2" />
+      <edge source="gopalmeena" target="sudheesh001" id="52" weight="11" />
+      <edge source="gopalmeena" target="kngoledge" id="53" weight="1" />
+      <edge source="PiotrKowalski" target="krishnadm8" id="54" weight="2" />
+      <edge source="PiotrKowalski" target="sevazhidkov" id="55" weight="1" />
+      <edge source="PiotrKowalski" target="sudheesh001" id="56" weight="2" />
+      <edge source="PiotrKowalski" target="kngoledge" id="57" weight="2" />
+      <edge source="PiotrKowalski" target="seadog007" id="58" weight="1" />
+      <edge source="Orbiter" target="sevazhidkov" id="59" weight="2" />
+      <edge source="Orbiter" target="mariobehling" id="60" weight="2" />
+      <edge source="Orbiter" target="sudheesh001" id="61" weight="1" />
+      <edge source="Orbiter" target="seadog007" id="62" weight="1" />
+      <edge source="krishnadm8" target="sevazhidkov" id="63" weight="1" />
+      <edge source="krishnadm8" target="sudheesh001" id="64" weight="1" />
+      <edge source="krishnadm8" target="kngoledge" id="65" weight="2" />
+      <edge source="sevazhidkov" target="sudheesh001" id="66" weight="2" />
+      <edge source="sevazhidkov" target="kngoledge" id="67" weight="1" />
+      <edge source="mariobehling" target="sudheesh001" id="68" weight="2" />
+      <edge source="sudheesh001" target="kngoledge" id="69" weight="1" />
+      <edge source="sudheesh001" target="seadog007" id="70" weight="1" />
+    </edges>
+  </graph>
+</gexf>

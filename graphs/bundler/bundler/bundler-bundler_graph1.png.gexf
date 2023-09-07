@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-26">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="amatsuda" label="amatsuda" />
+      <node id="wjordan" label="wjordan" />
+      <node id="slothelle" label="slothelle" />
+      <node id="myersjustinc" label="myersjustinc" />
+      <node id="Shekharrajak" label="Shekharrajak" />
+      <node id="indirect" label="indirect" />
+      <node id="segiddins" label="segiddins" />
+      <node id="smathy" label="smathy" />
+      <node id="Paxa" label="Paxa" />
+      <node id="svoop" label="svoop" />
+      <node id="homu" label="homu" />
+      <node id="5t111111" label="5t111111" />
+      <node id="chrismo" label="chrismo" />
+      <node id="roseaboveit" label="roseaboveit" />
+      <node id="smlx" label="smlx" />
+      <node id="alyssais" label="alyssais" />
+      <node id="kerrizor" label="kerrizor" />
+      <node id="seban" label="seban" />
+      <node id="pixeltrix" label="pixeltrix" />
+      <node id="colby-swandale" label="colby-swandale" />
+      <node id="bundlerbot" label="bundlerbot" />
+      <node id="okkez" label="okkez" />
+      <node id="denniss" label="denniss" />
+      <node id="koic" label="koic" />
+      <node id="savavirtosu" label="savavirtosu" />
+      <node id="rhenium" label="rhenium" />
+      <node id="olleolleolle" label="olleolleolle" />
+      <node id="danielpclark" label="danielpclark" />
+    </nodes>
+    <edges>
+      <edge source="amatsuda" target="wjordan" id="0" weight="9" />
+      <edge source="amatsuda" target="Shekharrajak" id="1" weight="3" />
+      <edge source="amatsuda" target="indirect" id="2" weight="8" />
+      <edge source="amatsuda" target="segiddins" id="3" weight="7" />
+      <edge source="amatsuda" target="smathy" id="4" weight="3" />
+      <edge source="amatsuda" target="Paxa" id="5" weight="2" />
+      <edge source="amatsuda" target="5t111111" id="6" weight="4" />
+      <edge source="amatsuda" target="chrismo" id="7" weight="1" />
+      <edge source="amatsuda" target="roseaboveit" id="8" weight="1" />
+      <edge source="amatsuda" target="alyssais" id="9" weight="3" />
+      <edge source="amatsuda" target="kerrizor" id="10" weight="4" />
+      <edge source="amatsuda" target="pixeltrix" id="11" weight="7" />
+      <edge source="amatsuda" target="colby-swandale" id="12" weight="7" />
+      <edge source="amatsuda" target="okkez" id="13" weight="7" />
+      <edge source="amatsuda" target="koic" id="14" weight="28" />
+      <edge source="amatsuda" target="rhenium" id="15" weight="3" />
+      <edge source="amatsuda" target="olleolleolle" id="16" weight="43" />
+      <edge source="amatsuda" target="danielpclark" id="17" weight="1" />
+      <edge source="wjordan" target="slothelle" id="18" weight="2" />
+      <edge source="wjordan" target="myersjustinc" id="19" weight="1" />
+      <edge source="wjordan" target="Shekharrajak" id="20" weight="2" />
+      <edge source="wjordan" target="indirect" id="21" weight="5" />
+      <edge source="wjordan" target="segiddins" id="22" weight="4" />
+      <edge source="wjordan" target="smathy" id="23" weight="3" />
+      <edge source="wjordan" target="Paxa" id="24" weight="4" />
+      <edge source="wjordan" target="5t111111" id="25" weight="2" />
+      <edge source="wjordan" target="chrismo" id="26" weight="2" />
+      <edge source="wjordan" target="roseaboveit" id="27" weight="1" />
+      <edge source="wjordan" target="alyssais" id="28" weight="2" />
+      <edge source="wjordan" target="kerrizor" id="29" weight="4" />
+      <edge source="wjordan" target="pixeltrix" id="30" weight="6" />
+      <edge source="wjordan" target="colby-swandale" id="31" weight="2" />
+      <edge source="wjordan" target="okkez" id="32" weight="3" />
+      <edge source="wjordan" target="koic" id="33" weight="9" />
+      <edge source="wjordan" target="savavirtosu" id="34" weight="1" />
+      <edge source="wjordan" target="rhenium" id="35" weight="2" />
+      <edge source="wjordan" target="olleolleolle" id="36" weight="21" />
+      <edge source="wjordan" target="danielpclark" id="37" weight="2" />
+      <edge source="slothelle" target="myersjustinc" id="38" weight="1" />
+      <edge source="slothelle" target="Shekharrajak" id="39" weight="2" />
+      <edge source="slothelle" target="indirect" id="40" weight="1" />
+      <edge source="slothelle" target="segiddins" id="41" weight="4" />
+      <edge source="slothelle" target="smathy" id="42" weight="1" />
+      <edge source="slothelle" target="5t111111" id="43" weight="1" />
+      <edge source="slothelle" target="chrismo" id="44" weight="2" />
+      <edge source="slothelle" target="roseaboveit" id="45" weight="1" />
+      <edge source="slothelle" target="alyssais" id="46" weight="2" />
+      <edge source="slothelle" target="kerrizor" id="47" weight="1" />
+      <edge source="slothelle" target="pixeltrix" id="48" weight="1" />
+      <edge source="slothelle" target="colby-swandale" id="49" weight="2" />
+      <edge source="slothelle" target="okkez" id="50" weight="1" />
+      <edge source="slothelle" target="koic" id="51" weight="1" />
+      <edge source="slothelle" target="savavirtosu" id="52" weight="1" />
+      <edge source="slothelle" target="rhenium" id="53" weight="1" />
+      <edge source="slothelle" target="olleolleolle" id="54" weight="3" />
+      <edge source="myersjustinc" target="Shekharrajak" id="55" weight="2" />
+      <edge source="myersjustinc" target="indirect" id="56" weight="2" />
+      <edge source="myersjustinc" target="segiddins" id="57" weight="3" />
+      <edge source="myersjustinc" target="smathy" id="58" weight="1" />
+      <edge source="myersjustinc" target="svoop" id="59" weight="1" />
+      <edge source="myersjustinc" target="5t111111" id="60" weight="1" />
+      <edge source="myersjustinc" target="chrismo" id="61" weight="1" />
+      <edge source="myersjustinc" target="roseaboveit" id="62" weight="1" />
+      <edge source="myersjustinc" target="alyssais" id="63" weight="2" />
+      <edge source="myersjustinc" target="kerrizor" id="64" weight="2" />
+      <edge source="myersjustinc" target="pixeltrix" id="65" weight="1" />
+      <edge source="myersjustinc" target="colby-swandale" id="66" weight="2" />
+      <edge source="myersjustinc" target="okkez" id="67" weight="2" />
+      <edge source="myersjustinc" target="koic" id="68" weight="2" />
+      <edge source="myersjustinc" target="savavirtosu" id="69" weight="1" />
+      <edge source="myersjustinc" target="rhenium" id="70" weight="1" />
+      <edge source="myersjustinc" target="olleolleolle" id="71" weight="2" />
+      <edge source="Shekharrajak" target="indirect" id="72" weight="6" />
+      <edge source="Shekharrajak" target="segiddins" id="73" weight="8" />
+      <edge source="Shekharrajak" target="smathy" id="74" weight="3" />
+      <edge source="Shekharrajak" target="Paxa" id="75" weight="1" />
+      <edge source="Shekharrajak" target="5t111111" id="76" weight="5" />
+      <edge source="Shekharrajak" target="chrismo" id="77" weight="1" />
+      <edge source="Shekharrajak" target="roseaboveit" id="78" weight="1" />
+      <edge source="Shekharrajak" target="alyssais" id="79" weight="5" />
+      <edge source="Shekharrajak" target="kerrizor" id="80" weight="7" />
+      <edge source="Shekharrajak" target="pixeltrix" id="81" weight="3" />
+      <edge source="Shekharrajak" target="colby-swandale" id="82" weight="14" />
+      <edge source="Shekharrajak" target="okkez" id="83" weight="7" />
+      <edge source="Shekharrajak" target="koic" id="84" weight="4" />
+      <edge source="Shekharrajak" target="savavirtosu" id="85" weight="1" />
+      <edge source="Shekharrajak" target="rhenium" id="86" weight="4" />
+      <edge source="Shekharrajak" target="olleolleolle" id="87" weight="14" />
+      <edge source="Shekharrajak" target="danielpclark" id="88" weight="1" />
+      <edge source="indirect" target="segiddins" id="89" weight="22" />
+      <edge source="indirect" target="smathy" id="90" weight="2" />
+      <edge source="indirect" target="Paxa" id="91" weight="1" />
+      <edge source="indirect" target="svoop" id="92" weight="1" />
+      <edge source="indirect" target="5t111111" id="93" weight="5" />
+      <edge source="indirect" target="chrismo" id="94" weight="1" />
+      <edge source="indirect" target="roseaboveit" id="95" weight="1" />
+      <edge source="indirect" target="alyssais" id="96" weight="9" />
+      <edge source="indirect" target="kerrizor" id="97" weight="6" />
+      <edge source="indirect" target="pixeltrix" id="98" weight="10" />
+      <edge source="indirect" target="colby-swandale" id="99" weight="7" />
+      <edge source="indirect" target="okkez" id="100" weight="4" />
+      <edge source="indirect" target="koic" id="101" weight="11" />
+      <edge source="indirect" target="savavirtosu" id="102" weight="1" />
+      <edge source="indirect" target="rhenium" id="103" weight="3" />
+      <edge source="indirect" target="olleolleolle" id="104" weight="23" />
+      <edge source="indirect" target="danielpclark" id="105" weight="2" />
+      <edge source="indirect" target="bundlerbot" id="106" weight="1" />
+      <edge source="segiddins" target="smathy" id="107" weight="3" />
+      <edge source="segiddins" target="Paxa" id="108" weight="3" />
+      <edge source="segiddins" target="5t111111" id="109" weight="5" />
+      <edge source="segiddins" target="chrismo" id="110" weight="2" />
+      <edge source="segiddins" target="roseaboveit" id="111" weight="2" />
+      <edge source="segiddins" target="alyssais" id="112" weight="8" />
+      <edge source="segiddins" target="kerrizor" id="113" weight="5" />
+      <edge source="segiddins" target="pixeltrix" id="114" weight="9" />
+      <edge source="segiddins" target="colby-swandale" id="115" weight="16" />
+      <edge source="segiddins" target="okkez" id="116" weight="5" />
+      <edge source="segiddins" target="koic" id="117" weight="14" />
+      <edge source="segiddins" target="savavirtosu" id="118" weight="3" />
+      <edge source="segiddins" target="rhenium" id="119" weight="5" />
+      <edge source="segiddins" target="olleolleolle" id="120" weight="20" />
+      <edge source="segiddins" target="danielpclark" id="121" weight="6" />
+      <edge source="segiddins" target="denniss" id="122" weight="1" />
+      <edge source="segiddins" target="svoop" id="123" weight="5" />
+      <edge source="smathy" target="Paxa" id="124" weight="2" />
+      <edge source="smathy" target="5t111111" id="125" weight="2" />
+      <edge source="smathy" target="chrismo" id="126" weight="1" />
+      <edge source="smathy" target="roseaboveit" id="127" weight="1" />
+      <edge source="smathy" target="alyssais" id="128" weight="1" />
+      <edge source="smathy" target="kerrizor" id="129" weight="2" />
+      <edge source="smathy" target="pixeltrix" id="130" weight="3" />
+      <edge source="smathy" target="colby-swandale" id="131" weight="2" />
+      <edge source="smathy" target="okkez" id="132" weight="3" />
+      <edge source="smathy" target="koic" id="133" weight="6" />
+      <edge source="smathy" target="savavirtosu" id="134" weight="1" />
+      <edge source="smathy" target="rhenium" id="135" weight="1" />
+      <edge source="smathy" target="olleolleolle" id="136" weight="8" />
+      <edge source="smathy" target="danielpclark" id="137" weight="1" />
+      <edge source="Paxa" target="5t111111" id="138" weight="1" />
+      <edge source="Paxa" target="alyssais" id="139" weight="2" />
+      <edge source="Paxa" target="kerrizor" id="140" weight="2" />
+      <edge source="Paxa" target="pixeltrix" id="141" weight="3" />
+      <edge source="Paxa" target="colby-swandale" id="142" weight="1" />
+      <edge source="Paxa" target="okkez" id="143" weight="2" />
+      <edge source="Paxa" target="koic" id="144" weight="3" />
+      <edge source="Paxa" target="rhenium" id="145" weight="1" />
+      <edge source="Paxa" target="olleolleolle" id="146" weight="7" />
+      <edge source="Paxa" target="danielpclark" id="147" weight="1" />
+      <edge source="svoop" target="alyssais" id="148" weight="1" />
+      <edge source="svoop" target="kerrizor" id="149" weight="1" />
+      <edge source="svoop" target="pixeltrix" id="150" weight="1" />
+      <edge source="svoop" target="olleolleolle" id="151" weight="6" />
+      <edge source="5t111111" target="chrismo" id="152" weight="1" />
+      <edge source="5t111111" target="roseaboveit" id="153" weight="2" />
+      <edge source="5t111111" target="alyssais" id="154" weight="4" />
+      <edge source="5t111111" target="kerrizor" id="155" weight="3" />
+      <edge source="5t111111" target="pixeltrix" id="156" weight="2" />
+      <edge source="5t111111" target="colby-swandale" id="157" weight="2" />
+      <edge source="5t111111" target="okkez" id="158" weight="2" />
+      <edge source="5t111111" target="koic" id="159" weight="5" />
+      <edge source="5t111111" target="savavirtosu" id="160" weight="1" />
+      <edge source="5t111111" target="rhenium" id="161" weight="1" />
+      <edge source="5t111111" target="olleolleolle" id="162" weight="9" />
+      <edge source="5t111111" target="danielpclark" id="163" weight="2" />
+      <edge source="chrismo" target="roseaboveit" id="164" weight="1" />
+      <edge source="chrismo" target="alyssais" id="165" weight="2" />
+      <edge source="chrismo" target="kerrizor" id="166" weight="3" />
+      <edge source="chrismo" target="pixeltrix" id="167" weight="1" />
+      <edge source="chrismo" target="colby-swandale" id="168" weight="3" />
+      <edge source="chrismo" target="okkez" id="169" weight="1" />
+      <edge source="chrismo" target="koic" id="170" weight="2" />
+      <edge source="chrismo" target="savavirtosu" id="171" weight="1" />
+      <edge source="chrismo" target="rhenium" id="172" weight="1" />
+      <edge source="chrismo" target="olleolleolle" id="173" weight="6" />
+      <edge source="chrismo" target="danielpclark" id="174" weight="1" />
+      <edge source="roseaboveit" target="alyssais" id="175" weight="1" />
+      <edge source="roseaboveit" target="kerrizor" id="176" weight="6" />
+      <edge source="roseaboveit" target="pixeltrix" id="177" weight="1" />
+      <edge source="roseaboveit" target="colby-swandale" id="178" weight="2" />
+      <edge source="roseaboveit" target="okkez" id="179" weight="1" />
+      <edge source="roseaboveit" target="koic" id="180" weight="3" />
+      <edge source="roseaboveit" target="savavirtosu" id="181" weight="1" />
+      <edge source="roseaboveit" target="rhenium" id="182" weight="1" />
+      <edge source="roseaboveit" target="olleolleolle" id="183" weight="4" />
+      <edge source="smlx" target="olleolleolle" id="184" weight="1" />
+      <edge source="alyssais" target="kerrizor" id="185" weight="2" />
+      <edge source="alyssais" target="pixeltrix" id="186" weight="5" />
+      <edge source="alyssais" target="colby-swandale" id="187" weight="4" />
+      <edge source="alyssais" target="okkez" id="188" weight="5" />
+      <edge source="alyssais" target="koic" id="189" weight="11" />
+      <edge source="alyssais" target="savavirtosu" id="190" weight="1" />
+      <edge source="alyssais" target="rhenium" id="191" weight="6" />
+      <edge source="alyssais" target="olleolleolle" id="192" weight="20" />
+      <edge source="kerrizor" target="pixeltrix" id="193" weight="5" />
+      <edge source="kerrizor" target="colby-swandale" id="194" weight="4" />
+      <edge source="kerrizor" target="okkez" id="195" weight="3" />
+      <edge source="kerrizor" target="koic" id="196" weight="8" />
+      <edge source="kerrizor" target="savavirtosu" id="197" weight="1" />
+      <edge source="kerrizor" target="rhenium" id="198" weight="1" />
+      <edge source="kerrizor" target="olleolleolle" id="199" weight="20" />
+      <edge source="kerrizor" target="danielpclark" id="200" weight="2" />
+      <edge source="seban" target="koic" id="201" weight="1" />
+      <edge source="seban" target="olleolleolle" id="202" weight="2" />
+      <edge source="pixeltrix" target="colby-swandale" id="203" weight="4" />
+      <edge source="pixeltrix" target="okkez" id="204" weight="6" />
+      <edge source="pixeltrix" target="koic" id="205" weight="18" />
+      <edge source="pixeltrix" target="savavirtosu" id="206" weight="1" />
+      <edge source="pixeltrix" target="rhenium" id="207" weight="4" />
+      <edge source="pixeltrix" target="olleolleolle" id="208" weight="32" />
+      <edge source="pixeltrix" target="danielpclark" id="209" weight="1" />
+      <edge source="colby-swandale" target="okkez" id="210" weight="5" />
+      <edge source="colby-swandale" target="koic" id="211" weight="12" />
+      <edge source="colby-swandale" target="savavirtosu" id="212" weight="1" />
+      <edge source="colby-swandale" target="rhenium" id="213" weight="4" />
+      <edge source="colby-swandale" target="olleolleolle" id="214" weight="18" />
+      <edge source="colby-swandale" target="danielpclark" id="215" weight="2" />
+      <edge source="okkez" target="koic" id="216" weight="15" />
+      <edge source="okkez" target="savavirtosu" id="217" weight="1" />
+      <edge source="okkez" target="rhenium" id="218" weight="5" />
+      <edge source="okkez" target="olleolleolle" id="219" weight="14" />
+      <edge source="okkez" target="danielpclark" id="220" weight="1" />
+      <edge source="koic" target="savavirtosu" id="221" weight="1" />
+      <edge source="koic" target="rhenium" id="222" weight="7" />
+      <edge source="koic" target="olleolleolle" id="223" weight="82" />
+      <edge source="koic" target="danielpclark" id="224" weight="1" />
+      <edge source="savavirtosu" target="rhenium" id="225" weight="1" />
+      <edge source="savavirtosu" target="olleolleolle" id="226" weight="1" />
+      <edge source="rhenium" target="olleolleolle" id="227" weight="12" />
+      <edge source="olleolleolle" target="danielpclark" id="228" weight="6" />
+    </edges>
+  </graph>
+</gexf>

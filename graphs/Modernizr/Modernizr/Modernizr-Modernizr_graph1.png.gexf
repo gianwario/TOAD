@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-28">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="denyskoch" label="denyskoch" />
+      <node id="jshen212" label="jshen212" />
+      <node id="paulirish" label="paulirish" />
+      <node id="philippsimon" label="philippsimon" />
+      <node id="prayagverma" label="prayagverma" />
+      <node id="JaZo" label="JaZo" />
+      <node id="Rowno" label="Rowno" />
+      <node id="myarcane" label="myarcane" />
+      <node id="roblarsen" label="roblarsen" />
+      <node id="alrra" label="alrra" />
+      <node id="AmazingJaze" label="AmazingJaze" />
+      <node id="vincentriemer" label="vincentriemer" />
+      <node id="barryceelen" label="barryceelen" />
+      <node id="ryanseddon" label="ryanseddon" />
+      <node id="patrickkettner" label="patrickkettner" />
+      <node id="greenkeeperio-bot" label="greenkeeperio-bot" />
+    </nodes>
+    <edges>
+      <edge source="denyskoch" target="jshen212" id="0" weight="1" />
+      <edge source="denyskoch" target="paulirish" id="1" weight="1" />
+      <edge source="denyskoch" target="philippsimon" id="2" weight="1" />
+      <edge source="denyskoch" target="prayagverma" id="3" weight="1" />
+      <edge source="denyskoch" target="myarcane" id="4" weight="1" />
+      <edge source="denyskoch" target="roblarsen" id="5" weight="1" />
+      <edge source="denyskoch" target="AmazingJaze" id="6" weight="1" />
+      <edge source="denyskoch" target="vincentriemer" id="7" weight="1" />
+      <edge source="denyskoch" target="ryanseddon" id="8" weight="1" />
+      <edge source="denyskoch" target="patrickkettner" id="9" weight="1" />
+      <edge source="jshen212" target="paulirish" id="10" weight="4" />
+      <edge source="jshen212" target="philippsimon" id="11" weight="1" />
+      <edge source="jshen212" target="prayagverma" id="12" weight="14" />
+      <edge source="jshen212" target="myarcane" id="13" weight="1" />
+      <edge source="jshen212" target="roblarsen" id="14" weight="2" />
+      <edge source="jshen212" target="AmazingJaze" id="15" weight="2" />
+      <edge source="jshen212" target="vincentriemer" id="16" weight="2" />
+      <edge source="jshen212" target="ryanseddon" id="17" weight="2" />
+      <edge source="jshen212" target="patrickkettner" id="18" weight="2" />
+      <edge source="paulirish" target="philippsimon" id="19" weight="2" />
+      <edge source="paulirish" target="prayagverma" id="20" weight="21" />
+      <edge source="paulirish" target="Rowno" id="21" weight="2" />
+      <edge source="paulirish" target="myarcane" id="22" weight="1" />
+      <edge source="paulirish" target="roblarsen" id="23" weight="6" />
+      <edge source="paulirish" target="alrra" id="24" weight="2" />
+      <edge source="paulirish" target="AmazingJaze" id="25" weight="3" />
+      <edge source="paulirish" target="vincentriemer" id="26" weight="3" />
+      <edge source="paulirish" target="ryanseddon" id="27" weight="6" />
+      <edge source="paulirish" target="patrickkettner" id="28" weight="13" />
+      <edge source="philippsimon" target="prayagverma" id="29" weight="7" />
+      <edge source="philippsimon" target="myarcane" id="30" weight="1" />
+      <edge source="philippsimon" target="roblarsen" id="31" weight="1" />
+      <edge source="philippsimon" target="AmazingJaze" id="32" weight="2" />
+      <edge source="philippsimon" target="vincentriemer" id="33" weight="1" />
+      <edge source="philippsimon" target="ryanseddon" id="34" weight="2" />
+      <edge source="philippsimon" target="patrickkettner" id="35" weight="12" />
+      <edge source="prayagverma" target="JaZo" id="36" weight="1" />
+      <edge source="prayagverma" target="Rowno" id="37" weight="1" />
+      <edge source="prayagverma" target="myarcane" id="38" weight="1" />
+      <edge source="prayagverma" target="roblarsen" id="39" weight="8" />
+      <edge source="prayagverma" target="alrra" id="40" weight="1" />
+      <edge source="prayagverma" target="AmazingJaze" id="41" weight="5" />
+      <edge source="prayagverma" target="vincentriemer" id="42" weight="5" />
+      <edge source="prayagverma" target="ryanseddon" id="43" weight="6" />
+      <edge source="prayagverma" target="patrickkettner" id="44" weight="20" />
+      <edge source="Rowno" target="alrra" id="45" weight="1" />
+      <edge source="Rowno" target="patrickkettner" id="46" weight="1" />
+      <edge source="myarcane" target="roblarsen" id="47" weight="1" />
+      <edge source="myarcane" target="AmazingJaze" id="48" weight="1" />
+      <edge source="myarcane" target="vincentriemer" id="49" weight="1" />
+      <edge source="myarcane" target="ryanseddon" id="50" weight="1" />
+      <edge source="myarcane" target="patrickkettner" id="51" weight="1" />
+      <edge source="roblarsen" target="AmazingJaze" id="52" weight="3" />
+      <edge source="roblarsen" target="vincentriemer" id="53" weight="1" />
+      <edge source="roblarsen" target="ryanseddon" id="54" weight="2" />
+      <edge source="roblarsen" target="patrickkettner" id="55" weight="5" />
+      <edge source="alrra" target="patrickkettner" id="56" weight="2" />
+      <edge source="alrra" target="ryanseddon" id="57" weight="4" />
+      <edge source="AmazingJaze" target="vincentriemer" id="58" weight="2" />
+      <edge source="AmazingJaze" target="ryanseddon" id="59" weight="3" />
+      <edge source="AmazingJaze" target="patrickkettner" id="60" weight="3" />
+      <edge source="vincentriemer" target="ryanseddon" id="61" weight="2" />
+      <edge source="vincentriemer" target="patrickkettner" id="62" weight="1" />
+      <edge source="ryanseddon" target="patrickkettner" id="63" weight="3" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-29">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="VocalFan" label="VocalFan" />
+      <node id="Antoinebr" label="Antoinebr" />
+      <node id="iifeoluwa" label="iifeoluwa" />
+      <node id="acidjames" label="acidjames" />
+      <node id="ctombumila37" label="ctombumila37" />
+      <node id="ImgBotApp" label="ImgBotApp" />
+      <node id="louistiti" label="louistiti" />
+      <node id="PeterDaveHello" label="PeterDaveHello" />
+      <node id="fkeloks" label="fkeloks" />
+      <node id="kesslerdev" label="kesslerdev" />
+    </nodes>
+    <edges>
+      <edge source="VocalFan" target="Antoinebr" id="0" weight="1" />
+      <edge source="VocalFan" target="iifeoluwa" id="1" weight="1" />
+      <edge source="VocalFan" target="acidjames" id="2" weight="1" />
+      <edge source="VocalFan" target="ctombumila37" id="3" weight="1" />
+      <edge source="VocalFan" target="ImgBotApp" id="4" weight="1" />
+      <edge source="VocalFan" target="PeterDaveHello" id="5" weight="2" />
+      <edge source="VocalFan" target="fkeloks" id="6" weight="1" />
+      <edge source="VocalFan" target="kesslerdev" id="7" weight="1" />
+      <edge source="Antoinebr" target="iifeoluwa" id="8" weight="1" />
+      <edge source="Antoinebr" target="acidjames" id="9" weight="1" />
+      <edge source="Antoinebr" target="ctombumila37" id="10" weight="1" />
+      <edge source="Antoinebr" target="louistiti" id="11" weight="2" />
+      <edge source="Antoinebr" target="PeterDaveHello" id="12" weight="1" />
+      <edge source="Antoinebr" target="fkeloks" id="13" weight="2" />
+      <edge source="Antoinebr" target="kesslerdev" id="14" weight="1" />
+      <edge source="iifeoluwa" target="acidjames" id="15" weight="1" />
+      <edge source="iifeoluwa" target="ctombumila37" id="16" weight="1" />
+      <edge source="iifeoluwa" target="ImgBotApp" id="17" weight="1" />
+      <edge source="iifeoluwa" target="PeterDaveHello" id="18" weight="2" />
+      <edge source="iifeoluwa" target="fkeloks" id="19" weight="1" />
+      <edge source="iifeoluwa" target="kesslerdev" id="20" weight="1" />
+      <edge source="acidjames" target="ctombumila37" id="21" weight="1" />
+      <edge source="acidjames" target="PeterDaveHello" id="22" weight="1" />
+      <edge source="acidjames" target="fkeloks" id="23" weight="1" />
+      <edge source="acidjames" target="kesslerdev" id="24" weight="1" />
+      <edge source="acidjames" target="louistiti" id="25" weight="1" />
+      <edge source="ctombumila37" target="PeterDaveHello" id="26" weight="1" />
+      <edge source="ctombumila37" target="fkeloks" id="27" weight="1" />
+      <edge source="ctombumila37" target="kesslerdev" id="28" weight="1" />
+      <edge source="ctombumila37" target="louistiti" id="29" weight="1" />
+      <edge source="ImgBotApp" target="PeterDaveHello" id="30" weight="7" />
+      <edge source="ImgBotApp" target="fkeloks" id="31" weight="1" />
+      <edge source="ImgBotApp" target="kesslerdev" id="32" weight="1" />
+      <edge source="louistiti" target="fkeloks" id="33" weight="2" />
+      <edge source="PeterDaveHello" target="fkeloks" id="34" weight="1" />
+      <edge source="PeterDaveHello" target="kesslerdev" id="35" weight="3" />
+      <edge source="fkeloks" target="kesslerdev" id="36" weight="2" />
+    </edges>
+  </graph>
+</gexf>

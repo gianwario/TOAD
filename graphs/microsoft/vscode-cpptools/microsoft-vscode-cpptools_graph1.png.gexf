@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-09-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="sean-mcmanus" label="sean-mcmanus" />
+      <node id="thejcannon" label="thejcannon" />
+      <node id="grdowns" label="grdowns" />
+      <node id="shubhambhattar" label="shubhambhattar" />
+      <node id="faheel" label="faheel" />
+      <node id="sylveon" label="sylveon" />
+      <node id="ronglums" label="ronglums" />
+      <node id="shsong" label="shsong" />
+      <node id="bobbrow" label="bobbrow" />
+      <node id="jogo-" label="jogo-" />
+      <node id="vitosamson" label="vitosamson" />
+      <node id="WardenGnaw" label="WardenGnaw" />
+      <node id="philographer" label="philographer" />
+      <node id="pieandcakes" label="pieandcakes" />
+    </nodes>
+    <edges>
+      <edge source="sean-mcmanus" target="ronglums" id="0" weight="4" />
+      <edge source="sean-mcmanus" target="jogo-" id="1" weight="1" />
+      <edge source="sean-mcmanus" target="WardenGnaw" id="2" weight="7" />
+      <edge source="sean-mcmanus" target="pieandcakes" id="3" weight="9" />
+      <edge source="sean-mcmanus" target="bobbrow" id="4" weight="30" />
+      <edge source="sean-mcmanus" target="faheel" id="5" weight="1" />
+      <edge source="sean-mcmanus" target="grdowns" id="6" weight="3" />
+      <edge source="thejcannon" target="shubhambhattar" id="7" weight="1" />
+      <edge source="thejcannon" target="faheel" id="8" weight="3" />
+      <edge source="thejcannon" target="sylveon" id="9" weight="2" />
+      <edge source="thejcannon" target="shsong" id="10" weight="1" />
+      <edge source="thejcannon" target="jogo-" id="11" weight="1" />
+      <edge source="thejcannon" target="vitosamson" id="12" weight="1" />
+      <edge source="thejcannon" target="WardenGnaw" id="13" weight="1" />
+      <edge source="thejcannon" target="bobbrow" id="14" weight="1" />
+      <edge source="grdowns" target="sylveon" id="15" weight="1" />
+      <edge source="grdowns" target="bobbrow" id="16" weight="20" />
+      <edge source="grdowns" target="WardenGnaw" id="17" weight="14" />
+      <edge source="grdowns" target="pieandcakes" id="18" weight="3" />
+      <edge source="shubhambhattar" target="faheel" id="19" weight="1" />
+      <edge source="shubhambhattar" target="sylveon" id="20" weight="1" />
+      <edge source="shubhambhattar" target="shsong" id="21" weight="1" />
+      <edge source="shubhambhattar" target="jogo-" id="22" weight="1" />
+      <edge source="shubhambhattar" target="vitosamson" id="23" weight="1" />
+      <edge source="shubhambhattar" target="WardenGnaw" id="24" weight="1" />
+      <edge source="shubhambhattar" target="pieandcakes" id="25" weight="1" />
+      <edge source="faheel" target="sylveon" id="26" weight="3" />
+      <edge source="faheel" target="shsong" id="27" weight="1" />
+      <edge source="faheel" target="jogo-" id="28" weight="2" />
+      <edge source="faheel" target="vitosamson" id="29" weight="1" />
+      <edge source="faheel" target="WardenGnaw" id="30" weight="1" />
+      <edge source="faheel" target="bobbrow" id="31" weight="3" />
+      <edge source="sylveon" target="shsong" id="32" weight="1" />
+      <edge source="sylveon" target="bobbrow" id="33" weight="2" />
+      <edge source="sylveon" target="jogo-" id="34" weight="3" />
+      <edge source="sylveon" target="vitosamson" id="35" weight="1" />
+      <edge source="sylveon" target="WardenGnaw" id="36" weight="1" />
+      <edge source="sylveon" target="pieandcakes" id="37" weight="1" />
+      <edge source="ronglums" target="WardenGnaw" id="38" weight="1" />
+      <edge source="ronglums" target="pieandcakes" id="39" weight="1" />
+      <edge source="shsong" target="jogo-" id="40" weight="1" />
+      <edge source="shsong" target="vitosamson" id="41" weight="1" />
+      <edge source="shsong" target="WardenGnaw" id="42" weight="1" />
+      <edge source="bobbrow" target="jogo-" id="43" weight="1" />
+      <edge source="bobbrow" target="pieandcakes" id="44" weight="3" />
+      <edge source="bobbrow" target="WardenGnaw" id="45" weight="18" />
+      <edge source="jogo-" target="vitosamson" id="46" weight="1" />
+      <edge source="jogo-" target="WardenGnaw" id="47" weight="2" />
+      <edge source="jogo-" target="pieandcakes" id="48" weight="3" />
+      <edge source="vitosamson" target="WardenGnaw" id="49" weight="1" />
+      <edge source="WardenGnaw" target="pieandcakes" id="50" weight="40" />
+    </edges>
+  </graph>
+</gexf>

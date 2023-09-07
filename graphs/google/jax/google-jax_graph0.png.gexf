@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="sschoenholz" label="sschoenholz" />
+      <node id="jonasrauber" label="jonasrauber" />
+      <node id="mattjj" label="mattjj" />
+      <node id="brettkoonce" label="brettkoonce" />
+      <node id="cclauss" label="cclauss" />
+      <node id="MikeInnes" label="MikeInnes" />
+      <node id="j-towns" label="j-towns" />
+      <node id="dsblank" label="dsblank" />
+      <node id="matt-graham" label="matt-graham" />
+      <node id="dougalm" label="dougalm" />
+      <node id="froystig" label="froystig" />
+      <node id="1e100" label="1e100" />
+      <node id="alexbw" label="alexbw" />
+      <node id="h3jia" label="h3jia" />
+      <node id="duvenaud" label="duvenaud" />
+      <node id="hawkinsp" label="hawkinsp" />
+      <node id="shoyer" label="shoyer" />
+      <node id="craffel" label="craffel" />
+      <node id="vishwakftw" label="vishwakftw" />
+    </nodes>
+    <edges>
+      <edge source="sschoenholz" target="jonasrauber" id="0" weight="1" />
+      <edge source="sschoenholz" target="mattjj" id="1" weight="1" />
+      <edge source="sschoenholz" target="brettkoonce" id="2" weight="2" />
+      <edge source="sschoenholz" target="cclauss" id="3" weight="2" />
+      <edge source="sschoenholz" target="MikeInnes" id="4" weight="1" />
+      <edge source="sschoenholz" target="j-towns" id="5" weight="1" />
+      <edge source="sschoenholz" target="dsblank" id="6" weight="1" />
+      <edge source="sschoenholz" target="matt-graham" id="7" weight="1" />
+      <edge source="sschoenholz" target="froystig" id="8" weight="1" />
+      <edge source="sschoenholz" target="h3jia" id="9" weight="1" />
+      <edge source="sschoenholz" target="duvenaud" id="10" weight="1" />
+      <edge source="sschoenholz" target="hawkinsp" id="11" weight="1" />
+      <edge source="sschoenholz" target="shoyer" id="12" weight="1" />
+      <edge source="sschoenholz" target="craffel" id="13" weight="1" />
+      <edge source="jonasrauber" target="mattjj" id="14" weight="2" />
+      <edge source="jonasrauber" target="brettkoonce" id="15" weight="4" />
+      <edge source="jonasrauber" target="cclauss" id="16" weight="11" />
+      <edge source="jonasrauber" target="MikeInnes" id="17" weight="3" />
+      <edge source="jonasrauber" target="j-towns" id="18" weight="3" />
+      <edge source="jonasrauber" target="dsblank" id="19" weight="3" />
+      <edge source="jonasrauber" target="matt-graham" id="20" weight="2" />
+      <edge source="jonasrauber" target="froystig" id="21" weight="1" />
+      <edge source="jonasrauber" target="1e100" id="22" weight="1" />
+      <edge source="jonasrauber" target="alexbw" id="23" weight="1" />
+      <edge source="jonasrauber" target="h3jia" id="24" weight="3" />
+      <edge source="jonasrauber" target="duvenaud" id="25" weight="1" />
+      <edge source="jonasrauber" target="hawkinsp" id="26" weight="3" />
+      <edge source="jonasrauber" target="shoyer" id="27" weight="5" />
+      <edge source="jonasrauber" target="craffel" id="28" weight="3" />
+      <edge source="mattjj" target="brettkoonce" id="29" weight="3" />
+      <edge source="mattjj" target="cclauss" id="30" weight="3" />
+      <edge source="mattjj" target="MikeInnes" id="31" weight="4" />
+      <edge source="mattjj" target="j-towns" id="32" weight="5" />
+      <edge source="mattjj" target="dsblank" id="33" weight="1" />
+      <edge source="mattjj" target="matt-graham" id="34" weight="2" />
+      <edge source="mattjj" target="froystig" id="35" weight="3" />
+      <edge source="mattjj" target="alexbw" id="36" weight="8" />
+      <edge source="mattjj" target="h3jia" id="37" weight="2" />
+      <edge source="mattjj" target="duvenaud" id="38" weight="4" />
+      <edge source="mattjj" target="hawkinsp" id="39" weight="10" />
+      <edge source="mattjj" target="shoyer" id="40" weight="3" />
+      <edge source="mattjj" target="craffel" id="41" weight="3" />
+      <edge source="mattjj" target="dougalm" id="42" weight="1" />
+      <edge source="mattjj" target="vishwakftw" id="43" weight="1" />
+      <edge source="brettkoonce" target="cclauss" id="44" weight="36" />
+      <edge source="brettkoonce" target="MikeInnes" id="45" weight="2" />
+      <edge source="brettkoonce" target="j-towns" id="46" weight="3" />
+      <edge source="brettkoonce" target="dsblank" id="47" weight="6" />
+      <edge source="brettkoonce" target="matt-graham" id="48" weight="1" />
+      <edge source="brettkoonce" target="froystig" id="49" weight="1" />
+      <edge source="brettkoonce" target="1e100" id="50" weight="2" />
+      <edge source="brettkoonce" target="alexbw" id="51" weight="4" />
+      <edge source="brettkoonce" target="h3jia" id="52" weight="2" />
+      <edge source="brettkoonce" target="duvenaud" id="53" weight="1" />
+      <edge source="brettkoonce" target="hawkinsp" id="54" weight="3" />
+      <edge source="brettkoonce" target="shoyer" id="55" weight="4" />
+      <edge source="brettkoonce" target="craffel" id="56" weight="5" />
+      <edge source="brettkoonce" target="vishwakftw" id="57" weight="1" />
+      <edge source="cclauss" target="MikeInnes" id="58" weight="2" />
+      <edge source="cclauss" target="j-towns" id="59" weight="6" />
+      <edge source="cclauss" target="dsblank" id="60" weight="17" />
+      <edge source="cclauss" target="matt-graham" id="61" weight="3" />
+      <edge source="cclauss" target="froystig" id="62" weight="2" />
+      <edge source="cclauss" target="1e100" id="63" weight="4" />
+      <edge source="cclauss" target="alexbw" id="64" weight="6" />
+      <edge source="cclauss" target="h3jia" id="65" weight="7" />
+      <edge source="cclauss" target="duvenaud" id="66" weight="2" />
+      <edge source="cclauss" target="hawkinsp" id="67" weight="4" />
+      <edge source="cclauss" target="shoyer" id="68" weight="16" />
+      <edge source="cclauss" target="craffel" id="69" weight="10" />
+      <edge source="cclauss" target="vishwakftw" id="70" weight="1" />
+      <edge source="MikeInnes" target="j-towns" id="71" weight="1" />
+      <edge source="MikeInnes" target="dsblank" id="72" weight="1" />
+      <edge source="MikeInnes" target="matt-graham" id="73" weight="1" />
+      <edge source="MikeInnes" target="froystig" id="74" weight="1" />
+      <edge source="MikeInnes" target="h3jia" id="75" weight="1" />
+      <edge source="MikeInnes" target="duvenaud" id="76" weight="2" />
+      <edge source="MikeInnes" target="hawkinsp" id="77" weight="1" />
+      <edge source="MikeInnes" target="shoyer" id="78" weight="1" />
+      <edge source="MikeInnes" target="craffel" id="79" weight="1" />
+      <edge source="j-towns" target="dsblank" id="80" weight="2" />
+      <edge source="j-towns" target="matt-graham" id="81" weight="2" />
+      <edge source="j-towns" target="froystig" id="82" weight="1" />
+      <edge source="j-towns" target="1e100" id="83" weight="1" />
+      <edge source="j-towns" target="alexbw" id="84" weight="2" />
+      <edge source="j-towns" target="h3jia" id="85" weight="3" />
+      <edge source="j-towns" target="duvenaud" id="86" weight="1" />
+      <edge source="j-towns" target="hawkinsp" id="87" weight="4" />
+      <edge source="j-towns" target="shoyer" id="88" weight="6" />
+      <edge source="j-towns" target="craffel" id="89" weight="3" />
+      <edge source="dsblank" target="matt-graham" id="90" weight="1" />
+      <edge source="dsblank" target="froystig" id="91" weight="1" />
+      <edge source="dsblank" target="1e100" id="92" weight="1" />
+      <edge source="dsblank" target="alexbw" id="93" weight="2" />
+      <edge source="dsblank" target="h3jia" id="94" weight="2" />
+      <edge source="dsblank" target="duvenaud" id="95" weight="1" />
+      <edge source="dsblank" target="hawkinsp" id="96" weight="2" />
+      <edge source="dsblank" target="shoyer" id="97" weight="4" />
+      <edge source="dsblank" target="craffel" id="98" weight="3" />
+      <edge source="matt-graham" target="froystig" id="99" weight="1" />
+      <edge source="matt-graham" target="h3jia" id="100" weight="2" />
+      <edge source="matt-graham" target="duvenaud" id="101" weight="2" />
+      <edge source="matt-graham" target="hawkinsp" id="102" weight="3" />
+      <edge source="matt-graham" target="shoyer" id="103" weight="2" />
+      <edge source="matt-graham" target="craffel" id="104" weight="3" />
+      <edge source="dougalm" target="duvenaud" id="105" weight="1" />
+      <edge source="froystig" target="h3jia" id="106" weight="1" />
+      <edge source="froystig" target="duvenaud" id="107" weight="1" />
+      <edge source="froystig" target="hawkinsp" id="108" weight="2" />
+      <edge source="froystig" target="shoyer" id="109" weight="2" />
+      <edge source="froystig" target="craffel" id="110" weight="1" />
+      <edge source="1e100" target="alexbw" id="111" weight="1" />
+      <edge source="1e100" target="hawkinsp" id="112" weight="1" />
+      <edge source="1e100" target="shoyer" id="113" weight="1" />
+      <edge source="1e100" target="craffel" id="114" weight="1" />
+      <edge source="alexbw" target="hawkinsp" id="115" weight="10" />
+      <edge source="alexbw" target="shoyer" id="116" weight="2" />
+      <edge source="alexbw" target="craffel" id="117" weight="2" />
+      <edge source="alexbw" target="duvenaud" id="118" weight="1" />
+      <edge source="h3jia" target="duvenaud" id="119" weight="1" />
+      <edge source="h3jia" target="hawkinsp" id="120" weight="2" />
+      <edge source="h3jia" target="shoyer" id="121" weight="6" />
+      <edge source="h3jia" target="craffel" id="122" weight="1" />
+      <edge source="duvenaud" target="hawkinsp" id="123" weight="1" />
+      <edge source="duvenaud" target="shoyer" id="124" weight="1" />
+      <edge source="duvenaud" target="craffel" id="125" weight="1" />
+      <edge source="hawkinsp" target="shoyer" id="126" weight="5" />
+      <edge source="hawkinsp" target="craffel" id="127" weight="2" />
+      <edge source="hawkinsp" target="vishwakftw" id="128" weight="13" />
+      <edge source="shoyer" target="craffel" id="129" weight="2" />
+    </edges>
+  </graph>
+</gexf>

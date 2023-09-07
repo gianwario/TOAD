@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-28">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="polsys" label="polsys" />
+      <node id="eric-wieser" label="eric-wieser" />
+      <node id="mavit" label="mavit" />
+      <node id="tomneutens" label="tomneutens" />
+      <node id="agdl" label="agdl" />
+      <node id="roncapat" label="roncapat" />
+      <node id="MichalSy" label="MichalSy" />
+      <node id="LourensPool" label="LourensPool" />
+      <node id="aknrdureegaesr" label="aknrdureegaesr" />
+      <node id="sergiotomasello" label="sergiotomasello" />
+      <node id="ximion" label="ximion" />
+      <node id="surya-veer" label="surya-veer" />
+      <node id="jeroenoverman" label="jeroenoverman" />
+      <node id="artynet" label="artynet" />
+      <node id="matthijskooijman" label="matthijskooijman" />
+      <node id="cmaglie" label="cmaglie" />
+      <node id="descampsa" label="descampsa" />
+      <node id="dsstutts" label="dsstutts" />
+      <node id="facchinm" label="facchinm" />
+      <node id="sandeepmistry" label="sandeepmistry" />
+    </nodes>
+    <edges>
+      <edge source="polsys" target="eric-wieser" id="0" weight="1" />
+      <edge source="polsys" target="mavit" id="1" weight="1" />
+      <edge source="polsys" target="tomneutens" id="2" weight="1" />
+      <edge source="polsys" target="agdl" id="3" weight="1" />
+      <edge source="polsys" target="roncapat" id="4" weight="1" />
+      <edge source="polsys" target="LourensPool" id="5" weight="1" />
+      <edge source="polsys" target="sergiotomasello" id="6" weight="1" />
+      <edge source="polsys" target="ximion" id="7" weight="1" />
+      <edge source="polsys" target="surya-veer" id="8" weight="1" />
+      <edge source="polsys" target="artynet" id="9" weight="1" />
+      <edge source="polsys" target="matthijskooijman" id="10" weight="1" />
+      <edge source="polsys" target="cmaglie" id="11" weight="1" />
+      <edge source="polsys" target="descampsa" id="12" weight="1" />
+      <edge source="polsys" target="dsstutts" id="13" weight="1" />
+      <edge source="polsys" target="facchinm" id="14" weight="1" />
+      <edge source="polsys" target="sandeepmistry" id="15" weight="1" />
+      <edge source="eric-wieser" target="mavit" id="16" weight="1" />
+      <edge source="eric-wieser" target="tomneutens" id="17" weight="1" />
+      <edge source="eric-wieser" target="agdl" id="18" weight="1" />
+      <edge source="eric-wieser" target="roncapat" id="19" weight="2" />
+      <edge source="eric-wieser" target="LourensPool" id="20" weight="1" />
+      <edge source="eric-wieser" target="sergiotomasello" id="21" weight="1" />
+      <edge source="eric-wieser" target="ximion" id="22" weight="1" />
+      <edge source="eric-wieser" target="surya-veer" id="23" weight="1" />
+      <edge source="eric-wieser" target="artynet" id="24" weight="4" />
+      <edge source="eric-wieser" target="matthijskooijman" id="25" weight="2" />
+      <edge source="eric-wieser" target="cmaglie" id="26" weight="2" />
+      <edge source="eric-wieser" target="descampsa" id="27" weight="1" />
+      <edge source="eric-wieser" target="dsstutts" id="28" weight="2" />
+      <edge source="eric-wieser" target="facchinm" id="29" weight="2" />
+      <edge source="eric-wieser" target="sandeepmistry" id="30" weight="3" />
+      <edge source="mavit" target="tomneutens" id="31" weight="1" />
+      <edge source="mavit" target="agdl" id="32" weight="1" />
+      <edge source="mavit" target="roncapat" id="33" weight="1" />
+      <edge source="mavit" target="LourensPool" id="34" weight="1" />
+      <edge source="mavit" target="aknrdureegaesr" id="35" weight="1" />
+      <edge source="mavit" target="sergiotomasello" id="36" weight="1" />
+      <edge source="mavit" target="ximion" id="37" weight="3" />
+      <edge source="mavit" target="surya-veer" id="38" weight="1" />
+      <edge source="mavit" target="artynet" id="39" weight="2" />
+      <edge source="mavit" target="matthijskooijman" id="40" weight="2" />
+      <edge source="mavit" target="cmaglie" id="41" weight="1" />
+      <edge source="mavit" target="descampsa" id="42" weight="1" />
+      <edge source="mavit" target="dsstutts" id="43" weight="1" />
+      <edge source="mavit" target="facchinm" id="44" weight="1" />
+      <edge source="mavit" target="sandeepmistry" id="45" weight="1" />
+      <edge source="tomneutens" target="agdl" id="46" weight="1" />
+      <edge source="tomneutens" target="roncapat" id="47" weight="1" />
+      <edge source="tomneutens" target="LourensPool" id="48" weight="1" />
+      <edge source="tomneutens" target="sergiotomasello" id="49" weight="1" />
+      <edge source="tomneutens" target="ximion" id="50" weight="1" />
+      <edge source="tomneutens" target="surya-veer" id="51" weight="1" />
+      <edge source="tomneutens" target="artynet" id="52" weight="1" />
+      <edge source="tomneutens" target="matthijskooijman" id="53" weight="1" />
+      <edge source="tomneutens" target="cmaglie" id="54" weight="1" />
+      <edge source="tomneutens" target="descampsa" id="55" weight="1" />
+      <edge source="tomneutens" target="dsstutts" id="56" weight="1" />
+      <edge source="tomneutens" target="facchinm" id="57" weight="1" />
+      <edge source="tomneutens" target="sandeepmistry" id="58" weight="1" />
+      <edge source="agdl" target="roncapat" id="59" weight="1" />
+      <edge source="agdl" target="LourensPool" id="60" weight="1" />
+      <edge source="agdl" target="sergiotomasello" id="61" weight="2" />
+      <edge source="agdl" target="ximion" id="62" weight="1" />
+      <edge source="agdl" target="surya-veer" id="63" weight="1" />
+      <edge source="agdl" target="artynet" id="64" weight="1" />
+      <edge source="agdl" target="matthijskooijman" id="65" weight="3" />
+      <edge source="agdl" target="cmaglie" id="66" weight="6" />
+      <edge source="agdl" target="descampsa" id="67" weight="1" />
+      <edge source="agdl" target="dsstutts" id="68" weight="1" />
+      <edge source="agdl" target="facchinm" id="69" weight="9" />
+      <edge source="agdl" target="sandeepmistry" id="70" weight="11" />
+      <edge source="roncapat" target="LourensPool" id="71" weight="1" />
+      <edge source="roncapat" target="sergiotomasello" id="72" weight="2" />
+      <edge source="roncapat" target="ximion" id="73" weight="1" />
+      <edge source="roncapat" target="surya-veer" id="74" weight="1" />
+      <edge source="roncapat" target="artynet" id="75" weight="2" />
+      <edge source="roncapat" target="matthijskooijman" id="76" weight="2" />
+      <edge source="roncapat" target="cmaglie" id="77" weight="2" />
+      <edge source="roncapat" target="descampsa" id="78" weight="1" />
+      <edge source="roncapat" target="dsstutts" id="79" weight="1" />
+      <edge source="roncapat" target="facchinm" id="80" weight="2" />
+      <edge source="roncapat" target="sandeepmistry" id="81" weight="1" />
+      <edge source="LourensPool" target="sergiotomasello" id="82" weight="1" />
+      <edge source="LourensPool" target="ximion" id="83" weight="1" />
+      <edge source="LourensPool" target="surya-veer" id="84" weight="1" />
+      <edge source="LourensPool" target="artynet" id="85" weight="1" />
+      <edge source="LourensPool" target="matthijskooijman" id="86" weight="1" />
+      <edge source="LourensPool" target="cmaglie" id="87" weight="1" />
+      <edge source="LourensPool" target="descampsa" id="88" weight="1" />
+      <edge source="LourensPool" target="dsstutts" id="89" weight="1" />
+      <edge source="LourensPool" target="facchinm" id="90" weight="1" />
+      <edge source="LourensPool" target="sandeepmistry" id="91" weight="1" />
+      <edge source="aknrdureegaesr" target="cmaglie" id="92" weight="1" />
+      <edge source="sergiotomasello" target="ximion" id="93" weight="1" />
+      <edge source="sergiotomasello" target="surya-veer" id="94" weight="1" />
+      <edge source="sergiotomasello" target="artynet" id="95" weight="7" />
+      <edge source="sergiotomasello" target="matthijskooijman" id="96" weight="2" />
+      <edge source="sergiotomasello" target="cmaglie" id="97" weight="3" />
+      <edge source="sergiotomasello" target="descampsa" id="98" weight="1" />
+      <edge source="sergiotomasello" target="dsstutts" id="99" weight="1" />
+      <edge source="sergiotomasello" target="facchinm" id="100" weight="3" />
+      <edge source="sergiotomasello" target="sandeepmistry" id="101" weight="2" />
+      <edge source="ximion" target="surya-veer" id="102" weight="1" />
+      <edge source="ximion" target="artynet" id="103" weight="1" />
+      <edge source="ximion" target="matthijskooijman" id="104" weight="5" />
+      <edge source="ximion" target="cmaglie" id="105" weight="1" />
+      <edge source="ximion" target="descampsa" id="106" weight="1" />
+      <edge source="ximion" target="dsstutts" id="107" weight="1" />
+      <edge source="ximion" target="facchinm" id="108" weight="1" />
+      <edge source="ximion" target="sandeepmistry" id="109" weight="1" />
+      <edge source="surya-veer" target="artynet" id="110" weight="1" />
+      <edge source="surya-veer" target="matthijskooijman" id="111" weight="1" />
+      <edge source="surya-veer" target="cmaglie" id="112" weight="1" />
+      <edge source="surya-veer" target="descampsa" id="113" weight="1" />
+      <edge source="surya-veer" target="dsstutts" id="114" weight="1" />
+      <edge source="surya-veer" target="facchinm" id="115" weight="1" />
+      <edge source="surya-veer" target="sandeepmistry" id="116" weight="1" />
+      <edge source="jeroenoverman" target="facchinm" id="117" weight="1" />
+      <edge source="jeroenoverman" target="matthijskooijman" id="118" weight="1" />
+      <edge source="artynet" target="matthijskooijman" id="119" weight="7" />
+      <edge source="artynet" target="cmaglie" id="120" weight="5" />
+      <edge source="artynet" target="descampsa" id="121" weight="2" />
+      <edge source="artynet" target="dsstutts" id="122" weight="1" />
+      <edge source="artynet" target="facchinm" id="123" weight="12" />
+      <edge source="artynet" target="sandeepmistry" id="124" weight="5" />
+      <edge source="matthijskooijman" target="cmaglie" id="125" weight="12" />
+      <edge source="matthijskooijman" target="descampsa" id="126" weight="4" />
+      <edge source="matthijskooijman" target="dsstutts" id="127" weight="2" />
+      <edge source="matthijskooijman" target="facchinm" id="128" weight="9" />
+      <edge source="matthijskooijman" target="sandeepmistry" id="129" weight="5" />
+      <edge source="cmaglie" target="descampsa" id="130" weight="1" />
+      <edge source="cmaglie" target="dsstutts" id="131" weight="1" />
+      <edge source="cmaglie" target="facchinm" id="132" weight="19" />
+      <edge source="cmaglie" target="sandeepmistry" id="133" weight="10" />
+      <edge source="descampsa" target="dsstutts" id="134" weight="1" />
+      <edge source="descampsa" target="facchinm" id="135" weight="3" />
+      <edge source="descampsa" target="sandeepmistry" id="136" weight="3" />
+      <edge source="dsstutts" target="facchinm" id="137" weight="1" />
+      <edge source="dsstutts" target="sandeepmistry" id="138" weight="1" />
+      <edge source="facchinm" target="sandeepmistry" id="139" weight="33" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-29">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="sgoblin" label="sgoblin" />
+      <node id="gunthercox" label="gunthercox" />
+      <node id="zan-kusterle" label="zan-kusterle" />
+      <node id="bloodywing" label="bloodywing" />
+      <node id="DarkmatterVale" label="DarkmatterVale" />
+      <node id="leif-waldner" label="leif-waldner" />
+    </nodes>
+    <edges>
+      <edge source="sgoblin" target="gunthercox" id="0" weight="1" />
+      <edge source="sgoblin" target="bloodywing" id="1" weight="1" />
+      <edge source="sgoblin" target="DarkmatterVale" id="2" weight="1" />
+      <edge source="sgoblin" target="leif-waldner" id="3" weight="1" />
+      <edge source="gunthercox" target="bloodywing" id="4" weight="1" />
+      <edge source="gunthercox" target="DarkmatterVale" id="5" weight="7" />
+      <edge source="gunthercox" target="leif-waldner" id="6" weight="1" />
+      <edge source="bloodywing" target="DarkmatterVale" id="7" weight="1" />
+      <edge source="bloodywing" target="leif-waldner" id="8" weight="1" />
+      <edge source="DarkmatterVale" target="leif-waldner" id="9" weight="1" />
+    </edges>
+  </graph>
+</gexf>

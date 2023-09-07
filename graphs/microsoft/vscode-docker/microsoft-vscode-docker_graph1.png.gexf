@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="bwateratmsft" label="bwateratmsft" />
+      <node id="ejizba" label="ejizba" />
+      <node id="rcjsuen" label="rcjsuen" />
+      <node id="sandipchitale" label="sandipchitale" />
+      <node id="allanwright" label="allanwright" />
+      <node id="ravipal" label="ravipal" />
+      <node id="karolz-ms" label="karolz-ms" />
+      <node id="philliphoff" label="philliphoff" />
+    </nodes>
+    <edges>
+      <edge source="bwateratmsft" target="rcjsuen" id="0" weight="1" />
+      <edge source="bwateratmsft" target="sandipchitale" id="1" weight="1" />
+      <edge source="bwateratmsft" target="ravipal" id="2" weight="18" />
+      <edge source="bwateratmsft" target="philliphoff" id="3" weight="6" />
+      <edge source="rcjsuen" target="sandipchitale" id="4" weight="3" />
+      <edge source="rcjsuen" target="allanwright" id="5" weight="1" />
+      <edge source="rcjsuen" target="ravipal" id="6" weight="1" />
+      <edge source="rcjsuen" target="karolz-ms" id="7" weight="1" />
+      <edge source="rcjsuen" target="philliphoff" id="8" weight="1" />
+      <edge source="sandipchitale" target="allanwright" id="9" weight="1" />
+      <edge source="sandipchitale" target="ravipal" id="10" weight="1" />
+      <edge source="sandipchitale" target="karolz-ms" id="11" weight="1" />
+      <edge source="sandipchitale" target="philliphoff" id="12" weight="1" />
+      <edge source="allanwright" target="ravipal" id="13" weight="1" />
+      <edge source="allanwright" target="karolz-ms" id="14" weight="1" />
+      <edge source="allanwright" target="philliphoff" id="15" weight="2" />
+      <edge source="ravipal" target="karolz-ms" id="16" weight="9" />
+      <edge source="ravipal" target="philliphoff" id="17" weight="37" />
+      <edge source="karolz-ms" target="philliphoff" id="18" weight="9" />
+    </edges>
+  </graph>
+</gexf>

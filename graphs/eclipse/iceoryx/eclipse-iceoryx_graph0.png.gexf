@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-09-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="bobedibob" label="bobedibob" />
+      <node id="mossmaurice" label="mossmaurice" />
+      <node id="marthtz" label="marthtz" />
+      <node id="rotu" label="rotu" />
+      <node id="elBoberido" label="elBoberido" />
+      <node id="budrus" label="budrus" />
+      <node id="dkroenke" label="dkroenke" />
+      <node id="Mr-Slippery" label="Mr-Slippery" />
+      <node id="elfenpiff" label="elfenpiff" />
+      <node id="Karsten1987" label="Karsten1987" />
+    </nodes>
+    <edges>
+      <edge source="mossmaurice" target="marthtz" id="0" weight="3" />
+      <edge source="mossmaurice" target="rotu" id="1" weight="1" />
+      <edge source="mossmaurice" target="elBoberido" id="2" weight="3" />
+      <edge source="mossmaurice" target="budrus" id="3" weight="2" />
+      <edge source="mossmaurice" target="dkroenke" id="4" weight="3" />
+      <edge source="mossmaurice" target="Mr-Slippery" id="5" weight="1" />
+      <edge source="mossmaurice" target="elfenpiff" id="6" weight="2" />
+      <edge source="mossmaurice" target="Karsten1987" id="7" weight="2" />
+      <edge source="marthtz" target="elBoberido" id="8" weight="3" />
+      <edge source="marthtz" target="budrus" id="9" weight="2" />
+      <edge source="marthtz" target="dkroenke" id="10" weight="1" />
+      <edge source="marthtz" target="Mr-Slippery" id="11" weight="1" />
+      <edge source="marthtz" target="elfenpiff" id="12" weight="1" />
+      <edge source="marthtz" target="Karsten1987" id="13" weight="1" />
+      <edge source="rotu" target="elBoberido" id="14" weight="1" />
+      <edge source="rotu" target="budrus" id="15" weight="1" />
+      <edge source="rotu" target="dkroenke" id="16" weight="1" />
+      <edge source="rotu" target="elfenpiff" id="17" weight="1" />
+      <edge source="rotu" target="Karsten1987" id="18" weight="8" />
+      <edge source="elBoberido" target="budrus" id="19" weight="3" />
+      <edge source="elBoberido" target="dkroenke" id="20" weight="2" />
+      <edge source="elBoberido" target="Mr-Slippery" id="21" weight="1" />
+      <edge source="elBoberido" target="elfenpiff" id="22" weight="3" />
+      <edge source="elBoberido" target="Karsten1987" id="23" weight="1" />
+      <edge source="budrus" target="dkroenke" id="24" weight="1" />
+      <edge source="budrus" target="Mr-Slippery" id="25" weight="1" />
+      <edge source="budrus" target="elfenpiff" id="26" weight="2" />
+      <edge source="budrus" target="Karsten1987" id="27" weight="1" />
+      <edge source="dkroenke" target="Mr-Slippery" id="28" weight="1" />
+      <edge source="dkroenke" target="elfenpiff" id="29" weight="1" />
+      <edge source="dkroenke" target="Karsten1987" id="30" weight="2" />
+      <edge source="Mr-Slippery" target="elfenpiff" id="31" weight="1" />
+      <edge source="Mr-Slippery" target="Karsten1987" id="32" weight="2" />
+      <edge source="elfenpiff" target="Karsten1987" id="33" weight="1" />
+    </edges>
+  </graph>
+</gexf>

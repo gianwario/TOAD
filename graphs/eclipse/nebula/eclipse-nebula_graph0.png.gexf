@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-09-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="wimjongman" label="wimjongman" />
+      <node id="fipro78" label="fipro78" />
+      <node id="lcaron" label="lcaron" />
+      <node id="PeterC-DLS" label="PeterC-DLS" />
+    </nodes>
+    <edges>
+      <edge source="wimjongman" target="fipro78" id="0" weight="2" />
+      <edge source="wimjongman" target="lcaron" id="1" weight="6" />
+      <edge source="wimjongman" target="PeterC-DLS" id="2" weight="1" />
+      <edge source="fipro78" target="lcaron" id="3" weight="1" />
+      <edge source="lcaron" target="PeterC-DLS" id="4" weight="2" />
+    </edges>
+  </graph>
+</gexf>

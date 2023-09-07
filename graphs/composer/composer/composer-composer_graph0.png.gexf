@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-28">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="tfrommen" label="tfrommen" />
+      <node id="ro-kl" label="ro-kl" />
+      <node id="dzuelke" label="dzuelke" />
+      <node id="balbuf" label="balbuf" />
+      <node id="Seldaek" label="Seldaek" />
+      <node id="xelaris" label="xelaris" />
+      <node id="alcohol" label="alcohol" />
+      <node id="decke" label="decke" />
+      <node id="theotonge" label="theotonge" />
+      <node id="greydnls" label="greydnls" />
+      <node id="Crizz0" label="Crizz0" />
+      <node id="twoixter" label="twoixter" />
+      <node id="frezno" label="frezno" />
+      <node id="Slamdunk" label="Slamdunk" />
+      <node id="rubenrua" label="rubenrua" />
+      <node id="derrabus" label="derrabus" />
+      <node id="theikalman" label="theikalman" />
+      <node id="IchHabRecht" label="IchHabRecht" />
+      <node id="sjadema" label="sjadema" />
+      <node id="janczer" label="janczer" />
+      <node id="deeky666" label="deeky666" />
+      <node id="acelaya" label="acelaya" />
+      <node id="chuangbo" label="chuangbo" />
+      <node id="javiereguiluz" label="javiereguiluz" />
+      <node id="issei-m" label="issei-m" />
+      <node id="robertpustulka" label="robertpustulka" />
+      <node id="Xerkus" label="Xerkus" />
+      <node id="CupOfTea696" label="CupOfTea696" />
+      <node id="naderman" label="naderman" />
+    </nodes>
+    <edges>
+      <edge source="tfrommen" target="balbuf" id="0" weight="1" />
+      <edge source="tfrommen" target="Seldaek" id="1" weight="1" />
+      <edge source="tfrommen" target="CupOfTea696" id="2" weight="1" />
+      <edge source="ro-kl" target="dzuelke" id="3" weight="1" />
+      <edge source="ro-kl" target="balbuf" id="4" weight="1" />
+      <edge source="ro-kl" target="Seldaek" id="5" weight="2" />
+      <edge source="ro-kl" target="xelaris" id="6" weight="1" />
+      <edge source="ro-kl" target="alcohol" id="7" weight="1" />
+      <edge source="ro-kl" target="theotonge" id="8" weight="1" />
+      <edge source="ro-kl" target="greydnls" id="9" weight="1" />
+      <edge source="ro-kl" target="Crizz0" id="10" weight="1" />
+      <edge source="ro-kl" target="twoixter" id="11" weight="1" />
+      <edge source="ro-kl" target="Slamdunk" id="12" weight="1" />
+      <edge source="ro-kl" target="rubenrua" id="13" weight="1" />
+      <edge source="ro-kl" target="derrabus" id="14" weight="1" />
+      <edge source="ro-kl" target="IchHabRecht" id="15" weight="1" />
+      <edge source="ro-kl" target="janczer" id="16" weight="1" />
+      <edge source="ro-kl" target="deeky666" id="17" weight="1" />
+      <edge source="ro-kl" target="chuangbo" id="18" weight="1" />
+      <edge source="ro-kl" target="javiereguiluz" id="19" weight="1" />
+      <edge source="ro-kl" target="issei-m" id="20" weight="1" />
+      <edge source="ro-kl" target="robertpustulka" id="21" weight="1" />
+      <edge source="ro-kl" target="Xerkus" id="22" weight="1" />
+      <edge source="ro-kl" target="naderman" id="23" weight="1" />
+      <edge source="dzuelke" target="balbuf" id="24" weight="1" />
+      <edge source="dzuelke" target="Seldaek" id="25" weight="13" />
+      <edge source="dzuelke" target="xelaris" id="26" weight="8" />
+      <edge source="dzuelke" target="alcohol" id="27" weight="1" />
+      <edge source="dzuelke" target="theotonge" id="28" weight="1" />
+      <edge source="dzuelke" target="greydnls" id="29" weight="2" />
+      <edge source="dzuelke" target="Crizz0" id="30" weight="1" />
+      <edge source="dzuelke" target="twoixter" id="31" weight="1" />
+      <edge source="dzuelke" target="Slamdunk" id="32" weight="7" />
+      <edge source="dzuelke" target="rubenrua" id="33" weight="4" />
+      <edge source="dzuelke" target="derrabus" id="34" weight="9" />
+      <edge source="dzuelke" target="IchHabRecht" id="35" weight="5" />
+      <edge source="dzuelke" target="janczer" id="36" weight="1" />
+      <edge source="dzuelke" target="deeky666" id="37" weight="6" />
+      <edge source="dzuelke" target="chuangbo" id="38" weight="1" />
+      <edge source="dzuelke" target="javiereguiluz" id="39" weight="9" />
+      <edge source="dzuelke" target="issei-m" id="40" weight="8" />
+      <edge source="dzuelke" target="robertpustulka" id="41" weight="1" />
+      <edge source="dzuelke" target="Xerkus" id="42" weight="1" />
+      <edge source="dzuelke" target="naderman" id="43" weight="8" />
+      <edge source="balbuf" target="Seldaek" id="44" weight="1" />
+      <edge source="balbuf" target="xelaris" id="45" weight="1" />
+      <edge source="balbuf" target="alcohol" id="46" weight="1" />
+      <edge source="balbuf" target="theotonge" id="47" weight="1" />
+      <edge source="balbuf" target="greydnls" id="48" weight="1" />
+      <edge source="balbuf" target="Crizz0" id="49" weight="1" />
+      <edge source="balbuf" target="twoixter" id="50" weight="1" />
+      <edge source="balbuf" target="Slamdunk" id="51" weight="1" />
+      <edge source="balbuf" target="rubenrua" id="52" weight="1" />
+      <edge source="balbuf" target="derrabus" id="53" weight="1" />
+      <edge source="balbuf" target="IchHabRecht" id="54" weight="1" />
+      <edge source="balbuf" target="janczer" id="55" weight="1" />
+      <edge source="balbuf" target="deeky666" id="56" weight="1" />
+      <edge source="balbuf" target="chuangbo" id="57" weight="1" />
+      <edge source="balbuf" target="javiereguiluz" id="58" weight="2" />
+      <edge source="balbuf" target="issei-m" id="59" weight="1" />
+      <edge source="balbuf" target="robertpustulka" id="60" weight="1" />
+      <edge source="balbuf" target="Xerkus" id="61" weight="2" />
+      <edge source="balbuf" target="naderman" id="62" weight="1" />
+      <edge source="Seldaek" target="xelaris" id="63" weight="11" />
+      <edge source="Seldaek" target="alcohol" id="64" weight="3" />
+      <edge source="Seldaek" target="theotonge" id="65" weight="1" />
+      <edge source="Seldaek" target="greydnls" id="66" weight="3" />
+      <edge source="Seldaek" target="Crizz0" id="67" weight="1" />
+      <edge source="Seldaek" target="twoixter" id="68" weight="2" />
+      <edge source="Seldaek" target="Slamdunk" id="69" weight="19" />
+      <edge source="Seldaek" target="rubenrua" id="70" weight="6" />
+      <edge source="Seldaek" target="derrabus" id="71" weight="24" />
+      <edge source="Seldaek" target="IchHabRecht" id="72" weight="7" />
+      <edge source="Seldaek" target="sjadema" id="73" weight="2" />
+      <edge source="Seldaek" target="janczer" id="74" weight="2" />
+      <edge source="Seldaek" target="deeky666" id="75" weight="7" />
+      <edge source="Seldaek" target="chuangbo" id="76" weight="1" />
+      <edge source="Seldaek" target="javiereguiluz" id="77" weight="29" />
+      <edge source="Seldaek" target="issei-m" id="78" weight="14" />
+      <edge source="Seldaek" target="robertpustulka" id="79" weight="1" />
+      <edge source="Seldaek" target="Xerkus" id="80" weight="9" />
+      <edge source="Seldaek" target="naderman" id="81" weight="16" />
+      <edge source="xelaris" target="alcohol" id="82" weight="1" />
+      <edge source="xelaris" target="theotonge" id="83" weight="1" />
+      <edge source="xelaris" target="greydnls" id="84" weight="1" />
+      <edge source="xelaris" target="Crizz0" id="85" weight="1" />
+      <edge source="xelaris" target="twoixter" id="86" weight="1" />
+      <edge source="xelaris" target="Slamdunk" id="87" weight="3" />
+      <edge source="xelaris" target="rubenrua" id="88" weight="5" />
+      <edge source="xelaris" target="derrabus" id="89" weight="5" />
+      <edge source="xelaris" target="IchHabRecht" id="90" weight="3" />
+      <edge source="xelaris" target="janczer" id="91" weight="1" />
+      <edge source="xelaris" target="deeky666" id="92" weight="5" />
+      <edge source="xelaris" target="chuangbo" id="93" weight="1" />
+      <edge source="xelaris" target="javiereguiluz" id="94" weight="13" />
+      <edge source="xelaris" target="issei-m" id="95" weight="8" />
+      <edge source="xelaris" target="robertpustulka" id="96" weight="2" />
+      <edge source="xelaris" target="Xerkus" id="97" weight="2" />
+      <edge source="xelaris" target="naderman" id="98" weight="4" />
+      <edge source="alcohol" target="theotonge" id="99" weight="1" />
+      <edge source="alcohol" target="greydnls" id="100" weight="3" />
+      <edge source="alcohol" target="Crizz0" id="101" weight="1" />
+      <edge source="alcohol" target="twoixter" id="102" weight="1" />
+      <edge source="alcohol" target="Slamdunk" id="103" weight="2" />
+      <edge source="alcohol" target="rubenrua" id="104" weight="4" />
+      <edge source="alcohol" target="derrabus" id="105" weight="1" />
+      <edge source="alcohol" target="theikalman" id="106" weight="1" />
+      <edge source="alcohol" target="IchHabRecht" id="107" weight="3" />
+      <edge source="alcohol" target="janczer" id="108" weight="2" />
+      <edge source="alcohol" target="deeky666" id="109" weight="1" />
+      <edge source="alcohol" target="chuangbo" id="110" weight="1" />
+      <edge source="alcohol" target="javiereguiluz" id="111" weight="1" />
+      <edge source="alcohol" target="issei-m" id="112" weight="1" />
+      <edge source="alcohol" target="robertpustulka" id="113" weight="2" />
+      <edge source="alcohol" target="Xerkus" id="114" weight="1" />
+      <edge source="alcohol" target="naderman" id="115" weight="2" />
+      <edge source="theotonge" target="greydnls" id="116" weight="1" />
+      <edge source="theotonge" target="Crizz0" id="117" weight="1" />
+      <edge source="theotonge" target="twoixter" id="118" weight="1" />
+      <edge source="theotonge" target="Slamdunk" id="119" weight="1" />
+      <edge source="theotonge" target="rubenrua" id="120" weight="1" />
+      <edge source="theotonge" target="derrabus" id="121" weight="1" />
+      <edge source="theotonge" target="IchHabRecht" id="122" weight="1" />
+      <edge source="theotonge" target="janczer" id="123" weight="1" />
+      <edge source="theotonge" target="deeky666" id="124" weight="1" />
+      <edge source="theotonge" target="chuangbo" id="125" weight="1" />
+      <edge source="theotonge" target="javiereguiluz" id="126" weight="1" />
+      <edge source="theotonge" target="issei-m" id="127" weight="1" />
+      <edge source="theotonge" target="robertpustulka" id="128" weight="1" />
+      <edge source="theotonge" target="Xerkus" id="129" weight="1" />
+      <edge source="theotonge" target="naderman" id="130" weight="1" />
+      <edge source="greydnls" target="Crizz0" id="131" weight="1" />
+      <edge source="greydnls" target="twoixter" id="132" weight="1" />
+      <edge source="greydnls" target="Slamdunk" id="133" weight="3" />
+      <edge source="greydnls" target="rubenrua" id="134" weight="1" />
+      <edge source="greydnls" target="derrabus" id="135" weight="3" />
+      <edge source="greydnls" target="IchHabRecht" id="136" weight="1" />
+      <edge source="greydnls" target="janczer" id="137" weight="1" />
+      <edge source="greydnls" target="deeky666" id="138" weight="1" />
+      <edge source="greydnls" target="chuangbo" id="139" weight="2" />
+      <edge source="greydnls" target="javiereguiluz" id="140" weight="1" />
+      <edge source="greydnls" target="issei-m" id="141" weight="1" />
+      <edge source="greydnls" target="robertpustulka" id="142" weight="2" />
+      <edge source="greydnls" target="Xerkus" id="143" weight="3" />
+      <edge source="greydnls" target="naderman" id="144" weight="3" />
+      <edge source="Crizz0" target="twoixter" id="145" weight="1" />
+      <edge source="Crizz0" target="Slamdunk" id="146" weight="1" />
+      <edge source="Crizz0" target="rubenrua" id="147" weight="1" />
+      <edge source="Crizz0" target="derrabus" id="148" weight="1" />
+      <edge source="Crizz0" target="IchHabRecht" id="149" weight="1" />
+      <edge source="Crizz0" target="janczer" id="150" weight="1" />
+      <edge source="Crizz0" target="deeky666" id="151" weight="1" />
+      <edge source="Crizz0" target="chuangbo" id="152" weight="1" />
+      <edge source="Crizz0" target="javiereguiluz" id="153" weight="1" />
+      <edge source="Crizz0" target="issei-m" id="154" weight="1" />
+      <edge source="Crizz0" target="robertpustulka" id="155" weight="1" />
+      <edge source="Crizz0" target="Xerkus" id="156" weight="2" />
+      <edge source="Crizz0" target="naderman" id="157" weight="3" />
+      <edge source="twoixter" target="Slamdunk" id="158" weight="1" />
+      <edge source="twoixter" target="rubenrua" id="159" weight="1" />
+      <edge source="twoixter" target="derrabus" id="160" weight="1" />
+      <edge source="twoixter" target="IchHabRecht" id="161" weight="1" />
+      <edge source="twoixter" target="janczer" id="162" weight="1" />
+      <edge source="twoixter" target="deeky666" id="163" weight="1" />
+      <edge source="twoixter" target="chuangbo" id="164" weight="1" />
+      <edge source="twoixter" target="javiereguiluz" id="165" weight="2" />
+      <edge source="twoixter" target="issei-m" id="166" weight="1" />
+      <edge source="twoixter" target="robertpustulka" id="167" weight="1" />
+      <edge source="twoixter" target="Xerkus" id="168" weight="1" />
+      <edge source="twoixter" target="naderman" id="169" weight="1" />
+      <edge source="Slamdunk" target="rubenrua" id="170" weight="3" />
+      <edge source="Slamdunk" target="derrabus" id="171" weight="18" />
+      <edge source="Slamdunk" target="IchHabRecht" id="172" weight="6" />
+      <edge source="Slamdunk" target="janczer" id="173" weight="1" />
+      <edge source="Slamdunk" target="deeky666" id="174" weight="9" />
+      <edge source="Slamdunk" target="chuangbo" id="175" weight="1" />
+      <edge source="Slamdunk" target="javiereguiluz" id="176" weight="7" />
+      <edge source="Slamdunk" target="issei-m" id="177" weight="9" />
+      <edge source="Slamdunk" target="robertpustulka" id="178" weight="2" />
+      <edge source="Slamdunk" target="Xerkus" id="179" weight="45" />
+      <edge source="Slamdunk" target="naderman" id="180" weight="10" />
+      <edge source="rubenrua" target="derrabus" id="181" weight="4" />
+      <edge source="rubenrua" target="theikalman" id="182" weight="1" />
+      <edge source="rubenrua" target="IchHabRecht" id="183" weight="2" />
+      <edge source="rubenrua" target="janczer" id="184" weight="3" />
+      <edge source="rubenrua" target="deeky666" id="185" weight="3" />
+      <edge source="rubenrua" target="chuangbo" id="186" weight="1" />
+      <edge source="rubenrua" target="javiereguiluz" id="187" weight="5" />
+      <edge source="rubenrua" target="issei-m" id="188" weight="6" />
+      <edge source="rubenrua" target="robertpustulka" id="189" weight="1" />
+      <edge source="rubenrua" target="Xerkus" id="190" weight="1" />
+      <edge source="rubenrua" target="naderman" id="191" weight="9" />
+      <edge source="derrabus" target="IchHabRecht" id="192" weight="6" />
+      <edge source="derrabus" target="sjadema" id="193" weight="1" />
+      <edge source="derrabus" target="janczer" id="194" weight="1" />
+      <edge source="derrabus" target="deeky666" id="195" weight="8" />
+      <edge source="derrabus" target="chuangbo" id="196" weight="1" />
+      <edge source="derrabus" target="javiereguiluz" id="197" weight="25" />
+      <edge source="derrabus" target="issei-m" id="198" weight="11" />
+      <edge source="derrabus" target="robertpustulka" id="199" weight="1" />
+      <edge source="derrabus" target="Xerkus" id="200" weight="4" />
+      <edge source="derrabus" target="naderman" id="201" weight="9" />
+      <edge source="theikalman" target="janczer" id="202" weight="1" />
+      <edge source="IchHabRecht" target="janczer" id="203" weight="1" />
+      <edge source="IchHabRecht" target="deeky666" id="204" weight="3" />
+      <edge source="IchHabRecht" target="chuangbo" id="205" weight="1" />
+      <edge source="IchHabRecht" target="javiereguiluz" id="206" weight="3" />
+      <edge source="IchHabRecht" target="issei-m" id="207" weight="6" />
+      <edge source="IchHabRecht" target="robertpustulka" id="208" weight="1" />
+      <edge source="IchHabRecht" target="Xerkus" id="209" weight="2" />
+      <edge source="IchHabRecht" target="naderman" id="210" weight="3" />
+      <edge source="sjadema" target="deeky666" id="211" weight="1" />
+      <edge source="sjadema" target="javiereguiluz" id="212" weight="3" />
+      <edge source="sjadema" target="naderman" id="213" weight="1" />
+      <edge source="janczer" target="deeky666" id="214" weight="1" />
+      <edge source="janczer" target="chuangbo" id="215" weight="1" />
+      <edge source="janczer" target="javiereguiluz" id="216" weight="1" />
+      <edge source="janczer" target="issei-m" id="217" weight="1" />
+      <edge source="janczer" target="robertpustulka" id="218" weight="1" />
+      <edge source="janczer" target="Xerkus" id="219" weight="2" />
+      <edge source="janczer" target="naderman" id="220" weight="1" />
+      <edge source="deeky666" target="chuangbo" id="221" weight="1" />
+      <edge source="deeky666" target="javiereguiluz" id="222" weight="7" />
+      <edge source="deeky666" target="issei-m" id="223" weight="8" />
+      <edge source="deeky666" target="robertpustulka" id="224" weight="1" />
+      <edge source="deeky666" target="Xerkus" id="225" weight="3" />
+      <edge source="deeky666" target="naderman" id="226" weight="5" />
+      <edge source="chuangbo" target="javiereguiluz" id="227" weight="1" />
+      <edge source="chuangbo" target="issei-m" id="228" weight="1" />
+      <edge source="chuangbo" target="robertpustulka" id="229" weight="1" />
+      <edge source="chuangbo" target="Xerkus" id="230" weight="1" />
+      <edge source="chuangbo" target="naderman" id="231" weight="1" />
+      <edge source="javiereguiluz" target="issei-m" id="232" weight="14" />
+      <edge source="javiereguiluz" target="robertpustulka" id="233" weight="1" />
+      <edge source="javiereguiluz" target="Xerkus" id="234" weight="5" />
+      <edge source="javiereguiluz" target="naderman" id="235" weight="7" />
+      <edge source="issei-m" target="robertpustulka" id="236" weight="1" />
+      <edge source="issei-m" target="Xerkus" id="237" weight="2" />
+      <edge source="issei-m" target="naderman" id="238" weight="6" />
+      <edge source="robertpustulka" target="Xerkus" id="239" weight="1" />
+      <edge source="robertpustulka" target="naderman" id="240" weight="1" />
+      <edge source="Xerkus" target="CupOfTea696" id="241" weight="1" />
+      <edge source="Xerkus" target="naderman" id="242" weight="5" />
+    </edges>
+  </graph>
+</gexf>

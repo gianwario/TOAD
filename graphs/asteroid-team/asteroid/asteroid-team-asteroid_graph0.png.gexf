@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-29">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="jensheit" label="jensheit" />
+      <node id="mpariente" label="mpariente" />
+      <node id="mhu-coder" label="mhu-coder" />
+      <node id="popcornell" label="popcornell" />
+      <node id="sunits" label="sunits" />
+    </nodes>
+    <edges>
+      <edge source="jensheit" target="mpariente" id="0" weight="1" />
+      <edge source="mpariente" target="mhu-coder" id="1" weight="10" />
+      <edge source="mpariente" target="popcornell" id="2" weight="17" />
+      <edge source="mpariente" target="sunits" id="3" weight="8" />
+      <edge source="mhu-coder" target="popcornell" id="4" weight="2" />
+      <edge source="mhu-coder" target="sunits" id="5" weight="1" />
+      <edge source="popcornell" target="sunits" id="6" weight="4" />
+    </edges>
+  </graph>
+</gexf>
