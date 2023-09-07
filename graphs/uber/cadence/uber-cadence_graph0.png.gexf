@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="shreyassrivatsan" label="shreyassrivatsan" />
+      <node id="pgohite" label="pgohite" />
+      <node id="andrewjdawson2016" label="andrewjdawson2016" />
+      <node id="yashrajbharti" label="yashrajbharti" />
+      <node id="vkuzmin-uber" label="vkuzmin-uber" />
+      <node id="samarabbas" label="samarabbas" />
+      <node id="lihannan99" label="lihannan99" />
+      <node id="meiliang86" label="meiliang86" />
+      <node id="venkat1109" label="venkat1109" />
+      <node id="dmetzgar" label="dmetzgar" />
+      <node id="longquanzheng" label="longquanzheng" />
+      <node id="wxing1292" label="wxing1292" />
+      <node id="sagikazarmark" label="sagikazarmark" />
+      <node id="yycptt" label="yycptt" />
+      <node id="yiminc" label="yiminc" />
+      <node id="vancexu" label="vancexu" />
+    </nodes>
+    <edges>
+      <edge source="shreyassrivatsan" target="pgohite" id="0" weight="3" />
+      <edge source="shreyassrivatsan" target="andrewjdawson2016" id="1" weight="3" />
+      <edge source="shreyassrivatsan" target="vkuzmin-uber" id="2" weight="2" />
+      <edge source="shreyassrivatsan" target="samarabbas" id="3" weight="6" />
+      <edge source="shreyassrivatsan" target="lihannan99" id="4" weight="3" />
+      <edge source="shreyassrivatsan" target="meiliang86" id="5" weight="2" />
+      <edge source="shreyassrivatsan" target="venkat1109" id="6" weight="18" />
+      <edge source="shreyassrivatsan" target="longquanzheng" id="7" weight="3" />
+      <edge source="shreyassrivatsan" target="sagikazarmark" id="8" weight="4" />
+      <edge source="shreyassrivatsan" target="yycptt" id="9" weight="3" />
+      <edge source="shreyassrivatsan" target="yiminc" id="10" weight="2" />
+      <edge source="shreyassrivatsan" target="vancexu" id="11" weight="3" />
+      <edge source="pgohite" target="andrewjdawson2016" id="12" weight="2" />
+      <edge source="pgohite" target="vkuzmin-uber" id="13" weight="2" />
+      <edge source="pgohite" target="samarabbas" id="14" weight="2" />
+      <edge source="pgohite" target="lihannan99" id="15" weight="2" />
+      <edge source="pgohite" target="meiliang86" id="16" weight="2" />
+      <edge source="pgohite" target="venkat1109" id="17" weight="3" />
+      <edge source="pgohite" target="longquanzheng" id="18" weight="2" />
+      <edge source="pgohite" target="sagikazarmark" id="19" weight="2" />
+      <edge source="pgohite" target="yycptt" id="20" weight="2" />
+      <edge source="pgohite" target="yiminc" id="21" weight="2" />
+      <edge source="pgohite" target="vancexu" id="22" weight="2" />
+      <edge source="andrewjdawson2016" target="vkuzmin-uber" id="23" weight="2" />
+      <edge source="andrewjdawson2016" target="samarabbas" id="24" weight="37" />
+      <edge source="andrewjdawson2016" target="lihannan99" id="25" weight="3" />
+      <edge source="andrewjdawson2016" target="meiliang86" id="26" weight="2" />
+      <edge source="andrewjdawson2016" target="venkat1109" id="27" weight="34" />
+      <edge source="andrewjdawson2016" target="longquanzheng" id="28" weight="4" />
+      <edge source="andrewjdawson2016" target="sagikazarmark" id="29" weight="3" />
+      <edge source="andrewjdawson2016" target="yycptt" id="30" weight="34" />
+      <edge source="andrewjdawson2016" target="yiminc" id="31" weight="2" />
+      <edge source="andrewjdawson2016" target="vancexu" id="32" weight="5" />
+      <edge source="vkuzmin-uber" target="samarabbas" id="33" weight="2" />
+      <edge source="vkuzmin-uber" target="lihannan99" id="34" weight="2" />
+      <edge source="vkuzmin-uber" target="meiliang86" id="35" weight="2" />
+      <edge source="vkuzmin-uber" target="venkat1109" id="36" weight="2" />
+      <edge source="vkuzmin-uber" target="longquanzheng" id="37" weight="2" />
+      <edge source="vkuzmin-uber" target="wxing1292" id="38" weight="1" />
+      <edge source="vkuzmin-uber" target="sagikazarmark" id="39" weight="2" />
+      <edge source="vkuzmin-uber" target="yycptt" id="40" weight="2" />
+      <edge source="vkuzmin-uber" target="yiminc" id="41" weight="2" />
+      <edge source="vkuzmin-uber" target="vancexu" id="42" weight="2" />
+      <edge source="samarabbas" target="lihannan99" id="43" weight="3" />
+      <edge source="samarabbas" target="meiliang86" id="44" weight="9" />
+      <edge source="samarabbas" target="venkat1109" id="45" weight="14" />
+      <edge source="samarabbas" target="longquanzheng" id="46" weight="13" />
+      <edge source="samarabbas" target="wxing1292" id="47" weight="15" />
+      <edge source="samarabbas" target="sagikazarmark" id="48" weight="5" />
+      <edge source="samarabbas" target="yycptt" id="49" weight="8" />
+      <edge source="samarabbas" target="yiminc" id="50" weight="10" />
+      <edge source="samarabbas" target="vancexu" id="51" weight="25" />
+      <edge source="lihannan99" target="meiliang86" id="52" weight="2" />
+      <edge source="lihannan99" target="venkat1109" id="53" weight="2" />
+      <edge source="lihannan99" target="longquanzheng" id="54" weight="3" />
+      <edge source="lihannan99" target="sagikazarmark" id="55" weight="3" />
+      <edge source="lihannan99" target="yycptt" id="56" weight="3" />
+      <edge source="lihannan99" target="yiminc" id="57" weight="2" />
+      <edge source="lihannan99" target="vancexu" id="58" weight="3" />
+      <edge source="lihannan99" target="wxing1292" id="59" weight="1" />
+      <edge source="meiliang86" target="venkat1109" id="60" weight="2" />
+      <edge source="meiliang86" target="longquanzheng" id="61" weight="6" />
+      <edge source="meiliang86" target="wxing1292" id="62" weight="6" />
+      <edge source="meiliang86" target="sagikazarmark" id="63" weight="3" />
+      <edge source="meiliang86" target="yycptt" id="64" weight="6" />
+      <edge source="meiliang86" target="yiminc" id="65" weight="8" />
+      <edge source="meiliang86" target="vancexu" id="66" weight="4" />
+      <edge source="venkat1109" target="longquanzheng" id="67" weight="5" />
+      <edge source="venkat1109" target="sagikazarmark" id="68" weight="2" />
+      <edge source="venkat1109" target="yycptt" id="69" weight="3" />
+      <edge source="venkat1109" target="yiminc" id="70" weight="2" />
+      <edge source="venkat1109" target="vancexu" id="71" weight="2" />
+      <edge source="dmetzgar" target="longquanzheng" id="72" weight="3" />
+      <edge source="dmetzgar" target="vancexu" id="73" weight="2" />
+      <edge source="longquanzheng" target="wxing1292" id="74" weight="16" />
+      <edge source="longquanzheng" target="sagikazarmark" id="75" weight="6" />
+      <edge source="longquanzheng" target="yycptt" id="76" weight="8" />
+      <edge source="longquanzheng" target="yiminc" id="77" weight="4" />
+      <edge source="longquanzheng" target="vancexu" id="78" weight="13" />
+      <edge source="wxing1292" target="sagikazarmark" id="79" weight="3" />
+      <edge source="wxing1292" target="yycptt" id="80" weight="5" />
+      <edge source="wxing1292" target="yiminc" id="81" weight="11" />
+      <edge source="wxing1292" target="vancexu" id="82" weight="6" />
+      <edge source="sagikazarmark" target="yycptt" id="83" weight="4" />
+      <edge source="sagikazarmark" target="yiminc" id="84" weight="5" />
+      <edge source="sagikazarmark" target="vancexu" id="85" weight="3" />
+      <edge source="yycptt" target="yiminc" id="86" weight="7" />
+      <edge source="yycptt" target="vancexu" id="87" weight="5" />
+      <edge source="yiminc" target="vancexu" id="88" weight="2" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="microsoftopensource" label="microsoftopensource" />
+      <node id="msftgits" label="msftgits" />
+      <node id="NikCharlebois" label="NikCharlebois" />
+      <node id="poiriersimon" label="poiriersimon" />
+      <node id="desmay" label="desmay" />
+      <node id="ThorstenLoeschmann" label="ThorstenLoeschmann" />
+    </nodes>
+    <edges>
+      <edge source="microsoftopensource" target="NikCharlebois" id="0" weight="1" />
+      <edge source="NikCharlebois" target="poiriersimon" id="1" weight="3" />
+      <edge source="NikCharlebois" target="desmay" id="2" weight="7" />
+      <edge source="NikCharlebois" target="ThorstenLoeschmann" id="3" weight="3" />
+      <edge source="poiriersimon" target="desmay" id="4" weight="1" />
+      <edge source="desmay" target="ThorstenLoeschmann" id="5" weight="1" />
+    </edges>
+  </graph>
+</gexf>

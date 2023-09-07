@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-31">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="zehuanw" label="zehuanw" />
+      <node id="wl1136" label="wl1136" />
+      <node id="minseokl" label="minseokl" />
+      <node id="straywarrior" label="straywarrior" />
+      <node id="gemsg@prm-dgx-04.nvidia.com" label="gemsg@prm-dgx-04.nvidia.com" />
+    </nodes>
+    <edges>
+      <edge source="zehuanw" target="straywarrior" id="0" weight="2" />
+    </edges>
+  </graph>
+</gexf>

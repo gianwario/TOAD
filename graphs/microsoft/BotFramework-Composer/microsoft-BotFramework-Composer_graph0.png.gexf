@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="lei9444" label="lei9444" />
+      <node id="luhan2017" label="luhan2017" />
+      <node id="feich-ms" label="feich-ms" />
+      <node id="msftgits" label="msftgits" />
+      <node id="yochay" label="yochay" />
+      <node id="a-b-r-o-w-n" label="a-b-r-o-w-n" />
+      <node id="boydc2014" label="boydc2014" />
+      <node id="louria" label="louria" />
+      <node id="VanyLaw" label="VanyLaw" />
+      <node id="youyu16" label="youyu16" />
+      <node id="tonyanziano" label="tonyanziano" />
+      <node id="Danieladu" label="Danieladu" />
+      <node id="yeze322" label="yeze322" />
+      <node id="cwhitten" label="cwhitten" />
+      <node id="axelsrz" label="axelsrz" />
+      <node id="microsoftopensource" label="microsoftopensource" />
+    </nodes>
+    <edges>
+      <edge source="lei9444" target="a-b-r-o-w-n" id="0" weight="10" />
+      <edge source="lei9444" target="boydc2014" id="1" weight="36" />
+      <edge source="lei9444" target="yeze322" id="2" weight="1" />
+      <edge source="lei9444" target="VanyLaw" id="3" weight="1" />
+      <edge source="lei9444" target="cwhitten" id="4" weight="9" />
+      <edge source="luhan2017" target="feich-ms" id="5" weight="3" />
+      <edge source="luhan2017" target="a-b-r-o-w-n" id="6" weight="19" />
+      <edge source="luhan2017" target="youyu16" id="7" weight="1" />
+      <edge source="luhan2017" target="Danieladu" id="8" weight="2" />
+      <edge source="luhan2017" target="yeze322" id="9" weight="2" />
+      <edge source="luhan2017" target="boydc2014" id="10" weight="1" />
+      <edge source="luhan2017" target="yochay" id="11" weight="1" />
+      <edge source="luhan2017" target="cwhitten" id="12" weight="2" />
+      <edge source="feich-ms" target="Danieladu" id="13" weight="1" />
+      <edge source="feich-ms" target="yeze322" id="14" weight="1" />
+      <edge source="feich-ms" target="boydc2014" id="15" weight="2" />
+      <edge source="yochay" target="Danieladu" id="16" weight="1" />
+      <edge source="a-b-r-o-w-n" target="yeze322" id="17" weight="22" />
+      <edge source="a-b-r-o-w-n" target="cwhitten" id="18" weight="15" />
+      <edge source="a-b-r-o-w-n" target="boydc2014" id="19" weight="26" />
+      <edge source="a-b-r-o-w-n" target="tonyanziano" id="20" weight="1" />
+      <edge source="a-b-r-o-w-n" target="VanyLaw" id="21" weight="2" />
+      <edge source="a-b-r-o-w-n" target="youyu16" id="22" weight="3" />
+      <edge source="boydc2014" target="youyu16" id="23" weight="31" />
+      <edge source="boydc2014" target="axelsrz" id="24" weight="1" />
+      <edge source="boydc2014" target="VanyLaw" id="25" weight="24" />
+      <edge source="boydc2014" target="cwhitten" id="26" weight="12" />
+      <edge source="boydc2014" target="yeze322" id="27" weight="25" />
+      <edge source="boydc2014" target="Danieladu" id="28" weight="3" />
+      <edge source="VanyLaw" target="youyu16" id="29" weight="2" />
+      <edge source="VanyLaw" target="Danieladu" id="30" weight="1" />
+      <edge source="VanyLaw" target="yeze322" id="31" weight="1" />
+      <edge source="youyu16" target="Danieladu" id="32" weight="2" />
+      <edge source="youyu16" target="axelsrz" id="33" weight="1" />
+      <edge source="youyu16" target="cwhitten" id="34" weight="6" />
+      <edge source="tonyanziano" target="cwhitten" id="35" weight="1" />
+      <edge source="Danieladu" target="yeze322" id="36" weight="1" />
+      <edge source="yeze322" target="axelsrz" id="37" weight="1" />
+      <edge source="yeze322" target="cwhitten" id="38" weight="8" />
+    </edges>
+  </graph>
+</gexf>

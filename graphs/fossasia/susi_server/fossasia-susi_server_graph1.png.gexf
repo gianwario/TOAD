@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-29">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="rmader" label="rmader" />
+      <node id="Soulou" label="Soulou" />
+      <node id="DengYiping" label="DengYiping" />
+      <node id="jigyasa-grover" label="jigyasa-grover" />
+      <node id="cribsb" label="cribsb" />
+      <node id="Orbiter" label="Orbiter" />
+      <node id="leonmak" label="leonmak" />
+      <node id="shivenmian" label="shivenmian" />
+      <node id="sudheesh001" label="sudheesh001" />
+      <node id="daminisatya" label="daminisatya" />
+      <node id="mariobehling" label="mariobehling" />
+      <node id="cshubhamrao" label="cshubhamrao" />
+    </nodes>
+    <edges>
+      <edge source="rmader" target="DengYiping" id="0" weight="1" />
+      <edge source="rmader" target="jigyasa-grover" id="1" weight="1" />
+      <edge source="rmader" target="cribsb" id="2" weight="1" />
+      <edge source="rmader" target="leonmak" id="3" weight="1" />
+      <edge source="rmader" target="shivenmian" id="4" weight="2" />
+      <edge source="rmader" target="sudheesh001" id="5" weight="3" />
+      <edge source="rmader" target="daminisatya" id="6" weight="2" />
+      <edge source="DengYiping" target="jigyasa-grover" id="7" weight="2" />
+      <edge source="DengYiping" target="cribsb" id="8" weight="1" />
+      <edge source="DengYiping" target="leonmak" id="9" weight="2" />
+      <edge source="DengYiping" target="shivenmian" id="10" weight="2" />
+      <edge source="DengYiping" target="sudheesh001" id="11" weight="4" />
+      <edge source="DengYiping" target="daminisatya" id="12" weight="5" />
+      <edge source="DengYiping" target="mariobehling" id="13" weight="1" />
+      <edge source="jigyasa-grover" target="cribsb" id="14" weight="1" />
+      <edge source="jigyasa-grover" target="Orbiter" id="15" weight="1" />
+      <edge source="jigyasa-grover" target="leonmak" id="16" weight="1" />
+      <edge source="jigyasa-grover" target="shivenmian" id="17" weight="2" />
+      <edge source="jigyasa-grover" target="sudheesh001" id="18" weight="1" />
+      <edge source="jigyasa-grover" target="daminisatya" id="19" weight="5" />
+      <edge source="cribsb" target="leonmak" id="20" weight="1" />
+      <edge source="cribsb" target="shivenmian" id="21" weight="1" />
+      <edge source="cribsb" target="sudheesh001" id="22" weight="1" />
+      <edge source="cribsb" target="daminisatya" id="23" weight="1" />
+      <edge source="Orbiter" target="sudheesh001" id="24" weight="1" />
+      <edge source="Orbiter" target="daminisatya" id="25" weight="3" />
+      <edge source="Orbiter" target="mariobehling" id="26" weight="2" />
+      <edge source="Orbiter" target="shivenmian" id="27" weight="1" />
+      <edge source="leonmak" target="shivenmian" id="28" weight="1" />
+      <edge source="leonmak" target="sudheesh001" id="29" weight="2" />
+      <edge source="leonmak" target="daminisatya" id="30" weight="6" />
+      <edge source="shivenmian" target="sudheesh001" id="31" weight="4" />
+      <edge source="shivenmian" target="daminisatya" id="32" weight="5" />
+      <edge source="shivenmian" target="mariobehling" id="33" weight="1" />
+      <edge source="sudheesh001" target="daminisatya" id="34" weight="15" />
+      <edge source="sudheesh001" target="mariobehling" id="35" weight="2" />
+      <edge source="sudheesh001" target="cshubhamrao" id="36" weight="1" />
+      <edge source="daminisatya" target="mariobehling" id="37" weight="2" />
+    </edges>
+  </graph>
+</gexf>

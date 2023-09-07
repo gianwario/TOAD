@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="ntzm" label="ntzm" />
+      <node id="RoboErikG" label="RoboErikG" />
+      <node id="NeilFraser" label="NeilFraser" />
+      <node id="rachel-fenichel" label="rachel-fenichel" />
+      <node id="AnmAtAnm" label="AnmAtAnm" />
+      <node id="windwood-xmu" label="windwood-xmu" />
+      <node id="jschanker" label="jschanker" />
+      <node id="picklesrus" label="picklesrus" />
+      <node id="translatewiki" label="translatewiki" />
+      <node id="samelhusseini" label="samelhusseini" />
+      <node id="Rgtemze" label="Rgtemze" />
+      <node id="zgtm" label="zgtm" />
+      <node id="jollytoad" label="jollytoad" />
+      <node id="jandrewb" label="jandrewb" />
+    </nodes>
+    <edges>
+      <edge source="ntzm" target="RoboErikG" id="0" weight="1" />
+      <edge source="ntzm" target="rachel-fenichel" id="1" weight="1" />
+      <edge source="ntzm" target="AnmAtAnm" id="2" weight="1" />
+      <edge source="ntzm" target="jschanker" id="3" weight="2" />
+      <edge source="ntzm" target="picklesrus" id="4" weight="1" />
+      <edge source="ntzm" target="samelhusseini" id="5" weight="1" />
+      <edge source="ntzm" target="Rgtemze" id="6" weight="1" />
+      <edge source="ntzm" target="zgtm" id="7" weight="2" />
+      <edge source="ntzm" target="jollytoad" id="8" weight="1" />
+      <edge source="ntzm" target="jandrewb" id="9" weight="1" />
+      <edge source="RoboErikG" target="rachel-fenichel" id="10" weight="14" />
+      <edge source="RoboErikG" target="AnmAtAnm" id="11" weight="5" />
+      <edge source="RoboErikG" target="jschanker" id="12" weight="1" />
+      <edge source="RoboErikG" target="picklesrus" id="13" weight="2" />
+      <edge source="RoboErikG" target="samelhusseini" id="14" weight="2" />
+      <edge source="RoboErikG" target="Rgtemze" id="15" weight="1" />
+      <edge source="RoboErikG" target="zgtm" id="16" weight="1" />
+      <edge source="RoboErikG" target="jollytoad" id="17" weight="2" />
+      <edge source="RoboErikG" target="jandrewb" id="18" weight="1" />
+      <edge source="NeilFraser" target="rachel-fenichel" id="19" weight="6" />
+      <edge source="NeilFraser" target="jollytoad" id="20" weight="1" />
+      <edge source="NeilFraser" target="samelhusseini" id="21" weight="1" />
+      <edge source="NeilFraser" target="AnmAtAnm" id="22" weight="12" />
+      <edge source="rachel-fenichel" target="AnmAtAnm" id="23" weight="48" />
+      <edge source="rachel-fenichel" target="jschanker" id="24" weight="1" />
+      <edge source="rachel-fenichel" target="picklesrus" id="25" weight="38" />
+      <edge source="rachel-fenichel" target="samelhusseini" id="26" weight="18" />
+      <edge source="rachel-fenichel" target="Rgtemze" id="27" weight="1" />
+      <edge source="rachel-fenichel" target="zgtm" id="28" weight="1" />
+      <edge source="rachel-fenichel" target="jollytoad" id="29" weight="9" />
+      <edge source="rachel-fenichel" target="jandrewb" id="30" weight="1" />
+      <edge source="AnmAtAnm" target="jschanker" id="31" weight="1" />
+      <edge source="AnmAtAnm" target="picklesrus" id="32" weight="4" />
+      <edge source="AnmAtAnm" target="samelhusseini" id="33" weight="4" />
+      <edge source="AnmAtAnm" target="Rgtemze" id="34" weight="21" />
+      <edge source="AnmAtAnm" target="zgtm" id="35" weight="1" />
+      <edge source="AnmAtAnm" target="jollytoad" id="36" weight="2" />
+      <edge source="AnmAtAnm" target="jandrewb" id="37" weight="1" />
+      <edge source="jschanker" target="picklesrus" id="38" weight="1" />
+      <edge source="jschanker" target="samelhusseini" id="39" weight="1" />
+      <edge source="jschanker" target="Rgtemze" id="40" weight="1" />
+      <edge source="jschanker" target="zgtm" id="41" weight="1" />
+      <edge source="jschanker" target="jollytoad" id="42" weight="1" />
+      <edge source="jschanker" target="jandrewb" id="43" weight="1" />
+      <edge source="picklesrus" target="samelhusseini" id="44" weight="3" />
+      <edge source="picklesrus" target="Rgtemze" id="45" weight="1" />
+      <edge source="picklesrus" target="zgtm" id="46" weight="1" />
+      <edge source="picklesrus" target="jollytoad" id="47" weight="1" />
+      <edge source="picklesrus" target="jandrewb" id="48" weight="1" />
+      <edge source="samelhusseini" target="Rgtemze" id="49" weight="1" />
+      <edge source="samelhusseini" target="zgtm" id="50" weight="1" />
+      <edge source="samelhusseini" target="jollytoad" id="51" weight="1" />
+      <edge source="samelhusseini" target="jandrewb" id="52" weight="1" />
+      <edge source="Rgtemze" target="zgtm" id="53" weight="1" />
+      <edge source="Rgtemze" target="jollytoad" id="54" weight="1" />
+      <edge source="Rgtemze" target="jandrewb" id="55" weight="1" />
+      <edge source="zgtm" target="jollytoad" id="56" weight="1" />
+      <edge source="zgtm" target="jandrewb" id="57" weight="1" />
+      <edge source="jollytoad" target="jandrewb" id="58" weight="1" />
+    </edges>
+  </graph>
+</gexf>

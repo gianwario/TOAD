@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="PrashanthCorp" label="PrashanthCorp" />
+      <node id="MiguelSavignano" label="MiguelSavignano" />
+      <node id="ejizba" label="ejizba" />
+      <node id="rcjsuen" label="rcjsuen" />
+      <node id="StephenWeatherford" label="StephenWeatherford" />
+      <node id="mikepatrick" label="mikepatrick" />
+      <node id="chrisdias" label="chrisdias" />
+      <node id="gregvanl" label="gregvanl" />
+      <node id="korservick" label="korservick" />
+    </nodes>
+    <edges>
+      <edge source="PrashanthCorp" target="ejizba" id="0" weight="1" />
+      <edge source="PrashanthCorp" target="StephenWeatherford" id="1" weight="87" />
+      <edge source="PrashanthCorp" target="chrisdias" id="2" weight="1" />
+      <edge source="PrashanthCorp" target="gregvanl" id="3" weight="2" />
+      <edge source="MiguelSavignano" target="rcjsuen" id="4" weight="1" />
+      <edge source="MiguelSavignano" target="mikepatrick" id="5" weight="1" />
+      <edge source="MiguelSavignano" target="gregvanl" id="6" weight="1" />
+      <edge source="MiguelSavignano" target="korservick" id="7" weight="1" />
+      <edge source="MiguelSavignano" target="StephenWeatherford" id="8" weight="1" />
+      <edge source="ejizba" target="StephenWeatherford" id="9" weight="59" />
+      <edge source="ejizba" target="chrisdias" id="10" weight="1" />
+      <edge source="rcjsuen" target="mikepatrick" id="11" weight="1" />
+      <edge source="rcjsuen" target="gregvanl" id="12" weight="3" />
+      <edge source="rcjsuen" target="korservick" id="13" weight="2" />
+      <edge source="rcjsuen" target="StephenWeatherford" id="14" weight="1" />
+      <edge source="StephenWeatherford" target="gregvanl" id="15" weight="1" />
+      <edge source="StephenWeatherford" target="chrisdias" id="16" weight="1" />
+      <edge source="StephenWeatherford" target="mikepatrick" id="17" weight="2" />
+      <edge source="mikepatrick" target="gregvanl" id="18" weight="1" />
+      <edge source="mikepatrick" target="korservick" id="19" weight="1" />
+      <edge source="chrisdias" target="gregvanl" id="20" weight="1" />
+      <edge source="gregvanl" target="korservick" id="21" weight="1" />
+    </edges>
+  </graph>
+</gexf>

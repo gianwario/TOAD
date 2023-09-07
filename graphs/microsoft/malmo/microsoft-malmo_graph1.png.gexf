@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-29">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="jorallo" label="jorallo" />
+      <node id="okdshin" label="okdshin" />
+      <node id="rodneyp290" label="rodneyp290" />
+      <node id="gitter-badger" label="gitter-badger" />
+      <node id="DaveyBiggers" label="DaveyBiggers" />
+      <node id="katja-hofmann" label="katja-hofmann" />
+      <node id="farizrahman4u" label="farizrahman4u" />
+      <node id="CameronAavik" label="CameronAavik" />
+      <node id="drtuck" label="drtuck" />
+      <node id="bengioe" label="bengioe" />
+      <node id="timhutton" label="timhutton" />
+    </nodes>
+    <edges>
+      <edge source="jorallo" target="timhutton" id="0" weight="5" />
+      <edge source="okdshin" target="rodneyp290" id="1" weight="1" />
+      <edge source="okdshin" target="gitter-badger" id="2" weight="2" />
+      <edge source="okdshin" target="DaveyBiggers" id="3" weight="1" />
+      <edge source="okdshin" target="farizrahman4u" id="4" weight="1" />
+      <edge source="okdshin" target="drtuck" id="5" weight="1" />
+      <edge source="okdshin" target="bengioe" id="6" weight="1" />
+      <edge source="rodneyp290" target="gitter-badger" id="7" weight="2" />
+      <edge source="rodneyp290" target="DaveyBiggers" id="8" weight="1" />
+      <edge source="rodneyp290" target="farizrahman4u" id="9" weight="1" />
+      <edge source="rodneyp290" target="drtuck" id="10" weight="1" />
+      <edge source="rodneyp290" target="bengioe" id="11" weight="1" />
+      <edge source="gitter-badger" target="DaveyBiggers" id="12" weight="2" />
+      <edge source="gitter-badger" target="katja-hofmann" id="13" weight="1" />
+      <edge source="gitter-badger" target="farizrahman4u" id="14" weight="11" />
+      <edge source="gitter-badger" target="drtuck" id="15" weight="1" />
+      <edge source="gitter-badger" target="bengioe" id="16" weight="2" />
+      <edge source="DaveyBiggers" target="farizrahman4u" id="17" weight="2" />
+      <edge source="DaveyBiggers" target="drtuck" id="18" weight="1" />
+      <edge source="DaveyBiggers" target="bengioe" id="19" weight="1" />
+      <edge source="DaveyBiggers" target="timhutton" id="20" weight="17" />
+      <edge source="katja-hofmann" target="timhutton" id="21" weight="2" />
+      <edge source="farizrahman4u" target="drtuck" id="22" weight="1" />
+      <edge source="farizrahman4u" target="bengioe" id="23" weight="1" />
+      <edge source="drtuck" target="bengioe" id="24" weight="1" />
+    </edges>
+  </graph>
+</gexf>

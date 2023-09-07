@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-27">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="dharmeshkakadia" label="dharmeshkakadia" />
+      <node id="mortonfox" label="mortonfox" />
+      <node id="fjolnir" label="fjolnir" />
+      <node id="nlutsenko" label="nlutsenko" />
+      <node id="ReadmeCritic" label="ReadmeCritic" />
+      <node id="michaelkirk" label="michaelkirk" />
+      <node id="erikprice" label="erikprice" />
+      <node id="benshan" label="benshan" />
+      <node id="jeff-teeps" label="jeff-teeps" />
+      <node id="richardjrossiii" label="richardjrossiii" />
+      <node id="oldshuren" label="oldshuren" />
+    </nodes>
+    <edges>
+      <edge source="dharmeshkakadia" target="fjolnir" id="0" weight="1" />
+      <edge source="dharmeshkakadia" target="nlutsenko" id="1" weight="1" />
+      <edge source="dharmeshkakadia" target="michaelkirk" id="2" weight="2" />
+      <edge source="dharmeshkakadia" target="erikprice" id="3" weight="1" />
+      <edge source="dharmeshkakadia" target="benshan" id="4" weight="1" />
+      <edge source="dharmeshkakadia" target="oldshuren" id="5" weight="1" />
+      <edge source="fjolnir" target="nlutsenko" id="6" weight="2" />
+      <edge source="fjolnir" target="michaelkirk" id="7" weight="1" />
+      <edge source="fjolnir" target="erikprice" id="8" weight="1" />
+      <edge source="fjolnir" target="benshan" id="9" weight="1" />
+      <edge source="fjolnir" target="richardjrossiii" id="10" weight="1" />
+      <edge source="fjolnir" target="oldshuren" id="11" weight="1" />
+      <edge source="nlutsenko" target="michaelkirk" id="12" weight="21" />
+      <edge source="nlutsenko" target="erikprice" id="13" weight="7" />
+      <edge source="nlutsenko" target="benshan" id="14" weight="2" />
+      <edge source="nlutsenko" target="richardjrossiii" id="15" weight="10" />
+      <edge source="nlutsenko" target="oldshuren" id="16" weight="19" />
+      <edge source="michaelkirk" target="erikprice" id="17" weight="2" />
+      <edge source="michaelkirk" target="benshan" id="18" weight="3" />
+      <edge source="michaelkirk" target="oldshuren" id="19" weight="1" />
+      <edge source="erikprice" target="benshan" id="20" weight="1" />
+      <edge source="erikprice" target="oldshuren" id="21" weight="1" />
+      <edge source="benshan" target="oldshuren" id="22" weight="1" />
+    </edges>
+  </graph>
+</gexf>

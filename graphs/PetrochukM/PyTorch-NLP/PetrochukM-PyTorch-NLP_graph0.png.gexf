@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="PetrochukM" label="PetrochukM" />
+      <node id="floscha" label="floscha" />
+      <node id="nzw0301" label="nzw0301" />
+      <node id="XingxingZhang" label="XingxingZhang" />
+      <node id="grant" label="grant" />
+    </nodes>
+    <edges>
+      <edge source="PetrochukM" target="floscha" id="0" weight="1" />
+      <edge source="PetrochukM" target="nzw0301" id="1" weight="2" />
+      <edge source="PetrochukM" target="XingxingZhang" id="2" weight="2" />
+      <edge source="PetrochukM" target="grant" id="3" weight="2" />
+      <edge source="floscha" target="XingxingZhang" id="4" weight="1" />
+      <edge source="floscha" target="grant" id="5" weight="1" />
+      <edge source="nzw0301" target="XingxingZhang" id="6" weight="1" />
+      <edge source="XingxingZhang" target="grant" id="7" weight="2" />
+    </edges>
+  </graph>
+</gexf>

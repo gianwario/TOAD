@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="zakharenkodmytro" label="zakharenkodmytro" />
+      <node id="eclipse-leshan-bot" label="eclipse-leshan-bot" />
+      <node id="dependabot[bot]" label="dependabot[bot]" />
+      <node id="dachaac" label="dachaac" />
+      <node id="sbernard31" label="sbernard31" />
+      <node id="cavenaghi9" label="cavenaghi9" />
+    </nodes>
+    <edges>
+      <edge source="zakharenkodmytro" target="dachaac" id="0" weight="1" />
+      <edge source="zakharenkodmytro" target="sbernard31" id="1" weight="26" />
+      <edge source="zakharenkodmytro" target="cavenaghi9" id="2" weight="1" />
+      <edge source="dachaac" target="sbernard31" id="3" weight="52" />
+      <edge source="dachaac" target="cavenaghi9" id="4" weight="1" />
+      <edge source="sbernard31" target="cavenaghi9" id="5" weight="1" />
+    </edges>
+  </graph>
+</gexf>

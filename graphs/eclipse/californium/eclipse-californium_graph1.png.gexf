@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-09-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="rkimsb2" label="rkimsb2" />
+      <node id="sbernard31" label="sbernard31" />
+      <node id="T0bbe" label="T0bbe" />
+      <node id="eclipse-californium-bot" label="eclipse-californium-bot" />
+    </nodes>
+    <edges>
+      <edge source="rkimsb2" target="sbernard31" id="0" weight="2" />
+      <edge source="rkimsb2" target="T0bbe" id="1" weight="1" />
+      <edge source="sbernard31" target="T0bbe" id="2" weight="1" />
+    </edges>
+  </graph>
+</gexf>

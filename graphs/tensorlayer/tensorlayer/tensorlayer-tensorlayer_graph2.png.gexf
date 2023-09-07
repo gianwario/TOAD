@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="jorgemf" label="jorgemf" />
+      <node id="xionghhcs" label="xionghhcs" />
+      <node id="luomai" label="luomai" />
+      <node id="fangde" label="fangde" />
+      <node id="matthew-z" label="matthew-z" />
+      <node id="arisliang" label="arisliang" />
+      <node id="codacy-badger" label="codacy-badger" />
+      <node id="lgarithm" label="lgarithm" />
+      <node id="nebulaV" label="nebulaV" />
+      <node id="DEKHTIARJonathan" label="DEKHTIARJonathan" />
+      <node id="lllcho" label="lllcho" />
+      <node id="wagamamaz" label="wagamamaz" />
+      <node id="zsdonghao" label="zsdonghao" />
+      <node id="XJTUWYD" label="XJTUWYD" />
+      <node id="AutuanLiu" label="AutuanLiu" />
+      <node id="hanm" label="hanm" />
+    </nodes>
+    <edges>
+      <edge source="jorgemf" target="xionghhcs" id="0" weight="2" />
+      <edge source="jorgemf" target="fangde" id="1" weight="2" />
+      <edge source="jorgemf" target="matthew-z" id="2" weight="2" />
+      <edge source="jorgemf" target="nebulaV" id="3" weight="1" />
+      <edge source="jorgemf" target="DEKHTIARJonathan" id="4" weight="1" />
+      <edge source="jorgemf" target="lllcho" id="5" weight="1" />
+      <edge source="jorgemf" target="wagamamaz" id="6" weight="1" />
+      <edge source="jorgemf" target="zsdonghao" id="7" weight="2" />
+      <edge source="jorgemf" target="AutuanLiu" id="8" weight="1" />
+      <edge source="jorgemf" target="luomai" id="9" weight="3" />
+      <edge source="jorgemf" target="lgarithm" id="10" weight="1" />
+      <edge source="xionghhcs" target="fangde" id="11" weight="1" />
+      <edge source="xionghhcs" target="matthew-z" id="12" weight="1" />
+      <edge source="xionghhcs" target="codacy-badger" id="13" weight="2" />
+      <edge source="xionghhcs" target="lllcho" id="14" weight="1" />
+      <edge source="xionghhcs" target="zsdonghao" id="15" weight="1" />
+      <edge source="xionghhcs" target="XJTUWYD" id="16" weight="1" />
+      <edge source="xionghhcs" target="AutuanLiu" id="17" weight="2" />
+      <edge source="luomai" target="wagamamaz" id="18" weight="2" />
+      <edge source="luomai" target="zsdonghao" id="19" weight="43" />
+      <edge source="luomai" target="lgarithm" id="20" weight="9" />
+      <edge source="luomai" target="DEKHTIARJonathan" id="21" weight="1" />
+      <edge source="luomai" target="AutuanLiu" id="22" weight="2" />
+      <edge source="luomai" target="XJTUWYD" id="23" weight="3" />
+      <edge source="fangde" target="matthew-z" id="24" weight="2" />
+      <edge source="fangde" target="nebulaV" id="25" weight="3" />
+      <edge source="fangde" target="DEKHTIARJonathan" id="26" weight="1" />
+      <edge source="fangde" target="lllcho" id="27" weight="1" />
+      <edge source="fangde" target="wagamamaz" id="28" weight="1" />
+      <edge source="fangde" target="zsdonghao" id="29" weight="3" />
+      <edge source="fangde" target="AutuanLiu" id="30" weight="2" />
+      <edge source="matthew-z" target="nebulaV" id="31" weight="2" />
+      <edge source="matthew-z" target="DEKHTIARJonathan" id="32" weight="1" />
+      <edge source="matthew-z" target="lllcho" id="33" weight="1" />
+      <edge source="matthew-z" target="wagamamaz" id="34" weight="1" />
+      <edge source="matthew-z" target="zsdonghao" id="35" weight="1" />
+      <edge source="matthew-z" target="AutuanLiu" id="36" weight="2" />
+      <edge source="codacy-badger" target="zsdonghao" id="37" weight="1" />
+      <edge source="codacy-badger" target="XJTUWYD" id="38" weight="1" />
+      <edge source="codacy-badger" target="AutuanLiu" id="39" weight="1" />
+      <edge source="lgarithm" target="zsdonghao" id="40" weight="24" />
+      <edge source="lgarithm" target="DEKHTIARJonathan" id="41" weight="2" />
+      <edge source="lgarithm" target="AutuanLiu" id="42" weight="4" />
+      <edge source="lgarithm" target="XJTUWYD" id="43" weight="3" />
+      <edge source="nebulaV" target="DEKHTIARJonathan" id="44" weight="1" />
+      <edge source="nebulaV" target="wagamamaz" id="45" weight="1" />
+      <edge source="nebulaV" target="zsdonghao" id="46" weight="3" />
+      <edge source="DEKHTIARJonathan" target="wagamamaz" id="47" weight="2" />
+      <edge source="DEKHTIARJonathan" target="zsdonghao" id="48" weight="2" />
+      <edge source="DEKHTIARJonathan" target="XJTUWYD" id="49" weight="1" />
+      <edge source="DEKHTIARJonathan" target="AutuanLiu" id="50" weight="2" />
+      <edge source="lllcho" target="AutuanLiu" id="51" weight="2" />
+      <edge source="lllcho" target="zsdonghao" id="52" weight="1" />
+      <edge source="wagamamaz" target="zsdonghao" id="53" weight="6" />
+      <edge source="wagamamaz" target="AutuanLiu" id="54" weight="2" />
+      <edge source="zsdonghao" target="AutuanLiu" id="55" weight="1" />
+      <edge source="zsdonghao" target="XJTUWYD" id="56" weight="20" />
+    </edges>
+  </graph>
+</gexf>

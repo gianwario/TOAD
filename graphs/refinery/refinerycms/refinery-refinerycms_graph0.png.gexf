@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-28">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="abelardogilm" label="abelardogilm" />
+      <node id="stefanspicer" label="stefanspicer" />
+      <node id="jaredbeck" label="jaredbeck" />
+      <node id="nikkiveen" label="nikkiveen" />
+      <node id="lukeschenk" label="lukeschenk" />
+      <node id="bricesanchez" label="bricesanchez" />
+      <node id="parndt" label="parndt" />
+      <node id="NicholasKirchner" label="NicholasKirchner" />
+      <node id="nzgrover" label="nzgrover" />
+    </nodes>
+    <edges>
+      <edge source="abelardogilm" target="stefanspicer" id="0" weight="1" />
+      <edge source="abelardogilm" target="jaredbeck" id="1" weight="3" />
+      <edge source="abelardogilm" target="nikkiveen" id="2" weight="1" />
+      <edge source="abelardogilm" target="bricesanchez" id="3" weight="3" />
+      <edge source="abelardogilm" target="parndt" id="4" weight="3" />
+      <edge source="abelardogilm" target="NicholasKirchner" id="5" weight="1" />
+      <edge source="abelardogilm" target="nzgrover" id="6" weight="1" />
+      <edge source="stefanspicer" target="jaredbeck" id="7" weight="1" />
+      <edge source="stefanspicer" target="nikkiveen" id="8" weight="1" />
+      <edge source="stefanspicer" target="bricesanchez" id="9" weight="24" />
+      <edge source="stefanspicer" target="parndt" id="10" weight="13" />
+      <edge source="stefanspicer" target="NicholasKirchner" id="11" weight="1" />
+      <edge source="stefanspicer" target="nzgrover" id="12" weight="1" />
+      <edge source="stefanspicer" target="lukeschenk" id="13" weight="1" />
+      <edge source="jaredbeck" target="nikkiveen" id="14" weight="2" />
+      <edge source="jaredbeck" target="bricesanchez" id="15" weight="5" />
+      <edge source="jaredbeck" target="parndt" id="16" weight="21" />
+      <edge source="jaredbeck" target="NicholasKirchner" id="17" weight="1" />
+      <edge source="jaredbeck" target="nzgrover" id="18" weight="1" />
+      <edge source="nikkiveen" target="bricesanchez" id="19" weight="1" />
+      <edge source="nikkiveen" target="parndt" id="20" weight="1" />
+      <edge source="nikkiveen" target="NicholasKirchner" id="21" weight="1" />
+      <edge source="nikkiveen" target="nzgrover" id="22" weight="1" />
+      <edge source="bricesanchez" target="parndt" id="23" weight="28" />
+      <edge source="bricesanchez" target="NicholasKirchner" id="24" weight="2" />
+      <edge source="bricesanchez" target="nzgrover" id="25" weight="7" />
+      <edge source="parndt" target="NicholasKirchner" id="26" weight="3" />
+      <edge source="parndt" target="nzgrover" id="27" weight="3" />
+      <edge source="NicholasKirchner" target="nzgrover" id="28" weight="1" />
+    </edges>
+  </graph>
+</gexf>

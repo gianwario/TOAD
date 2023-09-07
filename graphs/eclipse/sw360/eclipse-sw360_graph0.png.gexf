@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-09-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="maxhbr" label="maxhbr" />
+      <node id="lepokle" label="lepokle" />
+      <node id="imaykay" label="imaykay" />
+      <node id="smrutis1" label="smrutis1" />
+      <node id="mcjaeger" label="mcjaeger" />
+      <node id="trungpl" label="trungpl" />
+      <node id="blaumeiser-at-bosch" label="blaumeiser-at-bosch" />
+      <node id="nutanv1contr" label="nutanv1contr" />
+    </nodes>
+    <edges>
+      <edge source="maxhbr" target="lepokle" id="0" weight="8" />
+      <edge source="maxhbr" target="mcjaeger" id="1" weight="3" />
+      <edge source="maxhbr" target="trungpl" id="2" weight="1" />
+      <edge source="maxhbr" target="nutanv1contr" id="3" weight="27" />
+      <edge source="maxhbr" target="imaykay" id="4" weight="37" />
+      <edge source="maxhbr" target="smrutis1" id="5" weight="2" />
+      <edge source="lepokle" target="imaykay" id="6" weight="17" />
+      <edge source="lepokle" target="mcjaeger" id="7" weight="7" />
+      <edge source="lepokle" target="nutanv1contr" id="8" weight="7" />
+      <edge source="lepokle" target="smrutis1" id="9" weight="2" />
+      <edge source="imaykay" target="nutanv1contr" id="10" weight="11" />
+      <edge source="smrutis1" target="nutanv1contr" id="11" weight="7" />
+      <edge source="mcjaeger" target="nutanv1contr" id="12" weight="2" />
+      <edge source="trungpl" target="nutanv1contr" id="13" weight="1" />
+    </edges>
+  </graph>
+</gexf>

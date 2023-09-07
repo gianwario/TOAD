@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-30">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="wjk" label="wjk" />
+      <node id="enricogior" label="enricogior" />
+      <node id="bzoz" label="bzoz" />
+      <node id="Alaricus" label="Alaricus" />
+      <node id="indierawk2k2" label="indierawk2k2" />
+      <node id="trident-job" label="trident-job" />
+      <node id="ExecThTs" label="ExecThTs" />
+      <node id="ebbyd3" label="ebbyd3" />
+      <node id="mythmon" label="mythmon" />
+      <node id="garyhuntddn" label="garyhuntddn" />
+      <node id="TheMrJukes" label="TheMrJukes" />
+      <node id="EwoutH" label="EwoutH" />
+      <node id="rayburger" label="rayburger" />
+      <node id="chasemaier" label="chasemaier" />
+      <node id="grumpydev" label="grumpydev" />
+      <node id="jjw24" label="jjw24" />
+      <node id="casungo" label="casungo" />
+      <node id="tulkjay" label="tulkjay" />
+      <node id="johng42" label="johng42" />
+      <node id="mkevenaar" label="mkevenaar" />
+    </nodes>
+    <edges>
+      <edge source="wjk" target="bzoz" id="0" weight="2" />
+      <edge source="wjk" target="Alaricus" id="1" weight="1" />
+      <edge source="wjk" target="trident-job" id="2" weight="1" />
+      <edge source="wjk" target="ExecThTs" id="3" weight="1" />
+      <edge source="wjk" target="ebbyd3" id="4" weight="1" />
+      <edge source="wjk" target="mythmon" id="5" weight="1" />
+      <edge source="wjk" target="garyhuntddn" id="6" weight="1" />
+      <edge source="wjk" target="TheMrJukes" id="7" weight="1" />
+      <edge source="wjk" target="EwoutH" id="8" weight="3" />
+      <edge source="wjk" target="rayburger" id="9" weight="1" />
+      <edge source="wjk" target="chasemaier" id="10" weight="1" />
+      <edge source="wjk" target="grumpydev" id="11" weight="1" />
+      <edge source="wjk" target="jjw24" id="12" weight="1" />
+      <edge source="wjk" target="tulkjay" id="13" weight="1" />
+      <edge source="wjk" target="johng42" id="14" weight="1" />
+      <edge source="wjk" target="mkevenaar" id="15" weight="1" />
+      <edge source="wjk" target="enricogior" id="16" weight="1" />
+      <edge source="enricogior" target="indierawk2k2" id="17" weight="2" />
+      <edge source="enricogior" target="jjw24" id="18" weight="1" />
+      <edge source="bzoz" target="Alaricus" id="19" weight="1" />
+      <edge source="bzoz" target="trident-job" id="20" weight="1" />
+      <edge source="bzoz" target="ExecThTs" id="21" weight="1" />
+      <edge source="bzoz" target="ebbyd3" id="22" weight="1" />
+      <edge source="bzoz" target="mythmon" id="23" weight="1" />
+      <edge source="bzoz" target="garyhuntddn" id="24" weight="1" />
+      <edge source="bzoz" target="TheMrJukes" id="25" weight="1" />
+      <edge source="bzoz" target="EwoutH" id="26" weight="4" />
+      <edge source="bzoz" target="rayburger" id="27" weight="1" />
+      <edge source="bzoz" target="chasemaier" id="28" weight="1" />
+      <edge source="bzoz" target="grumpydev" id="29" weight="1" />
+      <edge source="bzoz" target="jjw24" id="30" weight="1" />
+      <edge source="bzoz" target="tulkjay" id="31" weight="1" />
+      <edge source="bzoz" target="johng42" id="32" weight="1" />
+      <edge source="Alaricus" target="trident-job" id="33" weight="1" />
+      <edge source="Alaricus" target="ExecThTs" id="34" weight="1" />
+      <edge source="Alaricus" target="ebbyd3" id="35" weight="1" />
+      <edge source="Alaricus" target="mythmon" id="36" weight="1" />
+      <edge source="Alaricus" target="garyhuntddn" id="37" weight="1" />
+      <edge source="Alaricus" target="TheMrJukes" id="38" weight="1" />
+      <edge source="Alaricus" target="EwoutH" id="39" weight="1" />
+      <edge source="Alaricus" target="rayburger" id="40" weight="1" />
+      <edge source="Alaricus" target="chasemaier" id="41" weight="1" />
+      <edge source="Alaricus" target="grumpydev" id="42" weight="1" />
+      <edge source="Alaricus" target="tulkjay" id="43" weight="1" />
+      <edge source="Alaricus" target="johng42" id="44" weight="1" />
+      <edge source="trident-job" target="ExecThTs" id="45" weight="1" />
+      <edge source="trident-job" target="ebbyd3" id="46" weight="1" />
+      <edge source="trident-job" target="mythmon" id="47" weight="1" />
+      <edge source="trident-job" target="garyhuntddn" id="48" weight="2" />
+      <edge source="trident-job" target="TheMrJukes" id="49" weight="1" />
+      <edge source="trident-job" target="EwoutH" id="50" weight="1" />
+      <edge source="trident-job" target="rayburger" id="51" weight="1" />
+      <edge source="trident-job" target="chasemaier" id="52" weight="1" />
+      <edge source="trident-job" target="grumpydev" id="53" weight="1" />
+      <edge source="trident-job" target="tulkjay" id="54" weight="1" />
+      <edge source="trident-job" target="johng42" id="55" weight="1" />
+      <edge source="ExecThTs" target="ebbyd3" id="56" weight="1" />
+      <edge source="ExecThTs" target="mythmon" id="57" weight="1" />
+      <edge source="ExecThTs" target="garyhuntddn" id="58" weight="1" />
+      <edge source="ExecThTs" target="TheMrJukes" id="59" weight="1" />
+      <edge source="ExecThTs" target="EwoutH" id="60" weight="1" />
+      <edge source="ExecThTs" target="rayburger" id="61" weight="1" />
+      <edge source="ExecThTs" target="chasemaier" id="62" weight="1" />
+      <edge source="ExecThTs" target="grumpydev" id="63" weight="1" />
+      <edge source="ExecThTs" target="tulkjay" id="64" weight="1" />
+      <edge source="ExecThTs" target="johng42" id="65" weight="1" />
+      <edge source="ebbyd3" target="mythmon" id="66" weight="1" />
+      <edge source="ebbyd3" target="garyhuntddn" id="67" weight="1" />
+      <edge source="ebbyd3" target="TheMrJukes" id="68" weight="1" />
+      <edge source="ebbyd3" target="EwoutH" id="69" weight="1" />
+      <edge source="ebbyd3" target="rayburger" id="70" weight="1" />
+      <edge source="ebbyd3" target="chasemaier" id="71" weight="1" />
+      <edge source="ebbyd3" target="grumpydev" id="72" weight="1" />
+      <edge source="ebbyd3" target="tulkjay" id="73" weight="1" />
+      <edge source="ebbyd3" target="johng42" id="74" weight="1" />
+      <edge source="mythmon" target="garyhuntddn" id="75" weight="1" />
+      <edge source="mythmon" target="TheMrJukes" id="76" weight="1" />
+      <edge source="mythmon" target="EwoutH" id="77" weight="3" />
+      <edge source="mythmon" target="rayburger" id="78" weight="1" />
+      <edge source="mythmon" target="chasemaier" id="79" weight="1" />
+      <edge source="mythmon" target="grumpydev" id="80" weight="1" />
+      <edge source="mythmon" target="tulkjay" id="81" weight="1" />
+      <edge source="mythmon" target="johng42" id="82" weight="1" />
+      <edge source="garyhuntddn" target="TheMrJukes" id="83" weight="1" />
+      <edge source="garyhuntddn" target="EwoutH" id="84" weight="1" />
+      <edge source="garyhuntddn" target="rayburger" id="85" weight="1" />
+      <edge source="garyhuntddn" target="chasemaier" id="86" weight="1" />
+      <edge source="garyhuntddn" target="grumpydev" id="87" weight="1" />
+      <edge source="garyhuntddn" target="tulkjay" id="88" weight="1" />
+      <edge source="garyhuntddn" target="johng42" id="89" weight="1" />
+      <edge source="TheMrJukes" target="EwoutH" id="90" weight="1" />
+      <edge source="TheMrJukes" target="rayburger" id="91" weight="1" />
+      <edge source="TheMrJukes" target="chasemaier" id="92" weight="1" />
+      <edge source="TheMrJukes" target="grumpydev" id="93" weight="1" />
+      <edge source="TheMrJukes" target="tulkjay" id="94" weight="1" />
+      <edge source="TheMrJukes" target="johng42" id="95" weight="1" />
+      <edge source="EwoutH" target="rayburger" id="96" weight="1" />
+      <edge source="EwoutH" target="chasemaier" id="97" weight="1" />
+      <edge source="EwoutH" target="grumpydev" id="98" weight="1" />
+      <edge source="EwoutH" target="jjw24" id="99" weight="1" />
+      <edge source="EwoutH" target="tulkjay" id="100" weight="1" />
+      <edge source="EwoutH" target="johng42" id="101" weight="1" />
+      <edge source="rayburger" target="chasemaier" id="102" weight="1" />
+      <edge source="rayburger" target="grumpydev" id="103" weight="1" />
+      <edge source="rayburger" target="tulkjay" id="104" weight="1" />
+      <edge source="rayburger" target="johng42" id="105" weight="1" />
+      <edge source="chasemaier" target="grumpydev" id="106" weight="1" />
+      <edge source="chasemaier" target="tulkjay" id="107" weight="1" />
+      <edge source="chasemaier" target="johng42" id="108" weight="1" />
+      <edge source="grumpydev" target="tulkjay" id="109" weight="1" />
+      <edge source="grumpydev" target="johng42" id="110" weight="1" />
+      <edge source="jjw24" target="mkevenaar" id="111" weight="1" />
+      <edge source="tulkjay" target="johng42" id="112" weight="1" />
+    </edges>
+  </graph>
+</gexf>

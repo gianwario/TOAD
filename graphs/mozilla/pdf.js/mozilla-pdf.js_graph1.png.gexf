@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-08-28">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="ydfzgyj" label="ydfzgyj" />
+      <node id="tgrathwell-pivotal" label="tgrathwell-pivotal" />
+      <node id="Snuffleupagus" label="Snuffleupagus" />
+      <node id="timvandermeij" label="timvandermeij" />
+      <node id="vologab" label="vologab" />
+      <node id="amccreight" label="amccreight" />
+      <node id="brendandahl" label="brendandahl" />
+      <node id="jasonjensen" label="jasonjensen" />
+      <node id="yurydelendik" label="yurydelendik" />
+      <node id="mukulmishra18" label="mukulmishra18" />
+      <node id="Rob--W" label="Rob--W" />
+      <node id="mysterlune" label="mysterlune" />
+      <node id="georgf" label="georgf" />
+    </nodes>
+    <edges>
+      <edge source="ydfzgyj" target="Snuffleupagus" id="0" weight="1" />
+      <edge source="ydfzgyj" target="timvandermeij" id="1" weight="1" />
+      <edge source="ydfzgyj" target="vologab" id="2" weight="1" />
+      <edge source="ydfzgyj" target="amccreight" id="3" weight="1" />
+      <edge source="ydfzgyj" target="brendandahl" id="4" weight="1" />
+      <edge source="ydfzgyj" target="jasonjensen" id="5" weight="1" />
+      <edge source="ydfzgyj" target="yurydelendik" id="6" weight="2" />
+      <edge source="ydfzgyj" target="mukulmishra18" id="7" weight="1" />
+      <edge source="ydfzgyj" target="Rob--W" id="8" weight="1" />
+      <edge source="ydfzgyj" target="mysterlune" id="9" weight="1" />
+      <edge source="ydfzgyj" target="georgf" id="10" weight="1" />
+      <edge source="Snuffleupagus" target="timvandermeij" id="11" weight="58" />
+      <edge source="Snuffleupagus" target="vologab" id="12" weight="1" />
+      <edge source="Snuffleupagus" target="amccreight" id="13" weight="1" />
+      <edge source="Snuffleupagus" target="brendandahl" id="14" weight="4" />
+      <edge source="Snuffleupagus" target="jasonjensen" id="15" weight="2" />
+      <edge source="Snuffleupagus" target="yurydelendik" id="16" weight="29" />
+      <edge source="Snuffleupagus" target="mukulmishra18" id="17" weight="36" />
+      <edge source="Snuffleupagus" target="Rob--W" id="18" weight="8" />
+      <edge source="Snuffleupagus" target="mysterlune" id="19" weight="5" />
+      <edge source="Snuffleupagus" target="georgf" id="20" weight="1" />
+      <edge source="timvandermeij" target="vologab" id="21" weight="1" />
+      <edge source="timvandermeij" target="amccreight" id="22" weight="5" />
+      <edge source="timvandermeij" target="brendandahl" id="23" weight="2" />
+      <edge source="timvandermeij" target="jasonjensen" id="24" weight="2" />
+      <edge source="timvandermeij" target="yurydelendik" id="25" weight="12" />
+      <edge source="timvandermeij" target="mukulmishra18" id="26" weight="17" />
+      <edge source="timvandermeij" target="Rob--W" id="27" weight="2" />
+      <edge source="timvandermeij" target="mysterlune" id="28" weight="1" />
+      <edge source="timvandermeij" target="georgf" id="29" weight="1" />
+      <edge source="vologab" target="amccreight" id="30" weight="1" />
+      <edge source="vologab" target="brendandahl" id="31" weight="1" />
+      <edge source="vologab" target="jasonjensen" id="32" weight="1" />
+      <edge source="vologab" target="yurydelendik" id="33" weight="1" />
+      <edge source="vologab" target="mukulmishra18" id="34" weight="1" />
+      <edge source="vologab" target="Rob--W" id="35" weight="1" />
+      <edge source="vologab" target="mysterlune" id="36" weight="1" />
+      <edge source="vologab" target="georgf" id="37" weight="1" />
+      <edge source="amccreight" target="brendandahl" id="38" weight="1" />
+      <edge source="amccreight" target="jasonjensen" id="39" weight="1" />
+      <edge source="amccreight" target="yurydelendik" id="40" weight="2" />
+      <edge source="amccreight" target="mukulmishra18" id="41" weight="1" />
+      <edge source="amccreight" target="Rob--W" id="42" weight="3" />
+      <edge source="amccreight" target="mysterlune" id="43" weight="1" />
+      <edge source="amccreight" target="georgf" id="44" weight="1" />
+      <edge source="brendandahl" target="jasonjensen" id="45" weight="1" />
+      <edge source="brendandahl" target="yurydelendik" id="46" weight="7" />
+      <edge source="brendandahl" target="mukulmishra18" id="47" weight="1" />
+      <edge source="brendandahl" target="Rob--W" id="48" weight="2" />
+      <edge source="brendandahl" target="mysterlune" id="49" weight="1" />
+      <edge source="brendandahl" target="georgf" id="50" weight="3" />
+      <edge source="jasonjensen" target="yurydelendik" id="51" weight="1" />
+      <edge source="jasonjensen" target="mukulmishra18" id="52" weight="1" />
+      <edge source="jasonjensen" target="Rob--W" id="53" weight="1" />
+      <edge source="jasonjensen" target="mysterlune" id="54" weight="1" />
+      <edge source="jasonjensen" target="georgf" id="55" weight="1" />
+      <edge source="yurydelendik" target="mukulmishra18" id="56" weight="25" />
+      <edge source="yurydelendik" target="Rob--W" id="57" weight="2" />
+      <edge source="yurydelendik" target="mysterlune" id="58" weight="3" />
+      <edge source="yurydelendik" target="georgf" id="59" weight="1" />
+      <edge source="mukulmishra18" target="Rob--W" id="60" weight="1" />
+      <edge source="mukulmishra18" target="mysterlune" id="61" weight="1" />
+      <edge source="mukulmishra18" target="georgf" id="62" weight="1" />
+      <edge source="Rob--W" target="mysterlune" id="63" weight="1" />
+      <edge source="Rob--W" target="georgf" id="64" weight="4" />
+      <edge source="mysterlune" target="georgf" id="65" weight="1" />
+    </edges>
+  </graph>
+</gexf>

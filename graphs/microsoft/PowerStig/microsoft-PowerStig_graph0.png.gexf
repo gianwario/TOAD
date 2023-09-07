@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-09-01">
+    <creator>NetworkX 3.1</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="camusicjunkie" label="camusicjunkie" />
+      <node id="ldillonel" label="ldillonel" />
+      <node id="clcaldwell" label="clcaldwell" />
+      <node id="microsoftopensource" label="microsoftopensource" />
+      <node id="chasewilson" label="chasewilson" />
+      <node id="athaynes" label="athaynes" />
+      <node id="jcwalker" label="jcwalker" />
+      <node id="msftgits" label="msftgits" />
+      <node id="nehrua" label="nehrua" />
+    </nodes>
+    <edges>
+      <edge source="camusicjunkie" target="ldillonel" id="0" weight="1" />
+      <edge source="camusicjunkie" target="clcaldwell" id="1" weight="1" />
+      <edge source="camusicjunkie" target="chasewilson" id="2" weight="2" />
+      <edge source="camusicjunkie" target="athaynes" id="3" weight="4" />
+      <edge source="camusicjunkie" target="jcwalker" id="4" weight="1" />
+      <edge source="ldillonel" target="clcaldwell" id="5" weight="2" />
+      <edge source="ldillonel" target="chasewilson" id="6" weight="2" />
+      <edge source="ldillonel" target="jcwalker" id="7" weight="1" />
+      <edge source="clcaldwell" target="chasewilson" id="8" weight="1" />
+      <edge source="chasewilson" target="athaynes" id="9" weight="1" />
+      <edge source="chasewilson" target="jcwalker" id="10" weight="2" />
+      <edge source="chasewilson" target="nehrua" id="11" weight="1" />
+      <edge source="athaynes" target="jcwalker" id="12" weight="1" />
+      <edge source="athaynes" target="nehrua" id="13" weight="5" />
+      <edge source="jcwalker" target="nehrua" id="14" weight="1" />
+    </edges>
+  </graph>
+</gexf>
