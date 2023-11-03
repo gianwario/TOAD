@@ -132,3 +132,6 @@ dmypy.json
 help.txt
 repositories
 relations_mining
+
+input.csv
+output.csv

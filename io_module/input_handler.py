@@ -8,25 +8,19 @@ from console import console
 
 def get_input_files():
     """
-    This function prompts the user to insert the needed input/output files and the end date of the time window to analyze.
+    This function prompts the user to insert the needed input/output files.
     :return: the input given by the user
     """
 
-    # TODO REMOVE HARD CODED INPUT BEFORE FINAL COMMIT
-
-    # input_path = console.input('[bold green]Please enter the path of the input file, including filename and its extension\n')
-
-    input_path = "C:/Users/gianm/Desktop/master-thesis/input.csv"
+    input_path = console.input('[bold green]Please enter the path of the input file, including filename and its extension\n')
     if not os.path.isfile(input_path):
         console.print("[bold red]Error, the file does not exist")
         raise SystemExit(0)
-    # output_dir = console.input('[bold green]Please enter the directory path for the output file\n')
-    output_dir = "C:/Users/gianm/Desktop/master-thesis"
+    output_dir = console.input('[bold green]Please enter the directory path for the output file\n')
     if not os.path.isdir(output_dir):
         console.print("[bold red]Error, the directory does not exist")
         raise SystemExit(0)
-    # output_path = console.input('[bold green]Please enter the filename of the output file. Please do not include any extension, as it will be a csv file\n')
-    output_path = "output"
+    output_path = console.input('[bold green]Please enter the filename of the output file. Please do not include any extension, as it will be a csv file\n')
     with open(os.path.join(output_dir, output_path + ".csv"), "w") as file:
         if not os.path.isfile(output_path + ".csv"):
             console.print("[bold red]There was an error creating the output file")
